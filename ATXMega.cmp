@@ -1,0 +1,150 @@
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 07.12.2012 01:30:11
+
+BeginCmp
+TimeStamp = /50BFD1FA;
+Reference = C1;
+ValeurCmp = CP1;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD1EF;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD20E;
+Reference = C3;
+ValeurCmp = CP1;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD1E5;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC88B;
+Reference = C5;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC86D;
+Reference = C6;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC87D;
+Reference = C7;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC882;
+Reference = C8;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFCA97;
+Reference = C9;
+ValeurCmp = CP1;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD147;
+Reference = C10;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD14C;
+Reference = C11;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50C1386C;
+Reference = C12;
+ValeurCmp = CP1;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BE9867;
+Reference = IC1;
+ValeurCmp = ATXMEGA32A4;
+IdModule  = TQFP44;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC90F;
+Reference = L1;
+ValeurCmp = INDUCTOR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC96A;
+Reference = L2;
+ValeurCmp = INDUCTOR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50C1377A;
+Reference = L3;
+ValeurCmp = INDUCTOR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD73E;
+Reference = P1;
+ValeurCmp = CONN_20;
+IdModule  = PIN_ARRAY_20X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC5D3;
+Reference = P2;
+ValeurCmp = CONN_3X2;
+IdModule  = pin_array_3x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFDA14;
+Reference = P3;
+ValeurCmp = CONN_20;
+IdModule  = PIN_ARRAY_20X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFC714;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50BFD15B;
+Reference = X1;
+ValeurCmp = CRYSTAL;
+IdModule  = HC-18UV;
+EndCmp
+
+EndListe

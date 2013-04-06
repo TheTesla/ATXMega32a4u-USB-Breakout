@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 06.04.2013 03:03:50
+EESchema Schematic File Version 2  date 06.04.2013 18:32:48
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -643,6 +643,8 @@ U 2 1 515F6E85
 P 9400 1950
 F 0 "D4" H 9500 1850 40  0000 C CNN
 F 1 "BAS70BRW" H 9400 2050 40  0000 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/BAS70TW_DW-04_DW-05_DW-06_BRW(SOT-363).PDF" H 9400 1950 60  0001 C CNN
+F 4 "BAS70BRW-TPTR-ND" H 9400 1950 60  0001 C CNN "Digi-Key Part Number"
 	2    9400 1950
 	0    -1   -1   0   
 $EndComp
@@ -651,7 +653,9 @@ L R R5
 U 1 1 511EE47A
 P 9750 1600
 F 0 "R5" V 9830 1600 50  0000 C CNN
-F 1 "R" V 9750 1600 50  0000 C CNN
+F 1 "680" V 9750 1600 50  0000 C CNN
+F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 9750 1600 60  0001 C CNN
+F 4 "RMCF0805JG680R-ND" V 9750 1600 60  0001 C CNN "Digi-Key Part Number"
 	1    9750 1600
 	-1   0    0    1   
 $EndComp
@@ -660,7 +664,9 @@ L R R4
 U 1 1 511EE462
 P 6100 1100
 F 0 "R4" V 6180 1100 50  0000 C CNN
-F 1 "R" V 6100 1100 50  0000 C CNN
+F 1 "330" V 6100 1100 50  0000 C CNN
+F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 6100 1100 60  0001 C CNN
+F 4 "RMCF0805JG330R-ND" V 6100 1100 60  0001 C CNN "Digi-Key Part Number"
 	1    6100 1100
 	0    1    1    0   
 $EndComp
@@ -706,6 +712,9 @@ U 1 1 5116F17F
 P 7950 1250
 F 0 "P4" H 7850 1650 60  0000 C CNN
 F 1 "MICROUSB" H 8000 1550 60  0000 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10118192.pdf" H 7950 1250 60  0001 C CNN
+F 4 "609-4613-2-ND" H 7950 1250 60  0001 C CNN "Digi-Key Part Number"
+F 5 "10118192-0001LF" H 7950 1250 60  0001 C CNN "Manufacturer Part Number"
 	1    7950 1250
 	0    1    1    0   
 $EndComp
@@ -751,7 +760,9 @@ L R R2
 U 1 1 5112B2F1
 P 7050 1700
 F 0 "R2" V 7130 1700 50  0000 C CNN
-F 1 "R" V 7050 1700 50  0000 C CNN
+F 1 "330" V 7050 1700 50  0000 C CNN
+F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 7050 1700 60  0001 C CNN
+F 4 "RMCF0805JG330R-ND" V 7050 1700 60  0001 C CNN "Digi-Key Part Number"
 	1    7050 1700
 	-1   0    0    1   
 $EndComp
@@ -760,7 +771,9 @@ L R R3
 U 1 1 5112B2DD
 P 7350 1700
 F 0 "R3" V 7430 1700 50  0000 C CNN
-F 1 "R" V 7350 1700 50  0000 C CNN
+F 1 "330" V 7350 1700 50  0000 C CNN
+F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 7350 1700 60  0001 C CNN
+F 4 "RMCF0805JG330R-ND" V 7350 1700 60  0001 C CNN "Digi-Key Part Number"
 	1    7350 1700
 	-1   0    0    1   
 $EndComp
@@ -787,7 +800,9 @@ L CP1 C13
 U 1 1 5112B08F
 P 6550 1950
 F 0 "C13" H 6600 2050 50  0000 L CNN
-F 1 "CP1" H 6600 1850 50  0000 L CNN
+F 1 "4u7" H 6600 1850 50  0000 L CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6550 1950 60  0001 C CNN
+F 4 "311-1371-2-ND" H 6550 1950 60  0001 C CNN "Digi-Key Part Number"
 	1    6550 1950
 	1    0    0    -1  
 $EndComp
@@ -861,7 +876,9 @@ L CP1 C12
 U 1 1 510FEA04
 P 4100 1700
 F 0 "C12" H 4150 1800 50  0000 L CNN
-F 1 "CP1" H 4150 1600 50  0000 L CNN
+F 1 "4u7" H 4150 1600 50  0000 L CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 4100 1700 60  0001 C CNN
+F 4 "311-1371-2-ND" H 4100 1700 60  0001 C CNN "Digi-Key Part Number"
 	1    4100 1700
 	0    1    1    0   
 $EndComp
@@ -999,7 +1016,9 @@ L INDUCTOR L1
 U 1 1 50C1377A
 P 2550 900
 F 0 "L1" V 2500 900 40  0000 C CNN
-F 1 "INDUCTOR" V 2650 900 40  0000 C CNN
+F 1 "100n" V 2650 900 40  0000 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CV201210.pdf" H 2550 900 60  0001 C CNN
+F 4 "CV201210-R10K-ND" H 2550 900 60  0001 C CNN "Digi-Key Part Number"
 	1    2550 900 
 	0    -1   -1   0   
 $EndComp
@@ -1039,7 +1058,9 @@ L CP1 C3
 U 1 1 50BFD20E
 P 3150 5600
 F 0 "C3" H 3200 5700 50  0000 L CNN
-F 1 "CP1" H 3200 5500 50  0000 L CNN
+F 1 "4u7" H 3200 5500 50  0000 L CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 3150 5600 60  0001 C CNN
+F 4 "311-1371-2-ND" H 3150 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    3150 5600
 	1    0    0    -1  
 $EndComp
@@ -1048,7 +1069,9 @@ L CP1 C1
 U 1 1 50BFD1FA
 P 2650 5600
 F 0 "C1" H 2700 5700 50  0000 L CNN
-F 1 "CP1" H 2700 5500 50  0000 L CNN
+F 1 "4u7" H 2700 5500 50  0000 L CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 2650 5600 60  0001 C CNN
+F 4 "311-1371-2-ND" H 2650 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    2650 5600
 	1    0    0    -1  
 $EndComp
@@ -1057,7 +1080,9 @@ L C C2
 U 1 1 50BFD1EF
 P 2900 5600
 F 0 "C2" H 2950 5700 50  0000 L CNN
-F 1 "C" H 2950 5500 50  0000 L CNN
+F 1 "100n" H 2950 5500 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 2900 5600 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 2900 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    2900 5600
 	1    0    0    -1  
 $EndComp
@@ -1066,7 +1091,9 @@ L C C4
 U 1 1 50BFD1E5
 P 3400 5600
 F 0 "C4" H 3450 5700 50  0000 L CNN
-F 1 "C" H 3450 5500 50  0000 L CNN
+F 1 "100n" H 3450 5500 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 3400 5600 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 3400 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    3400 5600
 	1    0    0    -1  
 $EndComp
@@ -1084,7 +1111,9 @@ L C C11
 U 1 1 50BFD14C
 P 7500 5600
 F 0 "C11" H 7550 5700 50  0000 L CNN
-F 1 "C" H 7550 5500 50  0000 L CNN
+F 1 "22p" H 7550 5500 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C220JCANNND.pdf" H 7500 5600 60  0001 C CNN
+F 4 "CL21C220JCANNND-ND" H 7500 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    7500 5600
 	1    0    0    -1  
 $EndComp
@@ -1093,7 +1122,9 @@ L C C10
 U 1 1 50BFD147
 P 6650 5600
 F 0 "C10" H 6700 5700 50  0000 L CNN
-F 1 "C" H 6700 5500 50  0000 L CNN
+F 1 "22p" H 6700 5500 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C220JCANNND.pdf" H 6650 5600 60  0001 C CNN
+F 4 "CL21C220JCANNND-ND" H 6650 5600 60  0001 C CNN "Digi-Key Part Number"
 	1    6650 5600
 	1    0    0    -1  
 $EndComp
@@ -1102,7 +1133,9 @@ L CP1 C9
 U 1 1 50BFCA97
 P 6200 1950
 F 0 "C9" H 6250 2050 50  0000 L CNN
-F 1 "CP1" H 6250 1850 50  0000 L CNN
+F 1 "4u7" H 6250 1850 50  0000 L CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6200 1950 60  0001 C CNN
+F 4 "311-1371-2-ND" H 6200 1950 60  0001 C CNN "Digi-Key Part Number"
 	1    6200 1950
 	1    0    0    -1  
 $EndComp
@@ -1111,7 +1144,9 @@ L INDUCTOR L2
 U 1 1 50BFC96A
 P 4400 1400
 F 0 "L2" V 4350 1400 40  0000 C CNN
-F 1 "100nH" V 4500 1400 40  0000 C CNN
+F 1 "100n" V 4500 1400 40  0000 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CV201210.pdf" H 4400 1400 60  0001 C CNN
+F 4 "CV201210-R10K-ND" H 4400 1400 60  0001 C CNN "Digi-Key Part Number"
 	1    4400 1400
 	1    0    0    -1  
 $EndComp
@@ -1119,8 +1154,10 @@ $Comp
 L C C5
 U 1 1 50BFC88B
 P 4100 2050
-F 0 "C5" H 4150 2150 50  0000 L CNN
-F 1 "C" H 4150 1950 50  0000 L CNN
+F 0 "C5" H 3950 1950 50  0000 L CNN
+F 1 "100n" H 3900 2150 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 4100 2050 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 4100 2050 60  0001 C CNN "Digi-Key Part Number"
 	1    4100 2050
 	0    -1   -1   0   
 $EndComp
@@ -1129,7 +1166,9 @@ L C C8
 U 1 1 50BFC882
 P 5900 1950
 F 0 "C8" H 5950 2050 50  0000 L CNN
-F 1 "C" H 5950 1850 50  0000 L CNN
+F 1 "100n" H 5950 1850 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5900 1950 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 5900 1950 60  0001 C CNN "Digi-Key Part Number"
 	1    5900 1950
 	1    0    0    -1  
 $EndComp
@@ -1138,7 +1177,9 @@ L C C7
 U 1 1 50BFC87D
 P 5600 1950
 F 0 "C7" H 5650 2050 50  0000 L CNN
-F 1 "C" H 5650 1850 50  0000 L CNN
+F 1 "100n" H 5650 1850 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5600 1950 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 5600 1950 60  0001 C CNN "Digi-Key Part Number"
 	1    5600 1950
 	1    0    0    -1  
 $EndComp
@@ -1147,7 +1188,9 @@ L C C6
 U 1 1 50BFC86D
 P 5300 1950
 F 0 "C6" H 5350 2050 50  0000 L CNN
-F 1 "C" H 5350 1850 50  0000 L CNN
+F 1 "100n" H 5350 1850 50  0000 L CNN
+F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5300 1950 60  0001 C CNN
+F 4 "CL21F104ZAANNND-ND" H 5300 1950 60  0001 C CNN "Digi-Key Part Number"
 	1    5300 1950
 	1    0    0    -1  
 $EndComp
@@ -1174,7 +1217,9 @@ L R R1
 U 1 1 50BFC714
 P 3500 2250
 F 0 "R1" V 3580 2250 50  0000 C CNN
-F 1 "R" V 3500 2250 50  0000 C CNN
+F 1 "10k" V 3500 2250 50  0000 C CNN
+F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3500 2250 60  0001 C CNN
+F 4 "RMCF0805JG10K0-ND" V 3500 2250 60  0001 C CNN "Digi-Key Part Number"
 	1    3500 2250
 	1    0    0    -1  
 $EndComp

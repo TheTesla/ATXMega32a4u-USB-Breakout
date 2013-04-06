@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 16.02.2013 02:45:23
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 06.04.2013 02:40:26
 
 BeginCmp
 TimeStamp = /50BFD1FA;
@@ -106,45 +106,24 @@ IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /511ECA78;
-Reference = D3;
-ValeurCmp = DIODESCH;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /511ECBE3;
-Reference = D4;
-ValeurCmp = DIODESCH;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /511ECBD7;
-Reference = D5;
-ValeurCmp = DIODESCH;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /511ECBE2;
-Reference = D6;
-ValeurCmp = DIODESCH;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /511EE433;
-Reference = D7;
+Reference = D3;
 ValeurCmp = LED;
-IdModule  = LED-0805;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /515F6E8D;
+Reference = D4;
+ValeurCmp = BAS70BRW;
+IdModule  = SOT363;
 EndCmp
 
 BeginCmp
 TimeStamp = /511EE41D;
-Reference = D8;
+Reference = D5;
 ValeurCmp = LED;
-IdModule  = LED-0805;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -164,7 +143,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50BFC96A;
 Reference = L2;
-ValeurCmp = INDUCTOR;
+ValeurCmp = 100nH;
 IdModule  = SM0805;
 EndCmp
 

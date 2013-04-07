@@ -1,547 +1,685 @@
-# EESchema Netlist Version 1.1 created  06.04.2013 23:39:27
-(
- ( /515F6E8D $noname  D4 BAS70BRW {Lib=BAS70BRW}
-  (    1 GND )
-  (    2 GND )
-  (    3 /PD7 )
-  (    4 N-000044 )
-  (    5 N-000044 )
-  (    6 /PD6 )
- )
- ( /511EE47A $noname  R5 680 {Lib=R}
-  (    1 N-000015 )
-  (    2 N-000044 )
- )
- ( /511EE462 $noname  R4 330 {Lib=R}
-  (    1 N-000016 )
-  (    2 /VCC )
- )
- ( /511EE433 $noname  D3 LED {Lib=LED}
-  (    1 N-000016 )
-  (    2 GND )
- )
- ( /511EE41D $noname  D5 LED {Lib=LED}
-  (    1 N-000015 )
-  (    2 GND )
- )
- ( /5116F17F $noname  P4 MICROUSB {Lib=MICROUSB}
-  (    1 N-000044 )
-  (    2 /PD6 )
-  (    3 /PD7 )
-  (    4 ? )
-  (    5 GND )
- )
- ( /51159BBF TQFP44  IC1 ATXMEGA32A4U {Lib=ATXMEGA32A4U}
-  (    1 /PA5 )
-  (    2 /PA6 )
-  (    3 /PA7 )
-  (    4 /PB0 )
-  (    5 /PB1 )
-  (    6 /PB2 )
-  (    7 /PB3 )
-  (    8 GND )
-  (    9 /VCC )
-  (   10 /PC0 )
-  (   11 /PC1 )
-  (   12 /PC2 )
-  (   13 /PC3 )
-  (   14 /PC4 )
-  (   15 /PC5 )
-  (   16 /PC6 )
-  (   17 /PC7 )
-  (   18 GND )
-  (   19 /VCC )
-  (   20 /PD0 )
-  (   21 /PD1 )
-  (   22 /PD2 )
-  (   23 /PD3 )
-  (   24 /PD4 )
-  (   25 /PD5 )
-  (   26 /PD6 )
-  (   27 /PD7 )
-  (   28 /PE0 )
-  (   29 /PE1 )
-  (   30 GND )
-  (   31 /VCC )
-  (   32 /PE2 )
-  (   33 /PE3 )
-  (   34 /PDI )
-  (   35 /RESET )
-  (   36 /PR0 )
-  (   37 /PR1 )
-  (   38 GND )
-  (   39 /AVCC )
-  (   40 /PA0 )
-  (   41 /PA1 )
-  (   42 /PA2 )
-  (   43 /PA3 )
-  (   44 /PA4 )
- )
- ( /5112B2F1 $noname  R2 330 {Lib=R}
-  (    1 N-000010 )
-  (    2 /PC6 )
- )
- ( /5112B2DD $noname  R3 330 {Lib=R}
-  (    1 N-000011 )
-  (    2 /PC7 )
- )
- ( /5112B2C6 $noname  D2 LED {Lib=LED}
-  (    1 N-000011 )
-  (    2 GND )
- )
- ( /5112B2B3 $noname  D1 LED {Lib=LED}
-  (    1 N-000010 )
-  (    2 GND )
- )
- ( /5112B08F $noname  C13 4u7 {Lib=CP1}
-  (    1 /VCC )
-  (    2 GND )
- )
- ( /510FEA04 $noname  C12 4u7 {Lib=CP1}
-  (    1 /AVCC )
-  (    2 GND )
- )
- ( /50C1377A $noname  L1 100n {Lib=INDUCTOR}
-  (    1 /VCC )
-  (    2 +3.3V )
- )
- ( /50BFDA14 $noname  P3 CONN_20 {Lib=CONN_20}
-  (    1 N-000044 )
-  (    2 GND )
-  (    3 +3.3V )
-  (    4 /PD0 )
-  (    5 /PD1 )
-  (    6 /PD2 )
-  (    7 /PD3 )
-  (    8 /PD4 )
-  (    9 /PD5 )
-  (   10 /PD6 )
-  (   11 /PD7 )
-  (   12 /PE0 )
-  (   13 /PE1 )
-  (   14 /PE2 )
-  (   15 /PE3 )
-  (   16 /PDI )
-  (   17 /RESET )
-  (   18 /PR0 )
-  (   19 /PR1 )
-  (   20 GND )
- )
- ( /50BFD73E $noname  P1 CONN_20 {Lib=CONN_20}
-  (    1 /PA0 )
-  (    2 /PA1 )
-  (    3 /PA2 )
-  (    4 /PA3 )
-  (    5 /PA4 )
-  (    6 /PA5 )
-  (    7 /PA6 )
-  (    8 /PA7 )
-  (    9 /PB0 )
-  (   10 /PB1 )
-  (   11 /PB2 )
-  (   12 /PB3 )
-  (   13 /PC0 )
-  (   14 /PC1 )
-  (   15 /PC2 )
-  (   16 /PC3 )
-  (   17 /PC4 )
-  (   18 /PC5 )
-  (   19 /PC6 )
-  (   20 /PC7 )
- )
- ( /50BFD20E $noname  C3 4u7 {Lib=CP1}
-  (    1 /PB0 )
-  (    2 GND )
- )
- ( /50BFD1FA $noname  C1 4u7 {Lib=CP1}
-  (    1 /PA0 )
-  (    2 GND )
- )
- ( /50BFD1EF $noname  C2 100n {Lib=C}
-  (    1 /PA0 )
-  (    2 GND )
- )
- ( /50BFD1E5 $noname  C4 100n {Lib=C}
-  (    1 /PB0 )
-  (    2 GND )
- )
- ( /50BFD15B $noname  X1 4_MHz {Lib=CRYSTAL}
-  (    1 /PR1 )
-  (    2 /PR0 )
- )
- ( /50BFD14C $noname  C11 18p {Lib=C}
-  (    1 /PR0 )
-  (    2 GND )
- )
- ( /50BFD147 $noname  C10 18p {Lib=C}
-  (    1 /PR1 )
-  (    2 GND )
- )
- ( /50BFCA97 $noname  C9 4u7 {Lib=CP1}
-  (    1 /VCC )
-  (    2 GND )
- )
- ( /50BFC96A $noname  L2 100n {Lib=INDUCTOR}
-  (    1 /VCC )
-  (    2 /AVCC )
- )
- ( /50BFC88B $noname  C5 100n {Lib=C}
-  (    1 GND )
-  (    2 /AVCC )
- )
- ( /50BFC882 $noname  C8 100n {Lib=C}
-  (    1 /VCC )
-  (    2 GND )
- )
- ( /50BFC87D $noname  C7 100n {Lib=C}
-  (    1 /VCC )
-  (    2 GND )
- )
- ( /50BFC86D $noname  C6 100n {Lib=C}
-  (    1 /VCC )
-  (    2 GND )
- )
- ( /50BFC714 $noname  R1 10k {Lib=R}
-  (    1 /VCC )
-  (    2 /RESET )
- )
- ( /50BFC5D3 $noname  P2 CONN_3X2 {Lib=CONN_3X2}
-  (    1 /PDI )
-  (    2 /VCC )
-  (    3 ? )
-  (    4 ? )
-  (    5 /RESET )
-  (    6 GND )
- )
-)
-*
-{ Allowed footprints by component:
-$component R5
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D5
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C13
- CP*
- SM*
-$endlist
-$component C12
- CP*
- SM*
-$endlist
-$component C3
- CP*
- SM*
-$endlist
-$component C1
- CP*
- SM*
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C4
- SM*
- C?
- C1-1
-$endlist
-$component C11
- SM*
- C?
- C1-1
-$endlist
-$component C10
- SM*
- C?
- C1-1
-$endlist
-$component C9
- CP*
- SM*
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$component C8
- SM*
- C?
- C1-1
-$endlist
-$component C7
- SM*
- C?
- C1-1
-$endlist
-$component C6
- SM*
- C?
- C1-1
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$endfootprintlist
-}
-{ Pin List by Nets
-Net 1 "/PB1" "PB1"
- P1 10
- IC1 5
-Net 2 "/PB2" "PB2"
- P1 11
- IC1 6
-Net 3 "/PA1" "PA1"
- IC1 41
- P1 2
-Net 4 "/PE2" "PE2"
- P3 14
- IC1 32
-Net 5 "/PD5" "PD5"
- IC1 25
- P3 9
-Net 6 "/PD3" "PD3"
- IC1 23
- P3 7
-Net 7 "/PE0" "PE0"
- P3 12
- IC1 28
-Net 8 "/PE1" "PE1"
- IC1 29
- P3 13
-Net 9 "GND" "GND"
- D4 1
- C4 2
- C2 2
- C1 2
- C3 2
- C11 2
- C10 2
- C9 2
- C5 1
- C8 2
- C7 2
- C12 2
- P2 6
- P3 20
- P3 2
- P4 5
- C6 2
- D4 2
- IC1 18
- IC1 38
- C13 2
- IC1 30
- IC1 8
- D2 2
- D1 2
- D3 2
- D5 2
-Net 10 "" ""
- D1 1
- R2 1
-Net 11 "" ""
- R3 1
- D2 1
-Net 12 "/PE3" "PE3"
- P3 15
- IC1 33
-Net 13 "/PD7" "PD7"
- D4 3
- P3 11
- P4 3
- IC1 27
-Net 15 "" ""
- R5 1
- D5 1
-Net 16 "" ""
- R4 1
- D3 1
-Net 17 "/PB3" "PB3"
- IC1 7
- P1 12
-Net 18 "/PC0" "PC0"
- IC1 10
- P1 13
-Net 19 "/PC5" "PC5"
- IC1 15
- P1 18
-Net 20 "/PC6" "PC6"
- P1 19
- R2 2
- IC1 16
-Net 21 "/PA3" "PA3"
- IC1 43
- P1 4
-Net 22 "/PR0" "PR0"
- C11 1
- P3 18
- X1 2
- IC1 36
-Net 23 "/PA2" "PA2"
- IC1 42
- P1 3
-Net 24 "/PA4" "PA4"
- IC1 44
- P1 5
-Net 25 "/PA5" "PA5"
- P1 6
- IC1 1
-Net 26 "/PA6" "PA6"
- P1 7
- IC1 2
-Net 27 "/PA7" "PA7"
- P1 8
- IC1 3
-Net 28 "/PC7" "PC7"
- P1 20
- IC1 17
- R3 2
-Net 31 "/VCC" "VCC"
- L1 1
- C13 1
- IC1 19
- R4 2
- C9 1
- IC1 9
- R1 1
- L2 1
- C8 1
- P2 2
- C6 1
- C7 1
- IC1 31
-Net 32 "/PC1" "PC1"
- P1 14
- IC1 11
-Net 33 "/PC2" "PC2"
- P1 15
- IC1 12
-Net 34 "/PC3" "PC3"
- IC1 13
- P1 16
-Net 35 "/PD1" "PD1"
- P3 5
- IC1 21
-Net 36 "/PC4" "PC4"
- P1 17
- IC1 14
-Net 37 "+3.3V" "+3.3V"
- P3 3
- L1 2
-Net 38 "/PD0" "PD0"
- IC1 20
- P3 4
-Net 39 "/PD2" "PD2"
- IC1 22
- P3 6
-Net 40 "/PD4" "PD4"
- IC1 24
- P3 8
-Net 41 "/PB0" "PB0"
- C3 1
- C4 1
- IC1 4
- P1 9
-Net 42 "/PR1" "PR1"
- IC1 37
- C10 1
- P3 19
- X1 1
-Net 43 "/PA0" "PA0"
- P1 1
- C1 1
- C2 1
- IC1 40
-Net 44 "" ""
- P3 1
- D4 5
- D4 4
- R5 2
- P4 1
-Net 45 "/PD6" "PD6"
- P3 10
- IC1 26
- D4 6
- P4 2
-Net 46 "/AVCC" "AVCC"
- C12 1
- C5 2
- L2 2
- IC1 39
-Net 47 "/PDI" "PDI"
- IC1 34
- P2 1
- P3 16
-Net 48 "/RESET" "RESET"
- P3 17
- R1 2
- IC1 35
- P2 5
-}
-#End
+(export (version D)
+  (design
+    (source C:\Projekte\KiCAD\ATXMega32_USB\ATXMega32_USB.sch)
+    (date "07.04.2013 01:31:56")
+    (tool "eeschema (2013-03-31 BZR 4008)-stable"))
+  (components
+    (comp (ref D4)
+      (value BAS70BRW)
+      (libsource (lib ATXMega32_USB-cache) (part BAS70BRW))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 515F6E8D))
+    (comp (ref R5)
+      (value 680)
+      (datasheet http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") RMCF0805JG680R-ND))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 511EE47A))
+    (comp (ref R4)
+      (value 330)
+      (datasheet http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") RMCF0805JG330R-ND))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 511EE462))
+    (comp (ref D3)
+      (value LED)
+      (datasheet http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0188&txtPartNo=LTST-C170KSKT)
+      (fields
+        (field (name "Digi-Key Part Number") 160-1416-2-ND)
+        (field (name "Manufacturer Part Number") 160-1416-2-ND)
+        (field (name Color) yellow))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 511EE433))
+    (comp (ref D5)
+      (value LED)
+      (datasheet http://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C171TBKT.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 160-1645-2-ND)
+        (field (name "Manufacturer Part Number") LTST-C171TBKT)
+        (field (name Color) blue))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 511EE41D))
+    (comp (ref P4)
+      (value MICROUSB)
+      (datasheet http://portal.fciconnect.com/Comergent//fci/drawing/10118192.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 609-4613-2-ND)
+        (field (name "Manufacturer Part Number") 10118192-0001LF))
+      (libsource (lib connectors) (part MICROUSB))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5116F17F))
+    (comp (ref IC1)
+      (value ATXMEGA32A4U)
+      (footprint TQFP44)
+      (datasheet http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") ATXMEGA32A4U-AURTR-ND)
+        (field (name Alternative) "ATXMEGA128A4U-AU-ND	"))
+      (libsource (lib ATXMega32_USB-cache) (part ATXMEGA32A4U))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51159BBF))
+    (comp (ref R2)
+      (value 330)
+      (datasheet http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") RMCF0805JG330R-ND))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5112B2F1))
+    (comp (ref R3)
+      (value 330)
+      (datasheet http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") RMCF0805JG330R-ND))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5112B2DD))
+    (comp (ref D2)
+      (value LED)
+      (datasheet http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0150&txtPartNo=LTST-C170KRKT)
+      (fields
+        (field (name "Digi-Key Part Number") 160-1415-2-ND)
+        (field (name "Manufacturer Part Number") LTST-C170KRKT)
+        (field (name Color) red))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5112B2C6))
+    (comp (ref D1)
+      (value LED)
+      (datasheet http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS22-2000-118&txtPartNo=LTST-C171KGKT)
+      (fields
+        (field (name "Digi-Key Part Number") 160-1426-2-ND)
+        (field (name "Manufacturer Part Number") LTST-C171KGKT)
+        (field (name Color) green))
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5112B2B3))
+    (comp (ref C13)
+      (value 4u7)
+      (datasheet http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 311-1371-2-ND))
+      (libsource (lib device) (part CP1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5112B08F))
+    (comp (ref C12)
+      (value 4u7)
+      (datasheet http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 311-1371-2-ND))
+      (libsource (lib device) (part CP1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 510FEA04))
+    (comp (ref L1)
+      (value 100n)
+      (datasheet http://www.bourns.com/data/global/pdfs/CV201210.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CV201210-R10K-ND))
+      (libsource (lib device) (part INDUCTOR))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50C1377A))
+    (comp (ref P3)
+      (value CONN_20)
+      (fields
+        (field (name Notes) "1/2 of Part")
+        (field (name "CSD-Electronics Part Number") 15435))
+      (libsource (lib conn) (part CONN_20))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFDA14))
+    (comp (ref P1)
+      (value CONN_20)
+      (fields
+        (field (name Notes) "1/2 of Part")
+        (field (name "CSD-Electronics Part Number") 15435))
+      (libsource (lib conn) (part CONN_20))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD73E))
+    (comp (ref C3)
+      (value 4u7)
+      (datasheet http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 311-1371-2-ND))
+      (libsource (lib device) (part CP1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD20E))
+    (comp (ref C1)
+      (value 4u7)
+      (datasheet http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 311-1371-2-ND))
+      (libsource (lib device) (part CP1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD1FA))
+    (comp (ref C2)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD1EF))
+    (comp (ref C4)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD1E5))
+    (comp (ref X1)
+      (value "4 MHz")
+      (datasheet http://www.abracon.com/Resonators/ABL.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 535-9057-ND)
+        (field (name "Manufacturer Part Number") ABL-4.000MHZ-B2))
+      (libsource (lib device) (part CRYSTAL))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD15B))
+    (comp (ref C11)
+      (value 18p)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21C180JBANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD14C))
+    (comp (ref C10)
+      (value 18p)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21C180JBANNND-ND)
+        (field (name "Manufacturer Part Number") CL21C180JBANNND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFD147))
+    (comp (ref C9)
+      (value 4u7)
+      (datasheet http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") 311-1371-2-ND))
+      (libsource (lib device) (part CP1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFCA97))
+    (comp (ref L2)
+      (value 100n)
+      (datasheet http://www.bourns.com/data/global/pdfs/CV201210.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CV201210-R10K-ND))
+      (libsource (lib device) (part INDUCTOR))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC96A))
+    (comp (ref C5)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC88B))
+    (comp (ref C8)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC882))
+    (comp (ref C7)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC87D))
+    (comp (ref C6)
+      (value 100n)
+      (datasheet http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") CL21F104ZAANNND-ND))
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC86D))
+    (comp (ref R1)
+      (value 10k)
+      (datasheet http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf)
+      (fields
+        (field (name "Digi-Key Part Number") RMCF0805JG10K0-ND))
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC714))
+    (comp (ref P2)
+      (value CONN_3X2)
+      (fields
+        (field (name Notes) "3/40 of Part")
+        (field (name "CSD-Electronics Part Number") 15485))
+      (libsource (lib conn) (part CONN_3X2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 50BFC5D3))
+    (comp (ref D6)
+      (value 6V2)
+      (datasheet http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF)
+      (fields
+        (field (name "Digi-Key Part Number") "SZMM3Z6V2T1G-ND	"))
+      (libsource (lib device) (part ZENER))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5160AECB)))
+  (libparts
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part CP1)
+      (description "Condensateur polarise")
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP1)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part CRYSTAL)
+      (fields
+        (field (name Reference) X)
+        (field (name Value) CRYSTAL)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib device) (part INDUCTOR)
+      (fields
+        (field (name Reference) L)
+        (field (name Value) INDUCTOR)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part ZENER)
+      (description "Diode zener")
+      (footprints
+        (fp D?)
+        (fp SO*)
+        (fp SM*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) ZENER)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib conn) (part CONN_20)
+      (description "Symbole general de connexion")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_20))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))
+        (pin (num 5) (name P5) (type passive))
+        (pin (num 6) (name P6) (type passive))
+        (pin (num 7) (name P7) (type passive))
+        (pin (num 8) (name P8) (type passive))
+        (pin (num 9) (name P9) (type passive))
+        (pin (num 10) (name P10) (type passive))
+        (pin (num 11) (name P11) (type passive))
+        (pin (num 12) (name P12) (type passive))
+        (pin (num 13) (name P13) (type passive))
+        (pin (num 14) (name P14) (type passive))
+        (pin (num 15) (name P15) (type passive))
+        (pin (num 16) (name P16) (type passive))
+        (pin (num 17) (name P17) (type passive))
+        (pin (num 18) (name P18) (type passive))
+        (pin (num 19) (name P19) (type passive))
+        (pin (num 20) (name P20) (type passive))))
+    (libpart (lib conn) (part CONN_3X2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_3X2))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))
+        (pin (num 4) (name 4) (type passive))
+        (pin (num 5) (name 5) (type passive))
+        (pin (num 6) (name 6) (type passive))))
+    (libpart (lib connectors) (part MICROUSB)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) MICROUSB))
+      (pins
+        (pin (num 1) (name VCC) (type power_in))
+        (pin (num 2) (name D-) (type BiDi))
+        (pin (num 3) (name D+) (type BiDi))
+        (pin (num 4) (name ID) (type unspc))
+        (pin (num 5) (name GND) (type unspc))))
+    (libpart (lib ATXMega32_USB-cache) (part ATXMEGA32A4U)
+      (fields
+        (field (name Reference) IC)
+        (field (name Value) ATXMEGA32A4U)
+        (field (name Footprint) TQFP44))
+      (pins
+        (pin (num 1) (name "PA5(ADC5/AC5)") (type BiDi))
+        (pin (num 2) (name "PA6(ADC6/AC6/AC1_OUT)") (type BiDi))
+        (pin (num 3) (name "PA7(ADC7/AC7/AC0_OUT)") (type BiDi))
+        (pin (num 4) (name "PB0(ADC8/AREF)") (type BiDi))
+        (pin (num 5) (name "PB1(ADC9)") (type BiDi))
+        (pin (num 6) (name "PB2(ADC10/DAC0)") (type BiDi))
+        (pin (num 7) (name "PB3(ADC11/DAC1)") (type BiDi))
+        (pin (num 8) (name GND) (type power_in))
+        (pin (num 9) (name VCC) (type power_in))
+        (pin (num 10) (name "(OC0A/~OC0ALS~/SDA)PC0") (type BiDi))
+        (pin (num 11) (name "(OC0B/OC0AHS/SCL/XCK0)PC1") (type BiDi))
+        (pin (num 12) (name "(OC0C/~OC0BLS~/RXD0)PC2") (type BiDi))
+        (pin (num 13) (name "(OC0D/OC0BHS/TXD0)PC3") (type BiDi))
+        (pin (num 14) (name "(~OC0CLS~/OC1A/~SS~)PC4") (type BiDi))
+        (pin (num 15) (name "(OC0CHS/OC1B/XCK1/MOSI)PC5") (type BiDi))
+        (pin (num 16) (name "(~OC0DLS~/RXD1/MISO/clk_RTC)PC6") (type BiDi))
+        (pin (num 17) (name "(OC0DHS/TXD1/SCK/CLKOUT/EVOUT/clk_PER)PC7") (type BiDi))
+        (pin (num 18) (name GND) (type power_in))
+        (pin (num 19) (name VCC) (type power_in))
+        (pin (num 20) (name "(OC0A)PD0") (type BiDi))
+        (pin (num 21) (name "(OC0B/XCK0)PD1") (type BiDi))
+        (pin (num 22) (name "(OC0C/RXD0)PD2") (type BiDi))
+        (pin (num 23) (name "(OC0D/TXD0)PD3") (type BiDi))
+        (pin (num 24) (name "(OC1A/~SS~)PD4") (type BiDi))
+        (pin (num 25) (name "(OC1B/XCK1/MOSI)PD5") (type BiDi))
+        (pin (num 26) (name "(RXD1/MISO/D-)PD6") (type BiDi))
+        (pin (num 27) (name "(TXD1/SCK/CLKOUT/EVOUT/D+/clk_PER)PD7") (type BiDi))
+        (pin (num 28) (name "(OC0A/SDA)PE0") (type BiDi))
+        (pin (num 29) (name "(OC0B/SCL/XCK0)PE1") (type BiDi))
+        (pin (num 30) (name GND) (type power_in))
+        (pin (num 31) (name VCC) (type power_in))
+        (pin (num 32) (name "(OC0C/RXD0)PE2") (type BiDi))
+        (pin (num 33) (name "(OC0D/TXD0)PE3") (type BiDi))
+        (pin (num 34) (name PDI_DATA) (type input))
+        (pin (num 35) (name ~RESET~/PDI_CLK) (type input))
+        (pin (num 36) (name "(XTAL2/TOSC2)PR0") (type BiDi))
+        (pin (num 37) (name "(XTAL1/TOSC1)PR1") (type BiDi))
+        (pin (num 38) (name GND) (type power_in))
+        (pin (num 39) (name AVCC) (type power_in))
+        (pin (num 40) (name "PA0(ADC0/AC0/AREF)") (type BiDi))
+        (pin (num 41) (name "PA1(ADC1/AC1)") (type BiDi))
+        (pin (num 42) (name "PA2(ADC2/AC2)") (type BiDi))
+        (pin (num 43) (name "PA3(ADC3/AC3)") (type BiDi))
+        (pin (num 44) (name "PA4(ADC4/AC4)") (type BiDi))))
+    (libpart (lib ATXMega32_USB-cache) (part BAS70BRW)
+      (fields
+        (field (name Reference) D)
+        (field (name Value) BAS70BRW))
+      (pins
+        (pin (num 1) (name anode) (type passive))
+        (pin (num 2) (name Anode) (type passive))
+        (pin (num 3) (name AK) (type passive))
+        (pin (num 4) (name cathode) (type passive))
+        (pin (num 5) (name cathode) (type passive))
+        (pin (num 6) (name AK) (type passive)))))
+  (libraries
+    (library (logical device)
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
+    (library (logical conn)
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
+    (library (logical connectors)
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\connectors.lib"))
+    (library (logical ATXMega32_USB-cache)
+      (uri C:\Projekte\KiCAD\ATXMega32_USB\ATXMega32_USB-cache.lib)))
+  (nets
+    (net (code 1) (name /PR0)
+      (node (ref P3) (pin 18))
+      (node (ref IC1) (pin 36))
+      (node (ref C11) (pin 1))
+      (node (ref X1) (pin 2)))
+    (net (code 2) (name /VCC)
+      (node (ref R1) (pin 1))
+      (node (ref R4) (pin 2))
+      (node (ref C13) (pin 1))
+      (node (ref C9) (pin 1))
+      (node (ref L2) (pin 1))
+      (node (ref C8) (pin 1))
+      (node (ref C7) (pin 1))
+      (node (ref IC1) (pin 31))
+      (node (ref IC1) (pin 9))
+      (node (ref C6) (pin 1))
+      (node (ref P2) (pin 2))
+      (node (ref L1) (pin 1))
+      (node (ref IC1) (pin 19)))
+    (net (code 3) (name /PA1)
+      (node (ref IC1) (pin 41))
+      (node (ref P1) (pin 2)))
+    (net (code 4) (name /PR1)
+      (node (ref C10) (pin 1))
+      (node (ref X1) (pin 1))
+      (node (ref P3) (pin 19))
+      (node (ref IC1) (pin 37)))
+    (net (code 5) (name /PD3)
+      (node (ref P3) (pin 7))
+      (node (ref IC1) (pin 23)))
+    (net (code 6) (name /PD1)
+      (node (ref IC1) (pin 21))
+      (node (ref P3) (pin 5)))
+    (net (code 7) (name /PC6)
+      (node (ref P1) (pin 19))
+      (node (ref IC1) (pin 16))
+      (node (ref R2) (pin 2)))
+    (net (code 8) (name /PC7)
+      (node (ref R3) (pin 2))
+      (node (ref IC1) (pin 17))
+      (node (ref P1) (pin 20)))
+    (net (code 9) (name "")
+      (node (ref D2) (pin 1))
+      (node (ref R3) (pin 1)))
+    (net (code 10) (name "")
+      (node (ref R2) (pin 1))
+      (node (ref D1) (pin 1)))
+    (net (code 11) (name GND)
+      (node (ref C6) (pin 2))
+      (node (ref C7) (pin 2))
+      (node (ref C8) (pin 2))
+      (node (ref C5) (pin 1))
+      (node (ref C9) (pin 2))
+      (node (ref P3) (pin 2))
+      (node (ref P3) (pin 20))
+      (node (ref C12) (pin 2))
+      (node (ref P4) (pin 5))
+      (node (ref D5) (pin 2))
+      (node (ref C10) (pin 2))
+      (node (ref D4) (pin 1))
+      (node (ref C11) (pin 2))
+      (node (ref D4) (pin 2))
+      (node (ref C4) (pin 2))
+      (node (ref D3) (pin 2))
+      (node (ref C2) (pin 2))
+      (node (ref C3) (pin 2))
+      (node (ref C1) (pin 2))
+      (node (ref D2) (pin 2))
+      (node (ref IC1) (pin 8))
+      (node (ref P2) (pin 6))
+      (node (ref IC1) (pin 38))
+      (node (ref D1) (pin 2))
+      (node (ref IC1) (pin 30))
+      (node (ref C13) (pin 2))
+      (node (ref IC1) (pin 18))
+      (node (ref D6) (pin 1)))
+    (net (code 12) (name /PD7)
+      (node (ref P3) (pin 11))
+      (node (ref D4) (pin 3))
+      (node (ref IC1) (pin 27))
+      (node (ref P4) (pin 3)))
+    (net (code 13) (name "")
+      (node (ref P4) (pin 4)))
+    (net (code 14) (name /PB1)
+      (node (ref IC1) (pin 5))
+      (node (ref P1) (pin 10)))
+    (net (code 15) (name /PB2)
+      (node (ref P1) (pin 11))
+      (node (ref IC1) (pin 6)))
+    (net (code 16) (name "")
+      (node (ref D5) (pin 1))
+      (node (ref R5) (pin 1)))
+    (net (code 17) (name "")
+      (node (ref D3) (pin 1))
+      (node (ref R4) (pin 1)))
+    (net (code 18) (name /PB0)
+      (node (ref IC1) (pin 4))
+      (node (ref C3) (pin 1))
+      (node (ref P1) (pin 9))
+      (node (ref C4) (pin 1)))
+    (net (code 19) (name /PA0)
+      (node (ref P1) (pin 1))
+      (node (ref IC1) (pin 40))
+      (node (ref C1) (pin 1))
+      (node (ref C2) (pin 1)))
+    (net (code 20) (name /PA2)
+      (node (ref P1) (pin 3))
+      (node (ref IC1) (pin 42)))
+    (net (code 21) (name /PA3)
+      (node (ref IC1) (pin 43))
+      (node (ref P1) (pin 4)))
+    (net (code 22) (name /PA4)
+      (node (ref P1) (pin 5))
+      (node (ref IC1) (pin 44)))
+    (net (code 23) (name /PA5)
+      (node (ref IC1) (pin 1))
+      (node (ref P1) (pin 6)))
+    (net (code 24) (name /PA6)
+      (node (ref IC1) (pin 2))
+      (node (ref P1) (pin 7)))
+    (net (code 25) (name /PA7)
+      (node (ref IC1) (pin 3))
+      (node (ref P1) (pin 8)))
+    (net (code 26) (name /PB3)
+      (node (ref P1) (pin 12))
+      (node (ref IC1) (pin 7)))
+    (net (code 27) (name "")
+      (node (ref P2) (pin 3)))
+    (net (code 28) (name "")
+      (node (ref P2) (pin 4)))
+    (net (code 29) (name /PC1)
+      (node (ref IC1) (pin 11))
+      (node (ref P1) (pin 14)))
+    (net (code 30) (name /PC2)
+      (node (ref P1) (pin 15))
+      (node (ref IC1) (pin 12)))
+    (net (code 31) (name /PC3)
+      (node (ref IC1) (pin 13))
+      (node (ref P1) (pin 16)))
+    (net (code 32) (name /PC4)
+      (node (ref P1) (pin 17))
+      (node (ref IC1) (pin 14)))
+    (net (code 33) (name /PC5)
+      (node (ref P1) (pin 18))
+      (node (ref IC1) (pin 15)))
+    (net (code 34) (name /PC0)
+      (node (ref P1) (pin 13))
+      (node (ref IC1) (pin 10)))
+    (net (code 35) (name /PD0)
+      (node (ref P3) (pin 4))
+      (node (ref IC1) (pin 20)))
+    (net (code 36) (name /PD2)
+      (node (ref P3) (pin 6))
+      (node (ref IC1) (pin 22)))
+    (net (code 37) (name /PD4)
+      (node (ref IC1) (pin 24))
+      (node (ref P3) (pin 8)))
+    (net (code 38) (name +3.3V)
+      (node (ref L1) (pin 2))
+      (node (ref P3) (pin 3)))
+    (net (code 39) (name /PE2)
+      (node (ref P3) (pin 14))
+      (node (ref IC1) (pin 32)))
+    (net (code 40) (name /PDI)
+      (node (ref P2) (pin 1))
+      (node (ref P3) (pin 16))
+      (node (ref IC1) (pin 34)))
+    (net (code 41) (name /PE1)
+      (node (ref P3) (pin 13))
+      (node (ref IC1) (pin 29)))
+    (net (code 42) (name /AVCC)
+      (node (ref C5) (pin 2))
+      (node (ref L2) (pin 2))
+      (node (ref C12) (pin 1))
+      (node (ref IC1) (pin 39)))
+    (net (code 43) (name "")
+      (node (ref P4) (pin 1))
+      (node (ref D6) (pin 2))
+      (node (ref R5) (pin 2))
+      (node (ref D4) (pin 4))
+      (node (ref D4) (pin 5))
+      (node (ref P3) (pin 1)))
+    (net (code 44) (name /PD6)
+      (node (ref P4) (pin 2))
+      (node (ref D4) (pin 6))
+      (node (ref IC1) (pin 26))
+      (node (ref P3) (pin 10)))
+    (net (code 45) (name /PE0)
+      (node (ref P3) (pin 12))
+      (node (ref IC1) (pin 28)))
+    (net (code 46) (name /PE3)
+      (node (ref IC1) (pin 33))
+      (node (ref P3) (pin 15)))
+    (net (code 47) (name /PD5)
+      (node (ref IC1) (pin 25))
+      (node (ref P3) (pin 9)))
+    (net (code 48) (name /RESET)
+      (node (ref IC1) (pin 35))
+      (node (ref P3) (pin 17))
+      (node (ref R1) (pin 2))
+      (node (ref P2) (pin 5)))))

@@ -1,4 +1,4 @@
-update=10.02.2013 02:03:48
+update=07.04.2013 01:48:50
 version=1
 last_client=cvpcb
 [pcbnew]
@@ -78,6 +78,7 @@ LibName19=smd_dil
 LibName20=smd_resistors
 LibName21=smd_transistors
 LibName22=w_smd_lqfp
+LibName23=sod323
 LibDir=
 [general]
 version=1

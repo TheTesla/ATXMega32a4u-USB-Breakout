@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 07.04.2013 01:49:28
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 07.04.2013 05:55:51
 
 BeginCmp
 TimeStamp = /50BFD1FA;
@@ -109,7 +109,7 @@ BeginCmp
 TimeStamp = /511EE433;
 Reference = D3;
 ValeurCmp = LED;
-IdModule  = SM0805;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
@@ -123,7 +123,7 @@ BeginCmp
 TimeStamp = /511EE41D;
 Reference = D5;
 ValeurCmp = LED;
-IdModule  = SM0805;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp

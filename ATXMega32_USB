@@ -29,5 +29,5 @@ C8, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/DownloadServlet?dir=par
 C7, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf, CL21F104ZAANNND-ND, 010002001, , , , , ; 
 C6, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf, CL21F104ZAANNND-ND, 010002001, , , , , ; 
 R1, 10k, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JG10K0-ND, 002004001, , , , , ; 
-P2, CONN_3X2, pin_array_3x2, , , , , , , 3/40 of Part , 15485; 
+P2, CONN_3X2, pin_array_3x2, , , 346018001, , , , 3/40 of Part , 15485; 
 D6, 6V2, SOD323, http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF, SZMM3Z6V2T1G-ND	, , , , , , ; 

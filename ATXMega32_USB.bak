@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 15.04.2013 23:49:09
+EESchema Schematic File Version 2  date 16.04.2013 02:00:40
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -842,7 +842,8 @@ F 2 "LED-0805" H 7350 2200 60  0001 C CNN
 F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0150&txtPartNo=LTST-C170KRKT" H 7350 2200 60  0001 C CNN
 F 4 "160-1415-2-ND" H 7350 2200 60  0001 C CNN "Digi-Key Part Number"
 F 5 "LTST-C170KRKT" H 7350 2200 60  0001 C CNN "Manufacturer Part Number"
-F 6 "red" H 7350 2200 60  0001 C CNN "Color"
+F 6 "033004001" H 7350 2200 60  0001 C CNN "Seeed OPL SKU"
+F 7 "red" H 7350 2200 60  0001 C CNN "Color"
 	1    7350 2200
 	0    1    1    0   
 $EndComp
@@ -856,7 +857,8 @@ F 2 "LED-0805" H 7050 2200 60  0001 C CNN
 F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS22-2000-118&txtPartNo=LTST-C171KGKT" H 7050 2200 60  0001 C CNN
 F 4 "160-1426-2-ND" H 7050 2200 60  0001 C CNN "Digi-Key Part Number"
 F 5 "LTST-C171KGKT" H 7050 2200 60  0001 C CNN "Manufacturer Part Number"
-F 6 "green" H 7050 2200 60  0001 C CNN "Color"
+F 6 "033003001" H 7050 2200 60  0001 C CNN "Seeed OPL SKU"
+F 7 "green" H 7050 2200 60  0001 C CNN "Color"
 	1    7050 2200
 	0    1    1    0   
 $EndComp
@@ -1377,7 +1379,8 @@ F 3 "~" H 2850 2650 60  0001 C CNN
 F 4 "~" H 2850 2650 60  0001 C CNN "Digi-Key Part Number"
 F 5 "~" H 2850 2650 60  0001 C CNN "Manufacturer Part Number"
 F 6 "3/40 of Part " H 2850 2650 60  0001 C CNN "Notes"
-F 7 "15485" H 2850 2650 60  0001 C CNN "CSD-Electronics Part Number"
+F 7 "346018001" H 2850 2650 60  0001 C CNN "Seeed OPL SKU"
+F 8 "15485" H 2850 2650 60  0001 C CNN "CSD-Electronics Part Number"
 	1    2850 2650
 	-1   0    0    1   
 $EndComp

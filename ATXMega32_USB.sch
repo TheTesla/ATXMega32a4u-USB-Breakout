@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 15.04.2013 23:52:48
+EESchema Schematic File Version 2  date 20.04.2013 01:52:58
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -50,7 +50,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "15 apr 2013"
+Date "19 apr 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1379,7 +1379,8 @@ F 3 "~" H 2850 2650 60  0001 C CNN
 F 4 "~" H 2850 2650 60  0001 C CNN "Digi-Key Part Number"
 F 5 "~" H 2850 2650 60  0001 C CNN "Manufacturer Part Number"
 F 6 "3/40 of Part " H 2850 2650 60  0001 C CNN "Notes"
-F 7 "15485" H 2850 2650 60  0001 C CNN "CSD-Electronics Part Number"
+F 7 "346018001" H 2850 2650 60  0001 C CNN "Seeed OPL SKU"
+F 8 "15485" H 2850 2650 60  0001 C CNN "CSD-Electronics Part Number"
 	1    2850 2650
 	-1   0    0    1   
 $EndComp
@@ -1402,7 +1403,7 @@ F 0 "D6" H 10100 2250 50  0000 C CNN
 F 1 "6V2" H 10100 2050 40  0000 C CNN
 F 2 "SOD323" H 10100 1850 60  0001 C CNN
 F 3 "http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF" H 10100 2150 60  0001 C CNN
-F 4 "SZMM3Z6V2T1G-ND	" H 10100 2150 60  0001 C CNN "Digi-Key Part Number"
+F 4 "SZMM3Z6V2T1G-ND" H 10100 2150 60  0001 C CNN "Digi-Key Part Number"
 	1    10100 2150
 	0    -1   -1   0   
 $EndComp

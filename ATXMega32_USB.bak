@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 16.04.2013 02:00:40
+EESchema Schematic File Version 2  date 14.05.2013 16:39:18
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -50,7 +50,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "15 apr 2013"
+Date "14 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -650,7 +650,7 @@ F 0 "D4" H 9200 1850 40  0000 C CNN
 F 1 "BAS70BRW" H 9100 2050 40  0000 C CNN
 F 2 "SOT363" H 9100 1950 60  0001 C CNN
 F 3 "http://www.mccsemi.com/up_pdf/BAS70TW_DW-04_DW-05_DW-06_BRW(SOT-363).PDF" H 9100 1950 60  0001 C CNN
-F 4 "BAS70BRW-TPTR-ND" H 9100 1950 60  0001 C CNN "Digi-Key Part Number"
+F 4 "BAS70BRW-TPCT-ND" H 9100 1950 60  0001 C CNN "Digi-Key Part Number"
 F 5 "~" H 9100 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "~" H 9100 1950 60  0001 C CNN "Notes"
 	1    9100 1950
@@ -664,7 +664,7 @@ F 0 "D4" H 9500 1850 40  0000 C CNN
 F 1 "BAS70BRW" H 9400 2050 40  0000 C CNN
 F 2 "SOT363" H 9400 1950 60  0001 C CNN
 F 3 "http://www.mccsemi.com/up_pdf/BAS70TW_DW-04_DW-05_DW-06_BRW(SOT-363).PDF" H 9400 1950 60  0001 C CNN
-F 4 "BAS70BRW-TPTR-ND" H 9400 1950 60  0001 C CNN "Digi-Key Part Number"
+F 4 "BAS70BRW-TPCT-ND" H 9400 1950 60  0001 C CNN "Digi-Key Part Number"
 F 5 "~" H 9400 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "~" H 9400 1950 60  0001 C CNN "Notes"
 	2    9400 1950
@@ -678,8 +678,9 @@ F 0 "R5" V 9830 1600 50  0000 C CNN
 F 1 "1k5" V 9750 1600 50  0000 C CNN
 F 2 "SM0805" H 9750 1600 60  0001 C CNN
 F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 9750 1600 60  0001 C CNN
-F 4 "RMCF0805JG680R-ND" V 9750 1600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "002022001" H 9750 1600 60  0001 C CNN "Seeed OPL SKU"
+F 4 "RMCF0805JT1K50CT-ND" H 9750 1600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "RMCF0805JT1K50" H 9750 1600 60  0001 C CNN "Manufacturer Part Number"
+F 6 "002022001" H 9750 1600 60  0001 C CNN "Seeed OPL SKU"
 	1    9750 1600
 	-1   0    0    1   
 $EndComp
@@ -691,8 +692,9 @@ F 0 "R4" V 6180 1100 50  0000 C CNN
 F 1 "1k" V 6100 1100 50  0000 C CNN
 F 2 "SM0805" H 6100 1100 60  0001 C CNN
 F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 6100 1100 60  0001 C CNN
-F 4 "RMCF0805JG330R-ND" V 6100 1100 60  0001 C CNN "Digi-Key Part Number"
-F 5 "002011001" H 6100 1100 60  0001 C CNN "Seeed OPL SKU"
+F 4 "RMCF0805JT1K00CT-ND" H 6100 1100 60  0001 C CNN "Digi-Key Part Number"
+F 5 "RMCF0805JT1K00" H 6100 1100 60  0001 C CNN "Manufacturer Part Number"
+F 6 "002011001" H 6100 1100 60  0001 C CNN "Seeed OPL SKU"
 	1    6100 1100
 	0    1    1    0   
 $EndComp
@@ -779,7 +781,7 @@ F 0 "IC1" H 3800 5580 50  0000 L BNN
 F 1 "ATXMEGA32A4U" H 6300 2350 50  0000 R BNN
 F 2 "TQFP44" H 3800 2400 50  0000 L CNN
 F 3 "http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf" H 5000 3950 60  0001 C CNN
-F 4 "ATXMEGA32A4U-AURTR-ND" H 5000 3950 60  0001 C CNN "Digi-Key Part Number"
+F 4 "ATXMEGA32A4U-AU-ND" H 5000 3950 60  0001 C CNN "Digi-Key Part Number"
 F 5 "ATXMEGA128A4U-AU-ND	" H 5000 3950 60  0001 C CNN "Alternative"
 	1    5000 3950
 	1    0    0    -1  
@@ -814,8 +816,9 @@ F 0 "R2" V 7130 1700 50  0000 C CNN
 F 1 "1k" V 7050 1700 50  0000 C CNN
 F 2 "SM0805" H 7050 1700 60  0001 C CNN
 F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 7050 1700 60  0001 C CNN
-F 4 "RMCF0805JG330R-ND" V 7050 1700 60  0001 C CNN "Digi-Key Part Number"
-F 5 "002011001" H 7050 1700 60  0001 C CNN "Seeed OPL SKU"
+F 4 "RMCF0805JT1K00CT-ND" H 7050 1700 60  0001 C CNN "Digi-Key Part Number"
+F 5 "RMCF0805JT1K00" H 7050 1700 60  0001 C CNN "Manufacturer Part Number"
+F 6 "002011001" H 7050 1700 60  0001 C CNN "Seeed OPL SKU"
 	1    7050 1700
 	-1   0    0    1   
 $EndComp
@@ -827,8 +830,9 @@ F 0 "R3" V 7430 1700 50  0000 C CNN
 F 1 "1k" V 7350 1700 50  0000 C CNN
 F 2 "SM0805" H 7350 1700 60  0001 C CNN
 F 3 "http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 7350 1700 60  0001 C CNN
-F 4 "RMCF0805JG330R-ND" V 7350 1700 60  0001 C CNN "Digi-Key Part Number"
-F 5 "002011001" H 7350 1700 60  0001 C CNN "Seeed OPL SKU"
+F 4 "RMCF0805JT1K00CT-ND" H 7350 1700 60  0001 C CNN "Digi-Key Part Number"
+F 5 "RMCF0805JT1K00" H 7350 1700 60  0001 C CNN "Manufacturer Part Number"
+F 6 "002011001" H 7350 1700 60  0001 C CNN "Seeed OPL SKU"
 	1    7350 1700
 	-1   0    0    1   
 $EndComp
@@ -869,9 +873,10 @@ P 6550 1950
 F 0 "C13" H 6600 2050 50  0000 L CNN
 F 1 "10u" H 6600 1850 50  0000 L CNN
 F 2 "SM0805" H 6550 1950 60  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6550 1950 60  0001 C CNN
-F 4 "311-1371-2-ND" H 6550 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010008001" H 6550 1950 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 6550 1950 60  0001 C CNN
+F 4 "445-1372-1-ND" H 6550 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012Y5V0J106Z" H 6550 1950 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010008001" H 6550 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    6550 1950
 	1    0    0    -1  
 $EndComp
@@ -949,9 +954,10 @@ P 4100 1700
 F 0 "C12" H 4150 1800 50  0000 L CNN
 F 1 "10u" H 4150 1600 50  0000 L CNN
 F 2 "SM0805" H 4100 1700 60  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 4100 1700 60  0001 C CNN
-F 4 "311-1371-2-ND" H 4100 1700 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010008001" H 4100 1700 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 4100 1700 60  0001 C CNN
+F 4 "445-1372-1-ND" H 4100 1700 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012Y5V0J106Z" H 4100 1700 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010008001" H 4100 1700 60  0001 C CNN "Seeed OPL SKU"
 	1    4100 1700
 	0    1    1    0   
 $EndComp
@@ -1106,7 +1112,8 @@ F 0 "L1" V 2500 900 40  0000 C CNN
 F 1 "100n" V 2650 900 40  0000 C CNN
 F 2 "SM0805" H 2550 900 60  0001 C CNN
 F 3 "http://www.bourns.com/data/global/pdfs/CV201210.pdf" H 2550 900 60  0001 C CNN
-F 4 "CV201210-R10K-ND" H 2550 900 60  0001 C CNN "Digi-Key Part Number"
+F 4 "535-11645-1-ND" H 2550 900 60  0001 C CNN "Digi-Key Part Number"
+F 5 "AIML-0805-R10K-T" H 2550 900 60  0001 C CNN "Manufacturer Part Number"
 	1    2550 900 
 	0    -1   -1   0   
 $EndComp
@@ -1162,9 +1169,10 @@ P 3150 5600
 F 0 "C3" H 3200 5700 50  0000 L CNN
 F 1 "10u" H 3200 5500 50  0000 L CNN
 F 2 "SM0805" H 3150 5600 60  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 3150 5600 60  0001 C CNN
-F 4 "311-1371-2-ND" H 3150 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010008001" H 3150 5600 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 3150 5600 60  0001 C CNN
+F 4 "445-1372-1-ND" H 3150 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012Y5V0J106Z" H 3150 5600 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010008001" H 3150 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    3150 5600
 	1    0    0    -1  
 $EndComp
@@ -1175,9 +1183,10 @@ P 2650 5600
 F 0 "C1" H 2700 5700 50  0000 L CNN
 F 1 "10u" H 2700 5500 50  0000 L CNN
 F 2 "SM0805" H 2650 5600 60  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 2650 5600 60  0001 C CNN
-F 4 "311-1371-2-ND" H 2650 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010008001" H 2650 5600 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 2650 5600 60  0001 C CNN
+F 4 "445-1372-1-ND" H 2650 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012Y5V0J106Z" H 2650 5600 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010008001" H 2650 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    2650 5600
 	1    0    0    -1  
 $EndComp
@@ -1188,9 +1197,10 @@ P 2900 5600
 F 0 "C2" H 2950 5700 50  0000 L CNN
 F 1 "100n" H 2950 5500 50  0000 L CNN
 F 2 "SM0603_Capa" H 2900 5600 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 2900 5600 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 2900 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 2900 5600 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 2900 5600 60  0001 C CNN
+F 4 "445-7534-1-ND" H 2900 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 2900 5600 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 2900 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    2900 5600
 	1    0    0    -1  
 $EndComp
@@ -1201,9 +1211,10 @@ P 3400 5600
 F 0 "C4" H 3450 5700 50  0000 L CNN
 F 1 "100n" H 3450 5500 50  0000 L CNN
 F 2 "SM0603_Capa" H 3400 5600 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 3400 5600 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 3400 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 3400 5600 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 3400 5600 60  0001 C CNN
+F 4 "445-7534-1-ND" H 3400 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 3400 5600 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 3400 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    3400 5600
 	1    0    0    -1  
 $EndComp
@@ -1214,9 +1225,9 @@ P 7050 5350
 F 0 "X1" H 7050 5500 60  0000 C CNN
 F 1 "4 MHz" H 7050 5200 60  0000 C CNN
 F 2 "HC-49V" H 7050 5350 60  0001 C CNN
-F 3 "http://www.abracon.com/Resonators/ABL.pdf" H 7050 5350 60  0001 C CNN
-F 4 "535-9057-ND" H 7050 5350 60  0001 C CNN "Digi-Key Part Number"
-F 5 "ABL-4.000MHZ-B2" H 7050 5350 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.ctscorp.com/components/Datasheets/008-0309-0.pdf" H 7050 5350 60  0001 C CNN
+F 4 "CTX896-ND" H 7050 5350 60  0001 C CNN "Digi-Key Part Number"
+F 5 "ATS040B" H 7050 5350 60  0001 C CNN "Manufacturer Part Number"
 	1    7050 5350
 	1    0    0    -1  
 $EndComp
@@ -1228,7 +1239,8 @@ F 0 "C11" H 7550 5700 50  0000 L CNN
 F 1 "18p" H 7550 5500 50  0000 L CNN
 F 2 "SM0805" H 7500 5600 60  0001 C CNN
 F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf" H 7500 5600 60  0001 C CNN
-F 4 "CL21C180JBANNND-ND" H 7500 5600 60  0001 C CNN "Digi-Key Part Number"
+F 4 "1276-1107-1-ND" H 7500 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL21C180JBANNNC" H 7500 5600 60  0001 C CNN "Manufacturer Part Number"
 	1    7500 5600
 	1    0    0    -1  
 $EndComp
@@ -1240,8 +1252,8 @@ F 0 "C10" H 6700 5700 50  0000 L CNN
 F 1 "18p" H 6700 5500 50  0000 L CNN
 F 2 "SM0805" H 6650 5600 60  0001 C CNN
 F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf" H 6650 5600 60  0001 C CNN
-F 4 "CL21C180JBANNND-ND" H 6650 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "CL21C180JBANNND" H 6650 5600 60  0001 C CNN "Manufacturer Part Number"
+F 4 "1276-1107-1-ND" H 6650 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL21C180JBANNNC" H 6650 5600 60  0001 C CNN "Manufacturer Part Number"
 	1    6650 5600
 	1    0    0    -1  
 $EndComp
@@ -1252,9 +1264,10 @@ P 6200 1950
 F 0 "C9" H 6250 2050 50  0000 L CNN
 F 1 "10u" H 6250 1850 50  0000 L CNN
 F 2 "SM0805" H 6200 1950 60  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6200 1950 60  0001 C CNN
-F 4 "311-1371-2-ND" H 6200 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010008001" H 6200 1950 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 6200 1950 60  0001 C CNN
+F 4 "445-1372-1-ND" H 6200 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012Y5V0J106Z" H 6200 1950 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010008001" H 6200 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    6200 1950
 	1    0    0    -1  
 $EndComp
@@ -1266,7 +1279,8 @@ F 0 "L2" V 4350 1400 40  0000 C CNN
 F 1 "100n" V 4500 1400 40  0000 C CNN
 F 2 "SM0805" H 4400 1400 60  0001 C CNN
 F 3 "http://www.bourns.com/data/global/pdfs/CV201210.pdf" H 4400 1400 60  0001 C CNN
-F 4 "CV201210-R10K-ND" H 4400 1400 60  0001 C CNN "Digi-Key Part Number"
+F 4 "535-11645-1-ND" H 4400 1400 60  0001 C CNN "Digi-Key Part Number"
+F 5 "AIML-0805-R10K-T" H 4400 1400 60  0001 C CNN "Manufacturer Part Number"
 	1    4400 1400
 	1    0    0    -1  
 $EndComp
@@ -1277,9 +1291,10 @@ P 4100 2050
 F 0 "C5" H 3950 1950 50  0000 L CNN
 F 1 "100n" H 3900 2150 50  0000 L CNN
 F 2 "SM0603_Capa" H 4100 2050 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 4100 2050 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 4100 2050 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 4100 2050 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 4100 2050 60  0001 C CNN
+F 4 "445-7534-1-ND" H 4100 2050 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 4100 2050 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 4100 2050 60  0001 C CNN "Seeed OPL SKU"
 	1    4100 2050
 	0    -1   -1   0   
 $EndComp
@@ -1290,9 +1305,10 @@ P 5900 1950
 F 0 "C8" H 5950 2050 50  0000 L CNN
 F 1 "100n" H 5950 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5900 1950 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5900 1950 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 5900 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 5900 1950 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5900 1950 60  0001 C CNN
+F 4 "445-7534-1-ND" H 5900 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 5900 1950 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 5900 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5900 1950
 	1    0    0    -1  
 $EndComp
@@ -1303,9 +1319,10 @@ P 5600 1950
 F 0 "C7" H 5650 2050 50  0000 L CNN
 F 1 "100n" H 5650 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5600 1950 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5600 1950 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 5600 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 5600 1950 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5600 1950 60  0001 C CNN
+F 4 "445-7534-1-ND" H 5600 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 5600 1950 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 5600 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5600 1950
 	1    0    0    -1  
 $EndComp
@@ -1316,9 +1333,10 @@ P 5300 1950
 F 0 "C6" H 5350 2050 50  0000 L CNN
 F 1 "100n" H 5350 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5300 1950 60  0001 C CNN
-F 3 "http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21F104ZAANNND.pdf" H 5300 1950 60  0001 C CNN
-F 4 "CL21F104ZAANNND-ND" H 5300 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "010002001" H 5300 1950 60  0001 C CNN "Seeed OPL SKU"
+F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5300 1950 60  0001 C CNN
+F 4 "445-7534-1-ND" H 5300 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "C2012X7R1H104K085AA" H 5300 1950 60  0001 C CNN "Manufacturer Part Number"
+F 6 "010002001" H 5300 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5300 1950
 	1    0    0    -1  
 $EndComp
@@ -1403,7 +1421,8 @@ F 0 "D6" H 10100 2250 50  0000 C CNN
 F 1 "6V2" H 10100 2050 40  0000 C CNN
 F 2 "SOD323" H 10100 1850 60  0001 C CNN
 F 3 "http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF" H 10100 2150 60  0001 C CNN
-F 4 "SZMM3Z6V2T1G-ND	" H 10100 2150 60  0001 C CNN "Digi-Key Part Number"
+F 4 "MM3Z6V2ST1GOSCT-ND" H 10100 2150 60  0001 C CNN "Digi-Key Part Number"
+F 5 "MM3Z6V2ST1G" H 10100 2150 60  0001 C CNN "Manufacturer Part Number"
 	1    10100 2150
 	0    -1   -1   0   
 $EndComp

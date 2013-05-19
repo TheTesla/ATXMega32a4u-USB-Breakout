@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 14.05.2013 16:40:03
+EESchema Schematic File Version 2  date 19.05.2013 04:39:10
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -50,7 +50,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "14 may 2013"
+Date "19 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -716,9 +716,9 @@ P 6550 1350
 F 0 "D3" H 6550 1450 50  0000 C CNN
 F 1 "LED" H 6550 1250 50  0000 C CNN
 F 2 "SM0805" H 6550 1350 60  0001 C CNN
-F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0188&txtPartNo=LTST-C170KSKT" H 6550 1350 60  0001 C CNN
-F 4 "160-1416-2-ND" H 6550 1350 60  0001 C CNN "Digi-Key Part Number"
-F 5 "160-1416-2-ND" H 6550 1350 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf" H 6550 1350 60  0001 C CNN
+F 4 "475-2560-1-ND" H 6550 1350 60  0001 C CNN "Digi-Key Part Number"
+F 5 "LY R976-PS-36" H 6550 1350 60  0001 C CNN "Manufacturer Part Number"
 F 6 "yellow" H 6550 1350 60  0001 C CNN "Color"
 	1    6550 1350
 	0    1    1    0   
@@ -730,9 +730,9 @@ P 9750 2150
 F 0 "D5" H 9750 2250 50  0000 C CNN
 F 1 "LED" H 9750 2050 50  0000 C CNN
 F 2 "SM0805" H 9750 2150 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C171TBKT.pdf" H 9750 2150 60  0001 C CNN
-F 4 "160-1645-2-ND" H 9750 2150 60  0001 C CNN "Digi-Key Part Number"
-F 5 "LTST-C171TBKT" H 9750 2150 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0226&txtPartNo=LTST-C170TBKT" H 9750 2150 60  0001 C CNN
+F 4 "160-1579-1-ND" H 9750 2150 60  0001 C CNN "Digi-Key Part Number"
+F 5 "LTST-C170TBKT" H 9750 2150 60  0001 C CNN "Manufacturer Part Number"
 F 6 "blue" H 9750 2150 60  0001 C CNN "Color"
 	1    9750 2150
 	0    1    1    0   
@@ -843,9 +843,9 @@ P 7350 2200
 F 0 "D2" H 7350 2300 50  0000 C CNN
 F 1 "LED" H 7350 2100 50  0000 C CNN
 F 2 "LED-0805" H 7350 2200 60  0001 C CNN
-F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0150&txtPartNo=LTST-C170KRKT" H 7350 2200 60  0001 C CNN
-F 4 "160-1415-2-ND" H 7350 2200 60  0001 C CNN "Digi-Key Part Number"
-F 5 "LTST-C170KRKT" H 7350 2200 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf" H 7350 2200 60  0001 C CNN
+F 4 "475-1278-1-ND" H 7350 2200 60  0001 C CNN "Digi-Key Part Number"
+F 5 "LS R976-NR-1" H 7350 2200 60  0001 C CNN "Manufacturer Part Number"
 F 6 "033004001" H 7350 2200 60  0001 C CNN "Seeed OPL SKU"
 F 7 "red" H 7350 2200 60  0001 C CNN "Color"
 	1    7350 2200
@@ -858,9 +858,9 @@ P 7050 2200
 F 0 "D1" H 7050 2300 50  0000 C CNN
 F 1 "LED" H 7050 2100 50  0000 C CNN
 F 2 "LED-0805" H 7050 2200 60  0001 C CNN
-F 3 "http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS22-2000-118&txtPartNo=LTST-C171KGKT" H 7050 2200 60  0001 C CNN
-F 4 "160-1426-2-ND" H 7050 2200 60  0001 C CNN "Digi-Key Part Number"
-F 5 "LTST-C171KGKT" H 7050 2200 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://catalog.osram-os.com/catalogue/catalogue.do;jsessionid=B38D4035738FAE714C474120326E9384?act=downloadFile&favOid=02000002000009ee000100b6" H 7050 2200 60  0001 C CNN
+F 4 "475-1410-1-ND" H 7050 2200 60  0001 C CNN "Digi-Key Part Number"
+F 5 "LG R971-KN-1" H 7050 2200 60  0001 C CNN "Manufacturer Part Number"
 F 6 "033003001" H 7050 2200 60  0001 C CNN "Seeed OPL SKU"
 F 7 "green" H 7050 2200 60  0001 C CNN "Color"
 	1    7050 2200
@@ -873,9 +873,9 @@ P 6550 1950
 F 0 "C13" H 6600 2050 50  0000 L CNN
 F 1 "10u" H 6600 1850 50  0000 L CNN
 F 2 "SM0805" H 6550 1950 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 6550 1950 60  0001 C CNN
-F 4 "445-1372-1-ND" H 6550 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012Y5V0J106Z" H 6550 1950 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6550 1950 60  0001 C CNN
+F 4 "311-1355-1-ND" H 6550 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CC0805ZKY5V6BB106" H 6550 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010008001" H 6550 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    6550 1950
 	1    0    0    -1  
@@ -954,9 +954,9 @@ P 4100 1700
 F 0 "C12" H 4150 1800 50  0000 L CNN
 F 1 "10u" H 4150 1600 50  0000 L CNN
 F 2 "SM0805" H 4100 1700 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 4100 1700 60  0001 C CNN
-F 4 "445-1372-1-ND" H 4100 1700 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012Y5V0J106Z" H 4100 1700 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 4100 1700 60  0001 C CNN
+F 4 "311-1355-1-ND" H 4100 1700 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CC0805ZKY5V6BB106" H 4100 1700 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010008001" H 4100 1700 60  0001 C CNN "Seeed OPL SKU"
 	1    4100 1700
 	0    1    1    0   
@@ -1169,9 +1169,9 @@ P 3150 5600
 F 0 "C3" H 3200 5700 50  0000 L CNN
 F 1 "10u" H 3200 5500 50  0000 L CNN
 F 2 "SM0805" H 3150 5600 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 3150 5600 60  0001 C CNN
-F 4 "445-1372-1-ND" H 3150 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012Y5V0J106Z" H 3150 5600 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 3150 5600 60  0001 C CNN
+F 4 "311-1355-1-ND" H 3150 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CC0805ZKY5V6BB106" H 3150 5600 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010008001" H 3150 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    3150 5600
 	1    0    0    -1  
@@ -1183,9 +1183,9 @@ P 2650 5600
 F 0 "C1" H 2700 5700 50  0000 L CNN
 F 1 "10u" H 2700 5500 50  0000 L CNN
 F 2 "SM0805" H 2650 5600 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 2650 5600 60  0001 C CNN
-F 4 "445-1372-1-ND" H 2650 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012Y5V0J106Z" H 2650 5600 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 2650 5600 60  0001 C CNN
+F 4 "311-1355-1-ND" H 2650 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CC0805ZKY5V6BB106" H 2650 5600 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010008001" H 2650 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    2650 5600
 	1    0    0    -1  
@@ -1264,9 +1264,9 @@ P 6200 1950
 F 0 "C9" H 6250 2050 50  0000 L CNN
 F 1 "10u" H 6250 1850 50  0000 L CNN
 F 2 "SM0805" H 6200 1950 60  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/TDK%20PDFs/C_Series_GeneralAppl_Spec_rev_0.3_201012.pdf" H 6200 1950 60  0001 C CNN
-F 4 "445-1372-1-ND" H 6200 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012Y5V0J106Z" H 6200 1950 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf" H 6200 1950 60  0001 C CNN
+F 4 "311-1355-1-ND" H 6200 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CC0805ZKY5V6BB106" H 6200 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010008001" H 6200 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    6200 1950
 	1    0    0    -1  

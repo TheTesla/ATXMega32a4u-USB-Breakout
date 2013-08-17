@@ -15,3 +15,12 @@ mv -f $gbrname.gbr $proname.GKO
 mv -f $gtoname.gto $proname.GTO
 mv -f $gboname.gbo $proname.GBO
 mv -f $drlname.drl $proname.XLN
+#tar -cf $proname.ZIP $proname.GTL $proname.GBL $proname.GTS $proname.GBS $proname.GKO $proname.GTO $proname.GBO $proname.XLN
+#rm $proname.GTL
+#rm $proname.GBL
+#rm $proname.GTS
+#rm $proname.GBS
+#rm $proname.GKO
+#rm $proname.GTO
+#rm $proname.GBO
+#rm $proname.XLN

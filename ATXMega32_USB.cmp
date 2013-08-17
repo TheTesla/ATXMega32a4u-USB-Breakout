@@ -1,9 +1,9 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 07.04.2013 05:55:51
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 11.08.2013 15:14:46
 
 BeginCmp
 TimeStamp = /50BFD1FA;
 Reference = C1;
-ValeurCmp = 4u7;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -17,7 +17,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50BFD20E;
 Reference = C3;
-ValeurCmp = 4u7;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -59,7 +59,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50BFCA97;
 Reference = C9;
-ValeurCmp = 4u7;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -80,14 +80,14 @@ EndCmp
 BeginCmp
 TimeStamp = /510FEA04;
 Reference = C12;
-ValeurCmp = 4u7;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5112B08F;
 Reference = C13;
-ValeurCmp = 4u7;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -116,7 +116,7 @@ BeginCmp
 TimeStamp = /515F6E8D;
 Reference = D4;
 ValeurCmp = BAS70BRW;
-IdModule  = SOT363;
+IdModule  = SOT-363;
 EndCmp
 
 BeginCmp
@@ -179,7 +179,7 @@ BeginCmp
 TimeStamp = /5116F17F;
 Reference = P4;
 ValeurCmp = MICROUSB;
-IdModule  = ZX62-B-5PA;
+IdModule  = MICRO-B_USB;
 EndCmp
 
 BeginCmp
@@ -192,28 +192,28 @@ EndCmp
 BeginCmp
 TimeStamp = /5112B2F1;
 Reference = R2;
-ValeurCmp = 330;
+ValeurCmp = 1k;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /5112B2DD;
 Reference = R3;
-ValeurCmp = 330;
+ValeurCmp = 1k;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /511EE462;
 Reference = R4;
-ValeurCmp = 330;
+ValeurCmp = 1k;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /511EE47A;
 Reference = R5;
-ValeurCmp = 680;
+ValeurCmp = 1k5;
 IdModule  = SM0805;
 EndCmp
 

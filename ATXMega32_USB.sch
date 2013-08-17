@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19.05.2013 04:39:10
+EESchema Schematic File Version 2  date 17.07.2013 13:00:53
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -50,7 +50,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "19 may 2013"
+Date "17 jul 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1197,9 +1197,9 @@ P 2900 5600
 F 0 "C2" H 2950 5700 50  0000 L CNN
 F 1 "100n" H 2950 5500 50  0000 L CNN
 F 2 "SM0603_Capa" H 2900 5600 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 2900 5600 60  0001 C CNN
-F 4 "445-7534-1-ND" H 2900 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 2900 5600 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 2900 5600 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 2900 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 2900 5600 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 2900 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    2900 5600
 	1    0    0    -1  
@@ -1211,9 +1211,9 @@ P 3400 5600
 F 0 "C4" H 3450 5700 50  0000 L CNN
 F 1 "100n" H 3450 5500 50  0000 L CNN
 F 2 "SM0603_Capa" H 3400 5600 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 3400 5600 60  0001 C CNN
-F 4 "445-7534-1-ND" H 3400 5600 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 3400 5600 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 3400 5600 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 3400 5600 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 3400 5600 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 3400 5600 60  0001 C CNN "Seeed OPL SKU"
 	1    3400 5600
 	1    0    0    -1  
@@ -1291,9 +1291,9 @@ P 4100 2050
 F 0 "C5" H 3950 1950 50  0000 L CNN
 F 1 "100n" H 3900 2150 50  0000 L CNN
 F 2 "SM0603_Capa" H 4100 2050 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 4100 2050 60  0001 C CNN
-F 4 "445-7534-1-ND" H 4100 2050 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 4100 2050 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 4100 2050 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 4100 2050 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 4100 2050 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 4100 2050 60  0001 C CNN "Seeed OPL SKU"
 	1    4100 2050
 	0    -1   -1   0   
@@ -1305,9 +1305,9 @@ P 5900 1950
 F 0 "C8" H 5950 2050 50  0000 L CNN
 F 1 "100n" H 5950 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5900 1950 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5900 1950 60  0001 C CNN
-F 4 "445-7534-1-ND" H 5900 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 5900 1950 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 5900 1950 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 5900 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 5900 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 5900 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5900 1950
 	1    0    0    -1  
@@ -1319,9 +1319,9 @@ P 5600 1950
 F 0 "C7" H 5650 2050 50  0000 L CNN
 F 1 "100n" H 5650 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5600 1950 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5600 1950 60  0001 C CNN
-F 4 "445-7534-1-ND" H 5600 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 5600 1950 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 5600 1950 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 5600 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 5600 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 5600 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5600 1950
 	1    0    0    -1  
@@ -1333,9 +1333,9 @@ P 5300 1950
 F 0 "C6" H 5350 2050 50  0000 L CNN
 F 1 "100n" H 5350 1850 50  0000 L CNN
 F 2 "SM0603_Capa" H 5300 1950 60  0001 C CNN
-F 3 "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_commercial_general_midvoltage_en.pdf" H 5300 1950 60  0001 C CNN
-F 4 "445-7534-1-ND" H 5300 1950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "C2012X7R1H104K085AA" H 5300 1950 60  0001 C CNN "Manufacturer Part Number"
+F 3 "http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf" H 5300 1950 60  0001 C CNN
+F 4 "1276-1011-1-ND" H 5300 1950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "CL10F104ZA8NNNC" H 5300 1950 60  0001 C CNN "Manufacturer Part Number"
 F 6 "010002001" H 5300 1950 60  0001 C CNN "Seeed OPL SKU"
 	1    5300 1950
 	1    0    0    -1  

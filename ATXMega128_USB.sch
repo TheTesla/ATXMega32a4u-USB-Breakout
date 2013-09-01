@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 17.07.2013 13:00:53
+EESchema Schematic File Version 2  date 01.09.2013 12:46:57
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -43,7 +43,23 @@ LIBS:power_ic
 LIBS:regulators
 LIBS:sensors (2)
 LIBS:usb_ic
-LIBS:ATXMega32_USB-cache
+LIBS:ok-74logic
+LIBS:ok-con-generic
+LIBS:ok-diodes
+LIBS:ok-generic
+LIBS:ok-ic-analog
+LIBS:ok-ic-atmel
+LIBS:ok-ic-com
+LIBS:ok-ic-power
+LIBS:ok-ic-special
+LIBS:ok-jacks
+LIBS:ok-opto
+LIBS:ok-power
+LIBS:ok-relay
+LIBS:ok-switches
+LIBS:ok-transformers
+LIBS:ok-transistors
+LIBS:ATXMega128_USB-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268

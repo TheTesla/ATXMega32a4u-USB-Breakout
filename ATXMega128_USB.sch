@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 01.09.2013 16:25:21
+EESchema Schematic File Version 2  date 01.09.2013 19:38:16
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -1436,10 +1436,10 @@ Wire Wire Line
 	10100 1300 10100 1950
 Connection ~ 9750 1300
 $Comp
-L ATXMEGA128A4U IC?
+L ATXMEGA128A4U IC1
 U 1 1 52234FEA
 P 5000 3950
-F 0 "IC?" H 3800 5580 50  0000 L BNN
+F 0 "IC1" H 3800 5580 50  0000 L BNN
 F 1 "ATXMEGA128A4U" H 6300 2350 50  0000 R BNN
 F 2 "TQFP44" H 3800 2400 50  0000 L CNN
 F 3 "http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf" H 5000 3950 60  0001 C CNN

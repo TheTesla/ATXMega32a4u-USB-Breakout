@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 01.09.2013 12:46:57
+EESchema Schematic File Version 2  date 01.09.2013 16:25:21
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -66,7 +66,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "17 jul 2013"
+Date "1 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -790,19 +790,6 @@ F 3 "" H 7700 2450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ATXMEGA32A4U IC1
-U 1 1 51159BBF
-P 5000 3950
-F 0 "IC1" H 3800 5580 50  0000 L BNN
-F 1 "ATXMEGA32A4U" H 6300 2350 50  0000 R BNN
-F 2 "TQFP44" H 3800 2400 50  0000 L CNN
-F 3 "http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf" H 5000 3950 60  0001 C CNN
-F 4 "ATXMEGA32A4U-AU-ND" H 5000 3950 60  0001 C CNN "Digi-Key Part Number"
-F 5 "ATXMEGA128A4U-AU-ND	" H 5000 3950 60  0001 C CNN "Alternative"
-	1    5000 3950
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR05
 U 1 1 5112B32E
 P 7050 2500
@@ -1448,4 +1435,17 @@ Connection ~ 9750 2400
 Wire Wire Line
 	10100 1300 10100 1950
 Connection ~ 9750 1300
+$Comp
+L ATXMEGA128A4U IC?
+U 1 1 52234FEA
+P 5000 3950
+F 0 "IC?" H 3800 5580 50  0000 L BNN
+F 1 "ATXMEGA128A4U" H 6300 2350 50  0000 R BNN
+F 2 "TQFP44" H 3800 2400 50  0000 L CNN
+F 3 "http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf" H 5000 3950 60  0001 C CNN
+F 4 "ATXMEGA128A4U-AU-ND" H 5000 3950 60  0001 C CNN "Digi-Key Part Number"
+F 5 "ATXMEGA128A4U-AU" H 5000 3950 60  0001 C CNN "Manufacturer Part Number"
+	1    5000 3950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

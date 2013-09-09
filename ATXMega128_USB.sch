@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 01.09.2013 19:38:16
+EESchema Schematic File Version 2  date 08.09.2013 09:00:55
 LIBS:atmel
 LIBS:libtest
 LIBS:test
@@ -59,6 +59,7 @@ LIBS:ok-relay
 LIBS:ok-switches
 LIBS:ok-transformers
 LIBS:ok-transistors
+LIBS:BreakoutBoards
 LIBS:ATXMega128_USB-cache
 EELAYER 27 0
 EELAYER END
@@ -66,7 +67,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "1 sep 2013"
+Date "8 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""

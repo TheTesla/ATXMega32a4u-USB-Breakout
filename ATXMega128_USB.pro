@@ -1,6 +1,6 @@
-update=04.08.2013 15:21:43
+update=07.09.2013 09:31:58
 version=1
-last_client=cvpcb
+last_client=eeschema
 [pcbnew]
 version=1
 PadDrlX=320
@@ -101,6 +101,11 @@ LibName42=ok-transformers
 LibDir=
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -170,8 +175,4 @@ LibName57=ok-relay
 LibName58=ok-switches
 LibName59=ok-transformers
 LibName60=ok-transistors
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName61=BreakoutBoards

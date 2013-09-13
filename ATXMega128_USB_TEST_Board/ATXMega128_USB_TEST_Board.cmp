@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 10.09.2013 21:43:52
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 13.09.2013 22:26:11
 
 BeginCmp
 TimeStamp = /522E34AD;
@@ -134,7 +134,14 @@ IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /522AF4F5;
+TimeStamp = /52337484;
+Reference = D15;
+ValeurCmp = 1N4148;
+IdModule  = Diode-MiniMELF_Standard_RevA_27July2010;
+EndCmp
+
+BeginCmp
+TimeStamp = /522F79D7;
 Reference = IC1;
 ValeurCmp = ATXMEGA128A4U_BOARD;
 IdModule  = ATXMega128a4u_Breakout;

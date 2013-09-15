@@ -1,23 +1,23 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 13.09.2013 22:26:11
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 14.09.2013 21:14:04
 
 BeginCmp
 TimeStamp = /522E34AD;
 Reference = C1;
-ValeurCmp = 10u;
+ValeurCmp = 330n;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /522E29EF;
 Reference = C2;
-ValeurCmp = 10u;
+ValeurCmp = 330n;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /522E2AFC;
 Reference = C3;
-ValeurCmp = 10u;
+ValeurCmp = 100n;
 IdModule  = SM0805;
 EndCmp
 
@@ -26,6 +26,34 @@ TimeStamp = /522B1F57;
 Reference = C4;
 ValeurCmp = 100n;
 IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52348001;
+Reference = C5;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5234835C;
+Reference = C6;
+ValeurCmp = 100u;
+IdModule  = CP-RAD-2.5-6.3;
+EndCmp
+
+BeginCmp
+TimeStamp = /52348845;
+Reference = C7;
+ValeurCmp = 10u;
+IdModule  = CP-RAD-2.5-6.3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5234884B;
+Reference = C8;
+ValeurCmp = 10u;
+IdModule  = CP-RAD-2.5-6.3;
 EndCmp
 
 BeginCmp
@@ -87,15 +115,15 @@ EndCmp
 BeginCmp
 TimeStamp = /522C273E;
 Reference = D8;
-ValeurCmp = 6V2;
-IdModule  = SOD323;
+ValeurCmp = 5V6;
+IdModule  = Diode-MiniMELF_Standard_RevA_27July2010;
 EndCmp
 
 BeginCmp
 TimeStamp = /522C8514;
 Reference = D9;
-ValeurCmp = 6V2;
-IdModule  = SOD323;
+ValeurCmp = 9V6;
+IdModule  = sot23;
 EndCmp
 
 BeginCmp
@@ -138,6 +166,20 @@ TimeStamp = /52337484;
 Reference = D15;
 ValeurCmp = 1N4148;
 IdModule  = Diode-MiniMELF_Standard_RevA_27July2010;
+EndCmp
+
+BeginCmp
+TimeStamp = /52345051;
+Reference = D16;
+ValeurCmp = 4V7;
+IdModule  = sot23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5234506B;
+Reference = D17;
+ValeurCmp = 4V7;
+IdModule  = sot23;
 EndCmp
 
 BeginCmp
@@ -332,7 +374,7 @@ EndCmp
 BeginCmp
 TimeStamp = /522C2854;
 Reference = R20;
-ValeurCmp = 1k;
+ValeurCmp = 10k;
 IdModule  = SM0805;
 EndCmp
 
@@ -360,7 +402,7 @@ EndCmp
 BeginCmp
 TimeStamp = /522C74D4;
 Reference = R24;
-ValeurCmp = 220;
+ValeurCmp = 470;
 IdModule  = SM0805;
 EndCmp
 
@@ -463,9 +505,9 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /522C7EF6;
+TimeStamp = /523466E9;
 Reference = U1;
-ValeurCmp = MC78L08ACH;
+ValeurCmp = MC78L12ACH;
 IdModule  = sot89;
 EndCmp
 

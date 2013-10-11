@@ -135,7 +135,7 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x67a
+.text           0x00000000      0xb52
  *(.vectors)
  .vectors       0x00000000      0x1fc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avrxmega7/crtx128a4u.o
                 0x00000000                __vector_default
@@ -316,13 +316,13 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8
                 0x00000218                __vector_120
                 0x0000021a                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x0000021a      0x45c ATXMega128_USB_TEST.o
+ .text.main     0x0000021a      0x934 ATXMega128_USB_TEST.o
                 0x0000021a                main
-                0x00000676                . = ALIGN (0x2)
+                0x00000b4e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000676        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avrxmega7\libgcc.a(_exit.o)
-                0x00000676                _exit
-                0x00000676                exit
+ .fini9         0x00000b4e        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avrxmega7\libgcc.a(_exit.o)
+                0x00000b4e                _exit
+                0x00000b4e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -341,11 +341,11 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000676        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avrxmega7\libgcc.a(_exit.o)
+ .fini0         0x00000b4e        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avrxmega7\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000067a                _etext = .
+                0x00000b52                _etext = .
 
-.data           0x00802000        0x0 load address 0x0000067a
+.data           0x00802000        0x0 load address 0x00000b52
                 0x00802000                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00802000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avrxmega7/crtx128a4u.o
@@ -365,8 +365,8 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8
  *(.bss*)
  *(COMMON)
                 0x00802000                PROVIDE (__bss_end, .)
-                0x0000067a                __data_load_start = LOADADDR (.data)
-                0x0000067a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000b52                __data_load_start = LOADADDR (.data)
+                0x00000b52                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00802000        0x0
                 0x00802000                PROVIDE (__noinit_start, .)
@@ -439,31 +439,31 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.939/avr8
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x612
+.debug_info     0x00000000      0x423
  *(.debug_info)
- .debug_info    0x00000000      0x612 ATXMega128_USB_TEST.o
+ .debug_info    0x00000000      0x423 ATXMega128_USB_TEST.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x197
+.debug_abbrev   0x00000000       0xf7
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x197 ATXMega128_USB_TEST.o
+ .debug_abbrev  0x00000000       0xf7 ATXMega128_USB_TEST.o
 
-.debug_line     0x00000000      0x480
+.debug_line     0x00000000      0x5ec
  *(.debug_line)
- .debug_line    0x00000000      0x480 ATXMega128_USB_TEST.o
+ .debug_line    0x00000000      0x5ec ATXMega128_USB_TEST.o
 
 .debug_frame    0x00000000       0x34
  *(.debug_frame)
  .debug_frame   0x00000000       0x34 ATXMega128_USB_TEST.o
 
-.debug_str      0x00000000      0x439
+.debug_str      0x00000000      0x3e6
  *(.debug_str)
- .debug_str     0x00000000      0x439 ATXMega128_USB_TEST.o
-                                0x472 (size before relaxing)
+ .debug_str     0x00000000      0x3e6 ATXMega128_USB_TEST.o
+                                0x41f (size before relaxing)
 
-.debug_loc      0x00000000      0x34c
+.debug_loc      0x00000000      0x527
  *(.debug_loc)
- .debug_loc     0x00000000      0x34c ATXMega128_USB_TEST.o
+ .debug_loc     0x00000000      0x527 ATXMega128_USB_TEST.o
 
 .debug_macinfo
  *(.debug_macinfo)

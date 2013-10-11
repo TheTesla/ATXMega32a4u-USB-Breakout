@@ -3,31 +3,31 @@ ATXMega128_USB_TEST.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000067a  00000000  00000000  00000074  2**1
+  0 .text         00000b52  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00802000  0000067a  000006ee  2**0
+  1 .data         00000000  00802000  00000b52  00000bc6  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .stab         00000714  00000000  00000000  000006f0  2**2
+  2 .stab         00000714  00000000  00000000  00000bc8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  3 .stabstr      00000097  00000000  00000000  00000e04  2**0
+  3 .stabstr      00000097  00000000  00000000  000012dc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .comment      0000002f  00000000  00000000  00000e9b  2**0
+  4 .comment      0000002f  00000000  00000000  00001373  2**0
                   CONTENTS, READONLY
-  5 .debug_aranges 00000020  00000000  00000000  00000eca  2**0
+  5 .debug_aranges 00000020  00000000  00000000  000013a2  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000612  00000000  00000000  00000eea  2**0
+  6 .debug_info   00000423  00000000  00000000  000013c2  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000197  00000000  00000000  000014fc  2**0
+  7 .debug_abbrev 000000f7  00000000  00000000  000017e5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000480  00000000  00000000  00001693  2**0
+  8 .debug_line   000005ec  00000000  00000000  000018dc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000034  00000000  00000000  00001b14  2**2
+  9 .debug_frame  00000034  00000000  00000000  00001ec8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000439  00000000  00000000  00001b48  2**0
+ 10 .debug_str    000003e6  00000000  00000000  00001efc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000034c  00000000  00000000  00001f81  2**0
+ 11 .debug_loc    00000527  00000000  00000000  000022e2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000010  00000000  00000000  000022cd  2**0
+ 12 .debug_ranges 00000010  00000000  00000000  00002809  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -302,7 +302,7 @@ Disassembly of section .text:
  210:	1a be       	out	0x3a, r1	; 58
  212:	1b be       	out	0x3b, r1	; 59
  214:	02 d0       	rcall	.+4      	; 0x21a <main>
- 216:	2f c2       	rjmp	.+1118   	; 0x676 <_exit>
+ 216:	9b c4       	rjmp	.+2358   	; 0xb4e <_exit>
 
 00000218 <__bad_interrupt>:
  218:	f3 ce       	rjmp	.-538    	; 0x0 <__vectors>
@@ -316,709 +316,1530 @@ int main(void)
 {
  21a:	cf 93       	push	r28
  21c:	df 93       	push	r29
- 21e:	00 d0       	rcall	.+0      	; 0x220 <main+0x6>
- 220:	00 d0       	rcall	.+0      	; 0x222 <main+0x8>
- 222:	cd b7       	in	r28, 0x3d	; 61
- 224:	de b7       	in	r29, 0x3e	; 62
-	uint32_t i;
-	uint32_t y;
+ 21e:	cd b7       	in	r28, 0x3d	; 61
+ 220:	de b7       	in	r29, 0x3e	; 62
+ 222:	2c 97       	sbiw	r28, 0x0c	; 12
+ 224:	cd bf       	out	0x3d, r28	; 61
+ 226:	de bf       	out	0x3e, r29	; 62
 	uint32_t z;
+	uint8_t j;
+	uint8_t ok;
+	uint8_t ct;
 
-	x = 0;
-	PORTD.DIR = 0xFF;
- 226:	8f ef       	ldi	r24, 0xFF	; 255
- 228:	80 93 60 06 	sts	0x0660, r24
-	PORTE.DIR = 0xFF;
- 22c:	80 93 80 06 	sts	0x0680, r24
+	PORTA.DIR = 0b00111100;
+ 228:	8c e3       	ldi	r24, 0x3C	; 60
+ 22a:	80 93 00 06 	sts	0x0600, r24
+	PORTB.DIR = 0b00001100;
+ 22e:	8c e0       	ldi	r24, 0x0C	; 12
+ 230:	80 93 20 06 	sts	0x0620, r24
+	PORTC.DIR = 0b11100001;	
+ 234:	81 ee       	ldi	r24, 0xE1	; 225
+ 236:	80 93 40 06 	sts	0x0640, r24
+	PORTD.DIR = 0b00000000;
+ 23a:	10 92 60 06 	sts	0x0660, r1
+	PORTE.DIR = 0b00001011;
+ 23e:	8b e0       	ldi	r24, 0x0B	; 11
+ 240:	80 93 80 06 	sts	0x0680, r24
+	PORTR.DIR = 0b00000000;
+ 244:	10 92 e0 07 	sts	0x07E0, r1
 	
-	PORTC.DIR = 0xE0;
- 230:	e0 e4       	ldi	r30, 0x40	; 64
- 232:	f6 e0       	ldi	r31, 0x06	; 6
- 234:	80 ee       	ldi	r24, 0xE0	; 224
- 236:	80 83       	st	Z, r24
-	PORTB.DIR = 0x00;
- 238:	10 92 20 06 	sts	0x0620, r1
-	PORTA.DIR = 0x12;
- 23c:	82 e1       	ldi	r24, 0x12	; 18
- 23e:	80 93 00 06 	sts	0x0600, r24
 	
-	PORTC.OUTCLR = 1 << 6;
- 242:	80 e4       	ldi	r24, 0x40	; 64
- 244:	86 83       	std	Z+6, r24	; 0x06
-	PORTC.OUTSET = 1 << 7;
- 246:	80 e8       	ldi	r24, 0x80	; 128
- 248:	85 83       	std	Z+5, r24	; 0x05
+	i = x = y = z = 0;
+	j = ok = ct = 0;
+ 248:	10 e0       	ldi	r17, 0x00	; 0
+ 24a:	00 e0       	ldi	r16, 0x00	; 0
+	PORTD.DIR = 0b00000000;
+	PORTE.DIR = 0b00001011;
+	PORTR.DIR = 0b00000000;
 	
-	// Enable the external oscillator
-	OSC.XOSCCTRL = OSC_FRQRANGE_2TO9_gc | OSC_XOSCSEL_XTAL_16KCLK_gc ;
- 24a:	e0 e5       	ldi	r30, 0x50	; 80
- 24c:	f0 e0       	ldi	r31, 0x00	; 0
- 24e:	8b e4       	ldi	r24, 0x4B	; 75
- 250:	82 83       	std	Z+2, r24	; 0x02
-	OSC.CTRL |= OSC_XOSCEN_bm ;
- 252:	80 81       	ld	r24, Z
- 254:	88 60       	ori	r24, 0x08	; 8
- 256:	80 83       	st	Z, r24
-	while( (OSC.STATUS & OSC_XOSCRDY_bm) == 0 ){} // wait until stable
- 258:	81 81       	ldd	r24, Z+1	; 0x01
- 25a:	83 ff       	sbrs	r24, 3
- 25c:	fd cf       	rjmp	.-6      	; 0x258 <main+0x3e>
-
-	// Now configure the PLL to be eXternal OSCillator * 2
-	OSC.PLLCTRL = OSC_PLLSRC_XOSC_gc | 3 ;
- 25e:	e0 e5       	ldi	r30, 0x50	; 80
- 260:	f0 e0       	ldi	r31, 0x00	; 0
- 262:	83 ec       	ldi	r24, 0xC3	; 195
- 264:	85 83       	std	Z+5, r24	; 0x05
-	OSC.CTRL |= OSC_PLLEN_bm ; // enable the PLL...
- 266:	80 81       	ld	r24, Z
- 268:	80 61       	ori	r24, 0x10	; 16
- 26a:	80 83       	st	Z, r24
-	while( (OSC.STATUS & OSC_PLLRDY_bm) == 0 ){} // wait until stable
- 26c:	81 81       	ldd	r24, Z+1	; 0x01
- 26e:	84 ff       	sbrs	r24, 4
- 270:	fd cf       	rjmp	.-6      	; 0x26c <main+0x52>
-
-	// And now switch to the PLL as the clocksource
-	CCP = CCP_IOREG_gc; // protected write follows
- 272:	88 ed       	ldi	r24, 0xD8	; 216
- 274:	84 bf       	out	0x34, r24	; 52
-	CLK.CTRL = CLK_SCLKSEL_PLL_gc;
- 276:	84 e0       	ldi	r24, 0x04	; 4
- 278:	80 93 40 00 	sts	0x0040, r24
-    {
-		x = 0;
-		PORTD.OUT = 0;
-		PORTE.OUT = 0;
-		PORTA.OUT = 0;
-		PORTC.OUTCLR = 1 << 5;
- 27c:	00 e2       	ldi	r16, 0x20	; 32
- 27e:	0e 83       	std	Y+6, r16	; 0x06
-
-
-		_delay_ms(50);
-		for(i=0;i<14;i++){
-			if(8==i) continue;
-			y = 1 << i;
- 280:	22 24       	eor	r2, r2
- 282:	23 94       	inc	r2
- 284:	31 2c       	mov	r3, r1
-
-		
-    while(1)
-    {
-		x = 0;
-		PORTD.OUT = 0;
- 286:	10 92 64 06 	sts	0x0664, r1
-		PORTE.OUT = 0;
- 28a:	10 92 84 06 	sts	0x0684, r1
-		PORTA.OUT = 0;
- 28e:	10 92 04 06 	sts	0x0604, r1
-		PORTC.OUTCLR = 1 << 5;
- 292:	1e 81       	ldd	r17, Y+6	; 0x06
- 294:	10 93 46 06 	sts	0x0646, r17
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 298:	2f ed       	ldi	r18, 0xDF	; 223
- 29a:	33 e9       	ldi	r19, 0x93	; 147
- 29c:	84 e0       	ldi	r24, 0x04	; 4
- 29e:	21 50       	subi	r18, 0x01	; 1
- 2a0:	30 40       	sbci	r19, 0x00	; 0
- 2a2:	80 40       	sbci	r24, 0x00	; 0
- 2a4:	e1 f7       	brne	.-8      	; 0x29e <main+0x84>
- 2a6:	00 c0       	rjmp	.+0      	; 0x2a8 <main+0x8e>
- 2a8:	00 00       	nop
- 2aa:	41 e0       	ldi	r20, 0x01	; 1
- 2ac:	50 e0       	ldi	r21, 0x00	; 0
- 2ae:	60 e0       	ldi	r22, 0x00	; 0
- 2b0:	70 e0       	ldi	r23, 0x00	; 0
- 2b2:	00 e0       	ldi	r16, 0x00	; 0
- 2b4:	10 e0       	ldi	r17, 0x00	; 0
- 2b6:	98 01       	movw	r18, r16
-
-
-		
-    while(1)
-    {
-		x = 0;
- 2b8:	19 82       	std	Y+1, r1	; 0x01
- 2ba:	1a 82       	std	Y+2, r1	; 0x02
- 2bc:	1b 82       	std	Y+3, r1	; 0x03
- 2be:	1c 82       	std	Y+4, r1	; 0x04
- 2c0:	d9 01       	movw	r26, r18
- 2c2:	c8 01       	movw	r24, r16
- 2c4:	07 c0       	rjmp	.+14     	; 0x2d4 <main+0xba>
- 2c6:	01 96       	adiw	r24, 0x01	; 1
- 2c8:	a1 1d       	adc	r26, r1
- 2ca:	b1 1d       	adc	r27, r1
- 2cc:	4f 5f       	subi	r20, 0xFF	; 255
- 2ce:	5f 4f       	sbci	r21, 0xFF	; 255
- 2d0:	6f 4f       	sbci	r22, 0xFF	; 255
- 2d2:	7f 4f       	sbci	r23, 0xFF	; 255
-		PORTC.OUTCLR = 1 << 5;
-
-
-		_delay_ms(50);
-		for(i=0;i<14;i++){
-			if(8==i) continue;
- 2d4:	88 30       	cpi	r24, 0x08	; 8
- 2d6:	91 05       	cpc	r25, r1
- 2d8:	a1 05       	cpc	r26, r1
- 2da:	b1 05       	cpc	r27, r1
- 2dc:	a1 f3       	breq	.-24     	; 0x2c6 <main+0xac>
-			y = 1 << i;
- 2de:	61 01       	movw	r12, r2
- 2e0:	08 2e       	mov	r0, r24
- 2e2:	02 c0       	rjmp	.+4      	; 0x2e8 <main+0xce>
- 2e4:	cc 0c       	add	r12, r12
- 2e6:	dd 1c       	adc	r13, r13
- 2e8:	0a 94       	dec	r0
- 2ea:	e2 f7       	brpl	.-8      	; 0x2e4 <main+0xca>
- 2ec:	ee 24       	eor	r14, r14
- 2ee:	d7 fc       	sbrc	r13, 7
- 2f0:	e0 94       	com	r14
- 2f2:	fe 2c       	mov	r15, r14
-			if(12>i){
- 2f4:	8c 30       	cpi	r24, 0x0C	; 12
- 2f6:	91 05       	cpc	r25, r1
- 2f8:	a1 05       	cpc	r26, r1
- 2fa:	b1 05       	cpc	r27, r1
- 2fc:	08 f0       	brcs	.+2      	; 0x300 <main+0xe6>
- 2fe:	58 c0       	rjmp	.+176    	; 0x3b0 <main+0x196>
-				PORTD.OUT = y & 0xFF;
- 300:	c0 92 64 06 	sts	0x0664, r12
-				PORTE.OUT = (y >> 8) & 0x0F;
- 304:	33 27       	eor	r19, r19
- 306:	2f 2d       	mov	r18, r15
- 308:	1e 2d       	mov	r17, r14
- 30a:	0d 2d       	mov	r16, r13
- 30c:	0f 70       	andi	r16, 0x0F	; 15
- 30e:	11 27       	eor	r17, r17
- 310:	22 27       	eor	r18, r18
- 312:	33 27       	eor	r19, r19
- 314:	00 93 84 06 	sts	0x0684, r16
-				PORTA.OUT = 0;
- 318:	10 92 04 06 	sts	0x0604, r1
-				PORTC.OUTCLR = 1 << 5;
- 31c:	e0 e2       	ldi	r30, 0x20	; 32
- 31e:	e0 93 46 06 	sts	0x0646, r30
-				PORTD.OUT = 0;
-				PORTE.OUT = 0;
-				PORTA.OUT = 16;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
- 322:	40 90 48 06 	lds	r4, 0x0648
- 326:	f0 91 28 06 	lds	r31, 0x0628
- 32a:	80 90 08 06 	lds	r8, 0x0608
- 32e:	8d 82       	std	Y+5, r8	; 0x05
-#include <avr/io.h>
-#include <util/delay.h> 
-
-
-
-int main(void)
- 330:	20 e1       	ldi	r18, 0x10	; 16
- 332:	30 e0       	ldi	r19, 0x00	; 0
- 334:	28 1b       	sub	r18, r24
- 336:	39 0b       	sbc	r19, r25
-				PORTA.OUT = 16;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
-			if(12>i){
-				if(((uint32_t)1<<((uint32_t)16-i)) != z) x += y;			
- 338:	81 2c       	mov	r8, r1
- 33a:	91 2c       	mov	r9, r1
- 33c:	54 01       	movw	r10, r8
- 33e:	83 94       	inc	r8
- 340:	04 c0       	rjmp	.+8      	; 0x34a <main+0x130>
- 342:	88 0c       	add	r8, r8
- 344:	99 1c       	adc	r9, r9
- 346:	aa 1c       	adc	r10, r10
- 348:	bb 1c       	adc	r11, r11
- 34a:	2a 95       	dec	r18
- 34c:	d2 f7       	brpl	.-12     	; 0x342 <main+0x128>
- 34e:	95 01       	movw	r18, r10
- 350:	84 01       	movw	r16, r8
-				PORTD.OUT = 0;
-				PORTE.OUT = 0;
-				PORTA.OUT = 16;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
- 352:	0f 2e       	mov	r0, r31
- 354:	ff e1       	ldi	r31, 0x1F	; 31
- 356:	9f 2e       	mov	r9, r31
- 358:	f0 2d       	mov	r31, r0
- 35a:	49 20       	and	r4, r9
- 35c:	51 2c       	mov	r5, r1
- 35e:	61 2c       	mov	r6, r1
- 360:	71 2c       	mov	r7, r1
- 362:	03 2e       	mov	r0, r19
- 364:	3c e0       	ldi	r19, 0x0C	; 12
- 366:	44 0c       	add	r4, r4
- 368:	55 1c       	adc	r5, r5
- 36a:	66 1c       	adc	r6, r6
- 36c:	77 1c       	adc	r7, r7
- 36e:	3a 95       	dec	r19
- 370:	d1 f7       	brne	.-12     	; 0x366 <main+0x14c>
- 372:	30 2d       	mov	r19, r0
- 374:	0f 2e       	mov	r0, r31
- 376:	ff e0       	ldi	r31, 0x0F	; 15
- 378:	8f 2e       	mov	r8, r31
- 37a:	f0 2d       	mov	r31, r0
- 37c:	8f 22       	and	r8, r31
- 37e:	91 2c       	mov	r9, r1
- 380:	a1 2c       	mov	r10, r1
- 382:	b1 2c       	mov	r11, r1
- 384:	ba 2c       	mov	r11, r10
- 386:	a9 2c       	mov	r10, r9
- 388:	98 2c       	mov	r9, r8
- 38a:	88 24       	eor	r8, r8
- 38c:	84 0c       	add	r8, r4
- 38e:	95 1c       	adc	r9, r5
- 390:	a6 1c       	adc	r10, r6
- 392:	b7 1c       	adc	r11, r7
- 394:	7d 80       	ldd	r7, Y+5	; 0x05
- 396:	ec ee       	ldi	r30, 0xEC	; 236
- 398:	7e 22       	and	r7, r30
- 39a:	87 0c       	add	r8, r7
- 39c:	91 1c       	adc	r9, r1
- 39e:	a1 1c       	adc	r10, r1
- 3a0:	b1 1c       	adc	r11, r1
-			if(12>i){
-				if(((uint32_t)1<<((uint32_t)16-i)) != z) x += y;			
- 3a2:	08 15       	cp	r16, r8
- 3a4:	19 05       	cpc	r17, r9
- 3a6:	2a 05       	cpc	r18, r10
- 3a8:	3b 05       	cpc	r19, r11
- 3aa:	09 f0       	breq	.+2      	; 0x3ae <main+0x194>
- 3ac:	81 c0       	rjmp	.+258    	; 0x4b0 <main+0x296>
- 3ae:	a7 c0       	rjmp	.+334    	; 0x4fe <main+0x2e4>
-				PORTD.OUT = y & 0xFF;
-				PORTE.OUT = (y >> 8) & 0x0F;
-				PORTA.OUT = 0;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			else if(12==i) {
- 3b0:	8c 30       	cpi	r24, 0x0C	; 12
- 3b2:	91 05       	cpc	r25, r1
- 3b4:	a1 05       	cpc	r26, r1
- 3b6:	b1 05       	cpc	r27, r1
- 3b8:	e9 f5       	brne	.+122    	; 0x434 <main+0x21a>
-				PORTD.OUT = 0;
- 3ba:	10 92 64 06 	sts	0x0664, r1
-				PORTE.OUT = 0;
- 3be:	10 92 84 06 	sts	0x0684, r1
-				PORTA.OUT = 2;
- 3c2:	f2 e0       	ldi	r31, 0x02	; 2
- 3c4:	f0 93 04 06 	sts	0x0604, r31
-				PORTC.OUTCLR = 1 << 5;
- 3c8:	68 94       	set
- 3ca:	88 24       	eor	r8, r8
- 3cc:	85 f8       	bld	r8, 5
- 3ce:	80 92 46 06 	sts	0x0646, r8
-				PORTD.OUT = 0;
-				PORTE.OUT = 0;
-				PORTA.OUT = 16;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
- 3d2:	30 91 48 06 	lds	r19, 0x0648
- 3d6:	20 91 28 06 	lds	r18, 0x0628
- 3da:	b0 90 08 06 	lds	r11, 0x0608
- 3de:	3f 71       	andi	r19, 0x1F	; 31
- 3e0:	43 2e       	mov	r4, r19
- 3e2:	51 2c       	mov	r5, r1
- 3e4:	61 2c       	mov	r6, r1
- 3e6:	71 2c       	mov	r7, r1
- 3e8:	03 2e       	mov	r0, r19
- 3ea:	3c e0       	ldi	r19, 0x0C	; 12
- 3ec:	44 0c       	add	r4, r4
- 3ee:	55 1c       	adc	r5, r5
- 3f0:	66 1c       	adc	r6, r6
- 3f2:	77 1c       	adc	r7, r7
- 3f4:	3a 95       	dec	r19
- 3f6:	d1 f7       	brne	.-12     	; 0x3ec <main+0x1d2>
- 3f8:	30 2d       	mov	r19, r0
- 3fa:	02 2f       	mov	r16, r18
- 3fc:	0f 70       	andi	r16, 0x0F	; 15
- 3fe:	10 e0       	ldi	r17, 0x00	; 0
- 400:	20 e0       	ldi	r18, 0x00	; 0
- 402:	30 e0       	ldi	r19, 0x00	; 0
- 404:	32 2f       	mov	r19, r18
- 406:	21 2f       	mov	r18, r17
- 408:	10 2f       	mov	r17, r16
- 40a:	00 27       	eor	r16, r16
- 40c:	04 0d       	add	r16, r4
- 40e:	15 1d       	adc	r17, r5
- 410:	26 1d       	adc	r18, r6
- 412:	37 1d       	adc	r19, r7
- 414:	0f 2e       	mov	r0, r31
- 416:	fc ee       	ldi	r31, 0xEC	; 236
- 418:	9f 2e       	mov	r9, r31
- 41a:	f0 2d       	mov	r31, r0
- 41c:	b9 20       	and	r11, r9
- 41e:	0b 0d       	add	r16, r11
- 420:	11 1d       	adc	r17, r1
- 422:	21 1d       	adc	r18, r1
- 424:	31 1d       	adc	r19, r1
-			if(12>i){
-				if(((uint32_t)1<<((uint32_t)16-i)) != z) x += y;			
-			}
-			else if(12==i){
-				if(8!=z) x += y;
- 426:	08 30       	cpi	r16, 0x08	; 8
- 428:	11 05       	cpc	r17, r1
- 42a:	21 05       	cpc	r18, r1
- 42c:	31 05       	cpc	r19, r1
- 42e:	09 f0       	breq	.+2      	; 0x432 <main+0x218>
- 430:	4c c0       	rjmp	.+152    	; 0x4ca <main+0x2b0>
- 432:	49 cf       	rjmp	.-366    	; 0x2c6 <main+0xac>
-				PORTD.OUT = 0;
-				PORTE.OUT = 0;
-				PORTA.OUT = 2;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			else if(13==i){
- 434:	8d 30       	cpi	r24, 0x0D	; 13
- 436:	91 05       	cpc	r25, r1
- 438:	a1 05       	cpc	r26, r1
- 43a:	b1 05       	cpc	r27, r1
- 43c:	09 f0       	breq	.+2      	; 0x440 <main+0x226>
- 43e:	14 c1       	rjmp	.+552    	; 0x668 <main+0x44e>
-				PORTD.OUT = 0;
- 440:	10 92 64 06 	sts	0x0664, r1
-				PORTE.OUT = 0;
- 444:	10 92 84 06 	sts	0x0684, r1
-				PORTA.OUT = 16;
- 448:	68 94       	set
- 44a:	aa 24       	eor	r10, r10
- 44c:	a4 f8       	bld	r10, 4
- 44e:	a0 92 04 06 	sts	0x0604, r10
-				PORTC.OUTCLR = 1 << 5;
- 452:	68 94       	set
- 454:	bb 24       	eor	r11, r11
- 456:	b5 f8       	bld	r11, 5
- 458:	b0 92 46 06 	sts	0x0646, r11
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
- 45c:	40 91 48 06 	lds	r20, 0x0648
- 460:	90 91 28 06 	lds	r25, 0x0628
- 464:	20 91 08 06 	lds	r18, 0x0608
- 468:	4f 71       	andi	r20, 0x1F	; 31
- 46a:	50 e0       	ldi	r21, 0x00	; 0
- 46c:	60 e0       	ldi	r22, 0x00	; 0
- 46e:	70 e0       	ldi	r23, 0x00	; 0
- 470:	03 2e       	mov	r0, r19
- 472:	3c e0       	ldi	r19, 0x0C	; 12
- 474:	44 0f       	add	r20, r20
- 476:	55 1f       	adc	r21, r21
- 478:	66 1f       	adc	r22, r22
- 47a:	77 1f       	adc	r23, r23
- 47c:	3a 95       	dec	r19
- 47e:	d1 f7       	brne	.-12     	; 0x474 <main+0x25a>
- 480:	30 2d       	mov	r19, r0
- 482:	89 2f       	mov	r24, r25
- 484:	8f 70       	andi	r24, 0x0F	; 15
- 486:	90 e0       	ldi	r25, 0x00	; 0
- 488:	a0 e0       	ldi	r26, 0x00	; 0
- 48a:	b0 e0       	ldi	r27, 0x00	; 0
- 48c:	ba 2f       	mov	r27, r26
- 48e:	a9 2f       	mov	r26, r25
- 490:	98 2f       	mov	r25, r24
- 492:	88 27       	eor	r24, r24
- 494:	84 0f       	add	r24, r20
- 496:	95 1f       	adc	r25, r21
- 498:	a6 1f       	adc	r26, r22
- 49a:	b7 1f       	adc	r27, r23
- 49c:	2c 7e       	andi	r18, 0xEC	; 236
- 49e:	82 0f       	add	r24, r18
- 4a0:	91 1d       	adc	r25, r1
- 4a2:	a1 1d       	adc	r26, r1
- 4a4:	b1 1d       	adc	r27, r1
-			}
-			else if(12==i){
-				if(8!=z) x += y;
-			}
-			else if(13==i){
-				if(4!=z) x += y;
- 4a6:	04 97       	sbiw	r24, 0x04	; 4
- 4a8:	a1 05       	cpc	r26, r1
- 4aa:	b1 05       	cpc	r27, r1
- 4ac:	d9 f4       	brne	.+54     	; 0x4e4 <main+0x2ca>
- 4ae:	2d c0       	rjmp	.+90     	; 0x50a <main+0x2f0>
-				PORTA.OUT = 16;
-				PORTC.OUTCLR = 1 << 5;
-			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
-			if(12>i){
-				if(((uint32_t)1<<((uint32_t)16-i)) != z) x += y;			
- 4b0:	09 81       	ldd	r16, Y+1	; 0x01
- 4b2:	1a 81       	ldd	r17, Y+2	; 0x02
- 4b4:	2b 81       	ldd	r18, Y+3	; 0x03
- 4b6:	3c 81       	ldd	r19, Y+4	; 0x04
- 4b8:	0c 0d       	add	r16, r12
- 4ba:	1d 1d       	adc	r17, r13
- 4bc:	2e 1d       	adc	r18, r14
- 4be:	3f 1d       	adc	r19, r15
- 4c0:	09 83       	std	Y+1, r16	; 0x01
- 4c2:	1a 83       	std	Y+2, r17	; 0x02
- 4c4:	2b 83       	std	Y+3, r18	; 0x03
- 4c6:	3c 83       	std	Y+4, r19	; 0x04
- 4c8:	1a c0       	rjmp	.+52     	; 0x4fe <main+0x2e4>
-			}
-			else if(12==i){
-				if(8!=z) x += y;
- 4ca:	89 80       	ldd	r8, Y+1	; 0x01
- 4cc:	9a 80       	ldd	r9, Y+2	; 0x02
- 4ce:	ab 80       	ldd	r10, Y+3	; 0x03
- 4d0:	bc 80       	ldd	r11, Y+4	; 0x04
- 4d2:	8c 0c       	add	r8, r12
- 4d4:	9d 1c       	adc	r9, r13
- 4d6:	ae 1c       	adc	r10, r14
- 4d8:	bf 1c       	adc	r11, r15
- 4da:	89 82       	std	Y+1, r8	; 0x01
- 4dc:	9a 82       	std	Y+2, r9	; 0x02
- 4de:	ab 82       	std	Y+3, r10	; 0x03
- 4e0:	bc 82       	std	Y+4, r11	; 0x04
- 4e2:	f1 ce       	rjmp	.-542    	; 0x2c6 <main+0xac>
-			}
-			else if(13==i){
-				if(4!=z) x += y;
- 4e4:	09 81       	ldd	r16, Y+1	; 0x01
- 4e6:	1a 81       	ldd	r17, Y+2	; 0x02
- 4e8:	2b 81       	ldd	r18, Y+3	; 0x03
- 4ea:	3c 81       	ldd	r19, Y+4	; 0x04
- 4ec:	0c 0d       	add	r16, r12
- 4ee:	1d 1d       	adc	r17, r13
- 4f0:	2e 1d       	adc	r18, r14
- 4f2:	3f 1d       	adc	r19, r15
- 4f4:	09 83       	std	Y+1, r16	; 0x01
- 4f6:	1a 83       	std	Y+2, r17	; 0x02
- 4f8:	2b 83       	std	Y+3, r18	; 0x03
- 4fa:	3c 83       	std	Y+4, r19	; 0x04
- 4fc:	06 c0       	rjmp	.+12     	; 0x50a <main+0x2f0>
-		PORTA.OUT = 0;
-		PORTC.OUTCLR = 1 << 5;
-
-
-		_delay_ms(50);
-		for(i=0;i<14;i++){
- 4fe:	4e 30       	cpi	r20, 0x0E	; 14
- 500:	51 05       	cpc	r21, r1
- 502:	61 05       	cpc	r22, r1
- 504:	71 05       	cpc	r23, r1
- 506:	08 f4       	brcc	.+2      	; 0x50a <main+0x2f0>
- 508:	de ce       	rjmp	.-580    	; 0x2c6 <main+0xac>
-			else if(13==i){
-				if(4!=z) x += y;
-			}
+	
+	i = x = y = z = 0;
+ 24c:	40 e0       	ldi	r20, 0x00	; 0
+ 24e:	50 e0       	ldi	r21, 0x00	; 0
+ 250:	ba 01       	movw	r22, r20
+ 252:	80 e0       	ldi	r24, 0x00	; 0
+ 254:	90 e0       	ldi	r25, 0x00	; 0
+ 256:	dc 01       	movw	r26, r24
+			i = 0;
+			ct++;
+			if(ct>2) ct = 0;
 		}
+		if (i> 10000) PORTC.OUTSET = 0b00100000;
+			else PORTC.OUTCLR = 0b00100000;
+ 258:	0f 2e       	mov	r0, r31
+ 25a:	f0 e4       	ldi	r31, 0x40	; 64
+ 25c:	ef 2e       	mov	r14, r31
+ 25e:	f6 e0       	ldi	r31, 0x06	; 6
+ 260:	ff 2e       	mov	r15, r31
+ 262:	f0 2d       	mov	r31, r0
+ 264:	68 94       	set
+ 266:	22 24       	eor	r2, r2
+ 268:	25 f8       	bld	r2, 5
 		
-		PORTD.OUT = 0;
- 50a:	10 92 64 06 	sts	0x0664, r1
-		PORTE.OUT = 0;
- 50e:	10 92 84 06 	sts	0x0684, r1
-		PORTA.OUT = 0;
- 512:	10 92 04 06 	sts	0x0604, r1
-		PORTC.OUTCLR = 1 << 5;
- 516:	1e 81       	ldd	r17, Y+6	; 0x06
- 518:	10 93 46 06 	sts	0x0646, r17
- 51c:	2f ed       	ldi	r18, 0xDF	; 223
- 51e:	33 e9       	ldi	r19, 0x93	; 147
- 520:	84 e0       	ldi	r24, 0x04	; 4
- 522:	21 50       	subi	r18, 0x01	; 1
- 524:	30 40       	sbci	r19, 0x00	; 0
- 526:	80 40       	sbci	r24, 0x00	; 0
- 528:	e1 f7       	brne	.-8      	; 0x522 <main+0x308>
- 52a:	00 c0       	rjmp	.+0      	; 0x52c <main+0x312>
- 52c:	00 00       	nop
-
-		_delay_ms(50);
-		PORTE.OUT = 1;
- 52e:	91 e0       	ldi	r25, 0x01	; 1
- 530:	90 93 84 06 	sts	0x0684, r25
- 534:	af e5       	ldi	r26, 0x5F	; 95
- 536:	ba ee       	ldi	r27, 0xEA	; 234
- 538:	e0 e0       	ldi	r30, 0x00	; 0
- 53a:	a1 50       	subi	r26, 0x01	; 1
- 53c:	b0 40       	sbci	r27, 0x00	; 0
- 53e:	e0 40       	sbci	r30, 0x00	; 0
- 540:	e1 f7       	brne	.-8      	; 0x53a <main+0x320>
- 542:	00 c0       	rjmp	.+0      	; 0x544 <main+0x32a>
- 544:	00 00       	nop
-		_delay_ms(10);
-		if((0 != PORTB.IN) || (0 != PORTA.IN)) x += 1 << 13;
- 546:	80 91 28 06 	lds	r24, 0x0628
- 54a:	81 11       	cpse	r24, r1
- 54c:	04 c0       	rjmp	.+8      	; 0x556 <main+0x33c>
- 54e:	80 91 08 06 	lds	r24, 0x0608
- 552:	88 23       	and	r24, r24
- 554:	59 f0       	breq	.+22     	; 0x56c <main+0x352>
- 556:	09 81       	ldd	r16, Y+1	; 0x01
- 558:	1a 81       	ldd	r17, Y+2	; 0x02
- 55a:	2b 81       	ldd	r18, Y+3	; 0x03
- 55c:	3c 81       	ldd	r19, Y+4	; 0x04
- 55e:	10 5e       	subi	r17, 0xE0	; 224
- 560:	2f 4f       	sbci	r18, 0xFF	; 255
- 562:	3f 4f       	sbci	r19, 0xFF	; 255
- 564:	09 83       	std	Y+1, r16	; 0x01
- 566:	1a 83       	std	Y+2, r17	; 0x02
- 568:	2b 83       	std	Y+3, r18	; 0x03
- 56a:	3c 83       	std	Y+4, r19	; 0x04
- 56c:	1f ed       	ldi	r17, 0xDF	; 223
- 56e:	23 e9       	ldi	r18, 0x93	; 147
- 570:	34 e0       	ldi	r19, 0x04	; 4
- 572:	11 50       	subi	r17, 0x01	; 1
- 574:	20 40       	sbci	r18, 0x00	; 0
- 576:	30 40       	sbci	r19, 0x00	; 0
- 578:	e1 f7       	brne	.-8      	; 0x572 <main+0x358>
- 57a:	00 c0       	rjmp	.+0      	; 0x57c <main+0x362>
- 57c:	00 00       	nop
-		_delay_ms(50);
-		if((1 != PORTB.IN) || (0 != PORTA.IN)) x += 1 << 14;
- 57e:	80 91 28 06 	lds	r24, 0x0628
- 582:	81 30       	cpi	r24, 0x01	; 1
- 584:	21 f4       	brne	.+8      	; 0x58e <main+0x374>
- 586:	80 91 08 06 	lds	r24, 0x0608
- 58a:	88 23       	and	r24, r24
- 58c:	59 f0       	breq	.+22     	; 0x5a4 <main+0x38a>
- 58e:	89 81       	ldd	r24, Y+1	; 0x01
- 590:	9a 81       	ldd	r25, Y+2	; 0x02
- 592:	ab 81       	ldd	r26, Y+3	; 0x03
- 594:	bc 81       	ldd	r27, Y+4	; 0x04
- 596:	90 5c       	subi	r25, 0xC0	; 192
- 598:	af 4f       	sbci	r26, 0xFF	; 255
- 59a:	bf 4f       	sbci	r27, 0xFF	; 255
- 59c:	89 83       	std	Y+1, r24	; 0x01
- 59e:	9a 83       	std	Y+2, r25	; 0x02
- 5a0:	ab 83       	std	Y+3, r26	; 0x03
- 5a2:	bc 83       	std	Y+4, r27	; 0x04
-
-
-		PORTD.OUT = 0;
- 5a4:	10 92 64 06 	sts	0x0664, r1
-		PORTE.OUT = 0;
- 5a8:	10 92 84 06 	sts	0x0684, r1
-		PORTA.OUT = 0;
- 5ac:	10 92 04 06 	sts	0x0604, r1
-		PORTC.OUTCLR = 1 << 5;
- 5b0:	9e 81       	ldd	r25, Y+6	; 0x06
- 5b2:	90 93 46 06 	sts	0x0646, r25
- 5b6:	af ed       	ldi	r26, 0xDF	; 223
- 5b8:	b3 e9       	ldi	r27, 0x93	; 147
- 5ba:	e4 e0       	ldi	r30, 0x04	; 4
- 5bc:	a1 50       	subi	r26, 0x01	; 1
- 5be:	b0 40       	sbci	r27, 0x00	; 0
- 5c0:	e0 40       	sbci	r30, 0x00	; 0
- 5c2:	e1 f7       	brne	.-8      	; 0x5bc <main+0x3a2>
- 5c4:	00 c0       	rjmp	.+0      	; 0x5c6 <main+0x3ac>
- 5c6:	00 00       	nop
-		_delay_ms(50);
-		PORTC.OUTSET = 1 << 5;
- 5c8:	90 93 45 06 	sts	0x0645, r25
- 5cc:	ff e5       	ldi	r31, 0x5F	; 95
- 5ce:	0a ee       	ldi	r16, 0xEA	; 234
- 5d0:	10 e0       	ldi	r17, 0x00	; 0
- 5d2:	f1 50       	subi	r31, 0x01	; 1
- 5d4:	00 40       	sbci	r16, 0x00	; 0
- 5d6:	10 40       	sbci	r17, 0x00	; 0
- 5d8:	e1 f7       	brne	.-8      	; 0x5d2 <main+0x3b8>
- 5da:	00 c0       	rjmp	.+0      	; 0x5dc <main+0x3c2>
- 5dc:	00 00       	nop
-		_delay_ms(10);
-		if((0 != PORTB.IN) || (0 != PORTA.IN)) x += 1 << 13;
- 5de:	80 91 28 06 	lds	r24, 0x0628
- 5e2:	81 11       	cpse	r24, r1
- 5e4:	04 c0       	rjmp	.+8      	; 0x5ee <main+0x3d4>
- 5e6:	80 91 08 06 	lds	r24, 0x0608
- 5ea:	88 23       	and	r24, r24
- 5ec:	59 f0       	breq	.+22     	; 0x604 <main+0x3ea>
- 5ee:	89 81       	ldd	r24, Y+1	; 0x01
- 5f0:	9a 81       	ldd	r25, Y+2	; 0x02
- 5f2:	ab 81       	ldd	r26, Y+3	; 0x03
- 5f4:	bc 81       	ldd	r27, Y+4	; 0x04
- 5f6:	90 5e       	subi	r25, 0xE0	; 224
- 5f8:	af 4f       	sbci	r26, 0xFF	; 255
- 5fa:	bf 4f       	sbci	r27, 0xFF	; 255
- 5fc:	89 83       	std	Y+1, r24	; 0x01
- 5fe:	9a 83       	std	Y+2, r25	; 0x02
- 600:	ab 83       	std	Y+3, r26	; 0x03
- 602:	bc 83       	std	Y+4, r27	; 0x04
- 604:	9f ed       	ldi	r25, 0xDF	; 223
- 606:	a3 e9       	ldi	r26, 0x93	; 147
- 608:	b4 e0       	ldi	r27, 0x04	; 4
- 60a:	91 50       	subi	r25, 0x01	; 1
- 60c:	a0 40       	sbci	r26, 0x00	; 0
- 60e:	b0 40       	sbci	r27, 0x00	; 0
- 610:	e1 f7       	brne	.-8      	; 0x60a <main+0x3f0>
- 612:	00 c0       	rjmp	.+0      	; 0x614 <main+0x3fa>
- 614:	00 00       	nop
-		_delay_ms(50);
-		if((0 != PORTB.IN) || (1 != PORTA.IN)) x += 1 << 14;
- 616:	80 91 28 06 	lds	r24, 0x0628
- 61a:	81 11       	cpse	r24, r1
- 61c:	04 c0       	rjmp	.+8      	; 0x626 <main+0x40c>
- 61e:	80 91 08 06 	lds	r24, 0x0608
- 622:	81 30       	cpi	r24, 0x01	; 1
- 624:	59 f0       	breq	.+22     	; 0x63c <main+0x422>
- 626:	09 81       	ldd	r16, Y+1	; 0x01
- 628:	1a 81       	ldd	r17, Y+2	; 0x02
- 62a:	2b 81       	ldd	r18, Y+3	; 0x03
- 62c:	3c 81       	ldd	r19, Y+4	; 0x04
- 62e:	10 5c       	subi	r17, 0xC0	; 192
- 630:	2f 4f       	sbci	r18, 0xFF	; 255
- 632:	3f 4f       	sbci	r19, 0xFF	; 255
- 634:	09 83       	std	Y+1, r16	; 0x01
- 636:	1a 83       	std	Y+2, r17	; 0x02
- 638:	2b 83       	std	Y+3, r18	; 0x03
- 63a:	3c 83       	std	Y+4, r19	; 0x04
-		
+		// USB-ESD-SCHUTZ testen
+		x++;
+		if (x>200) x = 0;
+		if (x< 25) {
+			PORTD.DIR = 0b11011001;
+ 26a:	0f 2e       	mov	r0, r31
+ 26c:	f0 e6       	ldi	r31, 0x60	; 96
+ 26e:	cf 2e       	mov	r12, r31
+ 270:	f6 e0       	ldi	r31, 0x06	; 6
+ 272:	df 2e       	mov	r13, r31
+ 274:	f0 2d       	mov	r31, r0
+			PORTD.OUT = 0b10011001;
+ 276:	0f 2e       	mov	r0, r31
+ 278:	f9 e9       	ldi	r31, 0x99	; 153
+ 27a:	3f 2e       	mov	r3, r31
+ 27c:	f0 2d       	mov	r31, r0
+	j = ok = ct = 0;
 	
-		if(0==x) {
- 63c:	89 81       	ldd	r24, Y+1	; 0x01
- 63e:	9a 81       	ldd	r25, Y+2	; 0x02
- 640:	ab 81       	ldd	r26, Y+3	; 0x03
- 642:	bc 81       	ldd	r27, Y+4	; 0x04
- 644:	89 2b       	or	r24, r25
- 646:	8a 2b       	or	r24, r26
- 648:	8b 2b       	or	r24, r27
- 64a:	39 f4       	brne	.+14     	; 0x65a <main+0x440>
-			PORTC.OUTTGL = 1 << 6;
- 64c:	90 e4       	ldi	r25, 0x40	; 64
- 64e:	90 93 47 06 	sts	0x0647, r25
-			PORTC.OUTCLR = 1 << 7;
- 652:	a0 e8       	ldi	r26, 0x80	; 128
- 654:	a0 93 46 06 	sts	0x0646, r26
- 658:	16 ce       	rjmp	.-980    	; 0x286 <main+0x6c>
-		}		
+	//PORTA.OUT = 4;
+	//while(1);
+	while(1){
+		PORTA.OUT = (PORTA.OUT & 0b11111011) | ((~PORTA.IN & 0b00000001) << 2);
+ 27e:	20 91 04 06 	lds	r18, 0x0604
+ 282:	2b 7f       	andi	r18, 0xFB	; 251
+ 284:	30 91 08 06 	lds	r19, 0x0608
+ 288:	30 fd       	sbrc	r19, 0
+ 28a:	02 c0       	rjmp	.+4      	; 0x290 <main+0x76>
+ 28c:	34 e0       	ldi	r19, 0x04	; 4
+ 28e:	01 c0       	rjmp	.+2      	; 0x292 <main+0x78>
+ 290:	30 e0       	ldi	r19, 0x00	; 0
+ 292:	23 2b       	or	r18, r19
+ 294:	20 93 04 06 	sts	0x0604, r18
+		PORTB.OUT = (PORTB.OUT & 0b11111011) | ((~PORTB.IN & 0b00000001) << 2);
+ 298:	20 91 24 06 	lds	r18, 0x0624
+ 29c:	2b 7f       	andi	r18, 0xFB	; 251
+ 29e:	30 91 28 06 	lds	r19, 0x0628
+ 2a2:	30 fd       	sbrc	r19, 0
+ 2a4:	02 c0       	rjmp	.+4      	; 0x2aa <main+0x90>
+ 2a6:	34 e0       	ldi	r19, 0x04	; 4
+ 2a8:	01 c0       	rjmp	.+2      	; 0x2ac <main+0x92>
+ 2aa:	30 e0       	ldi	r19, 0x00	; 0
+ 2ac:	23 2b       	or	r18, r19
+ 2ae:	20 93 24 06 	sts	0x0624, r18
+
+		// USB-ESD-Schutz Z-Diode testen
+		i++;
+ 2b2:	4f 5f       	subi	r20, 0xFF	; 255
+ 2b4:	5f 4f       	sbci	r21, 0xFF	; 255
+ 2b6:	6f 4f       	sbci	r22, 0xFF	; 255
+ 2b8:	7f 4f       	sbci	r23, 0xFF	; 255
+		if (i> 20000) {
+ 2ba:	41 32       	cpi	r20, 0x21	; 33
+ 2bc:	2e e4       	ldi	r18, 0x4E	; 78
+ 2be:	52 07       	cpc	r21, r18
+ 2c0:	61 05       	cpc	r22, r1
+ 2c2:	71 05       	cpc	r23, r1
+ 2c4:	28 f0       	brcs	.+10     	; 0x2d0 <main+0xb6>
+			i = 0;
+			ct++;
+ 2c6:	1f 5f       	subi	r17, 0xFF	; 255
+			if(ct>2) ct = 0;
+ 2c8:	13 30       	cpi	r17, 0x03	; 3
+ 2ca:	08 f0       	brcs	.+2      	; 0x2ce <main+0xb4>
+ 2cc:	3b c4       	rjmp	.+2166   	; 0xb44 <main+0x92a>
+ 2ce:	3b c4       	rjmp	.+2166   	; 0xb46 <main+0x92c>
+		}
+		if (i> 10000) PORTC.OUTSET = 0b00100000;
+ 2d0:	41 31       	cpi	r20, 0x11	; 17
+ 2d2:	37 e2       	ldi	r19, 0x27	; 39
+ 2d4:	53 07       	cpc	r21, r19
+ 2d6:	61 05       	cpc	r22, r1
+ 2d8:	71 05       	cpc	r23, r1
+ 2da:	18 f0       	brcs	.+6      	; 0x2e2 <main+0xc8>
+ 2dc:	f7 01       	movw	r30, r14
+ 2de:	25 82       	std	Z+5, r2	; 0x05
+ 2e0:	02 c0       	rjmp	.+4      	; 0x2e6 <main+0xcc>
+			else PORTC.OUTCLR = 0b00100000;
+ 2e2:	f7 01       	movw	r30, r14
+ 2e4:	26 82       	std	Z+6, r2	; 0x06
+		
+		// USB-ESD-SCHUTZ testen
+		x++;
+ 2e6:	01 96       	adiw	r24, 0x01	; 1
+ 2e8:	a1 1d       	adc	r26, r1
+ 2ea:	b1 1d       	adc	r27, r1
+		if (x>200) x = 0;
+ 2ec:	89 3c       	cpi	r24, 0xC9	; 201
+ 2ee:	91 05       	cpc	r25, r1
+ 2f0:	a1 05       	cpc	r26, r1
+ 2f2:	b1 05       	cpc	r27, r1
+ 2f4:	30 f4       	brcc	.+12     	; 0x302 <main+0xe8>
+		if (x< 25) {
+ 2f6:	89 31       	cpi	r24, 0x19	; 25
+ 2f8:	91 05       	cpc	r25, r1
+ 2fa:	a1 05       	cpc	r26, r1
+ 2fc:	b1 05       	cpc	r27, r1
+ 2fe:	60 f4       	brcc	.+24     	; 0x318 <main+0xfe>
+ 300:	03 c0       	rjmp	.+6      	; 0x308 <main+0xee>
+		if (i> 10000) PORTC.OUTSET = 0b00100000;
+			else PORTC.OUTCLR = 0b00100000;
+		
+		// USB-ESD-SCHUTZ testen
+		x++;
+		if (x>200) x = 0;
+ 302:	80 e0       	ldi	r24, 0x00	; 0
+ 304:	90 e0       	ldi	r25, 0x00	; 0
+ 306:	dc 01       	movw	r26, r24
+		if (x< 25) {
+			PORTD.DIR = 0b11011001;
+ 308:	0f 2e       	mov	r0, r31
+ 30a:	f9 ed       	ldi	r31, 0xD9	; 217
+ 30c:	4f 2e       	mov	r4, r31
+ 30e:	f0 2d       	mov	r31, r0
+ 310:	f6 01       	movw	r30, r12
+ 312:	40 82       	st	Z, r4
+			PORTD.OUT = 0b10011001;
+ 314:	34 82       	std	Z+4, r3	; 0x04
+ 316:	b3 cf       	rjmp	.-154    	; 0x27e <main+0x64>
+		}
+		else if(x < 50){
+ 318:	82 33       	cpi	r24, 0x32	; 50
+ 31a:	91 05       	cpc	r25, r1
+ 31c:	a1 05       	cpc	r26, r1
+ 31e:	b1 05       	cpc	r27, r1
+ 320:	40 f4       	brcc	.+16     	; 0x332 <main+0x118>
+			PORTD.DIR = 0b01011001;
+ 322:	0f 2e       	mov	r0, r31
+ 324:	f9 e5       	ldi	r31, 0x59	; 89
+ 326:	4f 2e       	mov	r4, r31
+ 328:	f0 2d       	mov	r31, r0
+ 32a:	f6 01       	movw	r30, r12
+ 32c:	40 82       	st	Z, r4
+			PORTD.OUT = 0b01011001;
+ 32e:	44 82       	std	Z+4, r4	; 0x04
+ 330:	a6 cf       	rjmp	.-180    	; 0x27e <main+0x64>
+		}
+		else if(x < 75){
+ 332:	8b 34       	cpi	r24, 0x4B	; 75
+ 334:	91 05       	cpc	r25, r1
+ 336:	a1 05       	cpc	r26, r1
+ 338:	b1 05       	cpc	r27, r1
+ 33a:	60 f4       	brcc	.+24     	; 0x354 <main+0x13a>
+			PORTD.DIR = 0b11011001;
+ 33c:	0f 2e       	mov	r0, r31
+ 33e:	f9 ed       	ldi	r31, 0xD9	; 217
+ 340:	4f 2e       	mov	r4, r31
+ 342:	f0 2d       	mov	r31, r0
+ 344:	f6 01       	movw	r30, r12
+ 346:	40 82       	st	Z, r4
+			PORTD.OUT = 0b01011001;
+ 348:	0f 2e       	mov	r0, r31
+ 34a:	f9 e5       	ldi	r31, 0x59	; 89
+ 34c:	5f 2e       	mov	r5, r31
+ 34e:	f0 2d       	mov	r31, r0
+ 350:	54 82       	std	Z+4, r5	; 0x04
+ 352:	95 cf       	rjmp	.-214    	; 0x27e <main+0x64>
+		}
+		else if(x < 100){
+ 354:	84 36       	cpi	r24, 0x64	; 100
+ 356:	91 05       	cpc	r25, r1
+ 358:	a1 05       	cpc	r26, r1
+ 35a:	b1 05       	cpc	r27, r1
+ 35c:	20 f4       	brcc	.+8      	; 0x366 <main+0x14c>
+			PORTD.DIR = 0b10011001;
+ 35e:	f6 01       	movw	r30, r12
+ 360:	30 82       	st	Z, r3
+			PORTD.OUT = 0b10011001;
+ 362:	34 82       	std	Z+4, r3	; 0x04
+ 364:	8c cf       	rjmp	.-232    	; 0x27e <main+0x64>
+			
+		}
+		else if (x< 125) {
+ 366:	8d 37       	cpi	r24, 0x7D	; 125
+ 368:	91 05       	cpc	r25, r1
+ 36a:	a1 05       	cpc	r26, r1
+ 36c:	b1 05       	cpc	r27, r1
+ 36e:	40 f4       	brcc	.+16     	; 0x380 <main+0x166>
+			PORTD.DIR = 0b11011001;
+ 370:	0f 2e       	mov	r0, r31
+ 372:	f9 ed       	ldi	r31, 0xD9	; 217
+ 374:	4f 2e       	mov	r4, r31
+ 376:	f0 2d       	mov	r31, r0
+ 378:	f6 01       	movw	r30, r12
+ 37a:	40 82       	st	Z, r4
+			PORTD.OUT = 0b10011001;
+ 37c:	34 82       	std	Z+4, r3	; 0x04
+ 37e:	7f cf       	rjmp	.-258    	; 0x27e <main+0x64>
+		}
+		else if(x < 150){
+ 380:	86 39       	cpi	r24, 0x96	; 150
+ 382:	91 05       	cpc	r25, r1
+ 384:	a1 05       	cpc	r26, r1
+ 386:	b1 05       	cpc	r27, r1
+ 388:	40 f4       	brcc	.+16     	; 0x39a <main+0x180>
+			PORTD.DIR = 0b10011001;
+ 38a:	f6 01       	movw	r30, r12
+ 38c:	30 82       	st	Z, r3
+			PORTD.OUT = 0b01011001;
+ 38e:	0f 2e       	mov	r0, r31
+ 390:	f9 e5       	ldi	r31, 0x59	; 89
+ 392:	4f 2e       	mov	r4, r31
+ 394:	f0 2d       	mov	r31, r0
+ 396:	44 82       	std	Z+4, r4	; 0x04
+ 398:	72 cf       	rjmp	.-284    	; 0x27e <main+0x64>
+		}
+		else if(x < 175){
+ 39a:	8f 3a       	cpi	r24, 0xAF	; 175
+ 39c:	91 05       	cpc	r25, r1
+ 39e:	a1 05       	cpc	r26, r1
+ 3a0:	b1 05       	cpc	r27, r1
+ 3a2:	60 f4       	brcc	.+24     	; 0x3bc <main+0x1a2>
+			PORTD.DIR = 0b11011001;
+ 3a4:	0f 2e       	mov	r0, r31
+ 3a6:	f9 ed       	ldi	r31, 0xD9	; 217
+ 3a8:	4f 2e       	mov	r4, r31
+ 3aa:	f0 2d       	mov	r31, r0
+ 3ac:	f6 01       	movw	r30, r12
+ 3ae:	40 82       	st	Z, r4
+			PORTD.OUT = 0b01011001;
+ 3b0:	0f 2e       	mov	r0, r31
+ 3b2:	f9 e5       	ldi	r31, 0x59	; 89
+ 3b4:	5f 2e       	mov	r5, r31
+ 3b6:	f0 2d       	mov	r31, r0
+ 3b8:	54 82       	std	Z+4, r5	; 0x04
+ 3ba:	61 cf       	rjmp	.-318    	; 0x27e <main+0x64>
+		}
+		else if(x < 199){
+ 3bc:	87 3c       	cpi	r24, 0xC7	; 199
+ 3be:	91 05       	cpc	r25, r1
+ 3c0:	a1 05       	cpc	r26, r1
+ 3c2:	b1 05       	cpc	r27, r1
+ 3c4:	40 f4       	brcc	.+16     	; 0x3d6 <main+0x1bc>
+			PORTD.DIR = 0b01011001;
+ 3c6:	0f 2e       	mov	r0, r31
+ 3c8:	f9 e5       	ldi	r31, 0x59	; 89
+ 3ca:	4f 2e       	mov	r4, r31
+ 3cc:	f0 2d       	mov	r31, r0
+ 3ce:	f6 01       	movw	r30, r12
+ 3d0:	40 82       	st	Z, r4
+			PORTD.OUT = 0b10011001;	
+ 3d2:	34 82       	std	Z+4, r3	; 0x04
+ 3d4:	54 cf       	rjmp	.-344    	; 0x27e <main+0x64>
+		}
+		//andere Pins testen
 		else{
-			PORTC.OUTCLR = 1 << 6;
- 65a:	b0 e4       	ldi	r27, 0x40	; 64
- 65c:	b0 93 46 06 	sts	0x0646, r27
-			PORTC.OUTTGL = 1 << 7;
- 660:	e0 e8       	ldi	r30, 0x80	; 128
- 662:	e0 93 47 06 	sts	0x0647, r30
- 666:	0f ce       	rjmp	.-994    	; 0x286 <main+0x6c>
-				PORTD.OUT = 0;
-				PORTE.OUT = 0;
-				PORTA.OUT = 16;
+			j++;
+ 3d6:	0f 5f       	subi	r16, 0xFF	; 255
+			if (j>10){
+ 3d8:	0b 30       	cpi	r16, 0x0B	; 11
+ 3da:	08 f4       	brcc	.+2      	; 0x3de <main+0x1c4>
+ 3dc:	75 c3       	rjmp	.+1770   	; 0xac8 <main+0x8ae>
+				j = 0;
+				ok = 0;
+				PORTE.OUTCLR = 1 << 0;
+ 3de:	55 24       	eor	r5, r5
+ 3e0:	53 94       	inc	r5
+ 3e2:	50 92 86 06 	sts	0x0686, r5
+				PORTE.OUTSET = 1 << 1;
+ 3e6:	68 94       	set
+ 3e8:	66 24       	eor	r6, r6
+ 3ea:	61 f8       	bld	r6, 1
+ 3ec:	60 92 85 06 	sts	0x0685, r6
+				PORTE.OUTCLR = 1 << 3;
+ 3f0:	68 94       	set
+ 3f2:	77 24       	eor	r7, r7
+ 3f4:	73 f8       	bld	r7, 3
+ 3f6:	70 92 86 06 	sts	0x0686, r7
+				PORTD.DIR = 0b11011000;
+ 3fa:	0f 2e       	mov	r0, r31
+ 3fc:	f8 ed       	ldi	r31, 0xD8	; 216
+ 3fe:	4f 2e       	mov	r4, r31
+ 400:	f0 2d       	mov	r31, r0
+ 402:	f6 01       	movw	r30, r12
+ 404:	40 82       	st	Z, r4
+				PORTA.OUTSET = 1 << 3;
+ 406:	70 92 05 06 	sts	0x0605, r7
+				PORTA.OUTCLR = 1 << 4;
+ 40a:	68 94       	set
+ 40c:	55 24       	eor	r5, r5
+ 40e:	54 f8       	bld	r5, 4
+ 410:	50 92 06 06 	sts	0x0606, r5
+				PORTA.OUTSET = 1 << 5;
+ 414:	20 92 05 06 	sts	0x0605, r2
+				PORTB.OUTCLR = 1 << 3;
+ 418:	70 92 26 06 	sts	0x0626, r7
+				PORTC.OUTSET = 1 << 0;
+ 41c:	44 24       	eor	r4, r4
+ 41e:	43 94       	inc	r4
+ 420:	f7 01       	movw	r30, r14
+ 422:	45 82       	std	Z+5, r4	; 0x05
+				PORTC.OUTCLR = 1 << 7;
+ 424:	68 94       	set
+ 426:	55 24       	eor	r5, r5
+ 428:	57 f8       	bld	r5, 7
+ 42a:	56 82       	std	Z+6, r5	; 0x06
 				PORTC.OUTCLR = 1 << 5;
+ 42c:	26 82       	std	Z+6, r2	; 0x06
+				PORTC.OUTSET = 1 << 6;
+ 42e:	68 94       	set
+ 430:	66 24       	eor	r6, r6
+ 432:	66 f8       	bld	r6, 6
+ 434:	65 82       	std	Z+5, r6	; 0x05
+				PORTD.OUTCLR = 1 << 3;
+ 436:	f6 01       	movw	r30, r12
+ 438:	76 82       	std	Z+6, r7	; 0x06
+				PORTD.OUTSET = 1 << 4;
+ 43a:	68 94       	set
+ 43c:	44 24       	eor	r4, r4
+ 43e:	44 f8       	bld	r4, 4
+ 440:	45 82       	std	Z+5, r4	; 0x05
+				PORTD.OUTCLR = 1 << 6;
+ 442:	66 82       	std	Z+6, r6	; 0x06
+				PORTD.OUTSET = 1 << 7;
+ 444:	55 82       	std	Z+5, r5	; 0x05
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+ 446:	00 91 08 06 	lds	r16, 0x0608
+ 44a:	0a 7f       	andi	r16, 0xFA	; 250
+ 44c:	40 2e       	mov	r4, r16
+ 44e:	51 2c       	mov	r5, r1
+ 450:	61 2c       	mov	r6, r1
+ 452:	71 2c       	mov	r7, r1
+ 454:	53 01       	movw	r10, r6
+ 456:	42 01       	movw	r8, r4
+ 458:	b6 94       	lsr	r11
+ 45a:	a7 94       	ror	r10
+ 45c:	97 94       	ror	r9
+ 45e:	87 94       	ror	r8
+ 460:	89 82       	std	Y+1, r8	; 0x01
+ 462:	9a 82       	std	Y+2, r9	; 0x02
+ 464:	ab 82       	std	Y+3, r10	; 0x03
+ 466:	bc 82       	std	Y+4, r11	; 0x04
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 468:	30 91 28 06 	lds	r19, 0x0628
+				z+= (uint32_t)PORTC.IN << 10;
+ 46c:	f7 01       	movw	r30, r14
+ 46e:	00 85       	ldd	r16, Z+8	; 0x08
+				z+= (uint32_t)PORTD.IN << 18;
+ 470:	f6 01       	movw	r30, r12
+ 472:	70 84       	ldd	r7, Z+8	; 0x08
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 474:	20 91 88 06 	lds	r18, 0x0688
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;	
+ 478:	e0 91 e8 07 	lds	r30, 0x07E8
+				PORTD.OUTCLR = 1 << 6;
+				PORTD.OUTSET = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+ 47c:	47 2c       	mov	r4, r7
+ 47e:	51 2c       	mov	r5, r1
+ 480:	61 2c       	mov	r6, r1
+ 482:	71 2c       	mov	r7, r1
+ 484:	53 01       	movw	r10, r6
+ 486:	42 01       	movw	r8, r4
+ 488:	07 2e       	mov	r0, r23
+ 48a:	72 e1       	ldi	r23, 0x12	; 18
+ 48c:	88 0c       	add	r8, r8
+ 48e:	99 1c       	adc	r9, r9
+ 490:	aa 1c       	adc	r10, r10
+ 492:	bb 1c       	adc	r11, r11
+ 494:	7a 95       	dec	r23
+ 496:	d1 f7       	brne	.-12     	; 0x48c <main+0x272>
+ 498:	70 2d       	mov	r23, r0
+ 49a:	8d 82       	std	Y+5, r8	; 0x05
+ 49c:	9e 82       	std	Y+6, r9	; 0x06
+ 49e:	af 82       	std	Y+7, r10	; 0x07
+ 4a0:	b8 86       	std	Y+8, r11	; 0x08
+				PORTD.OUTSET = 1 << 4;
+				PORTD.OUTCLR = 1 << 6;
+				PORTD.OUTSET = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 4a2:	40 2e       	mov	r4, r16
+ 4a4:	51 2c       	mov	r5, r1
+ 4a6:	61 2c       	mov	r6, r1
+ 4a8:	71 2c       	mov	r7, r1
+ 4aa:	53 01       	movw	r10, r6
+ 4ac:	42 01       	movw	r8, r4
+ 4ae:	07 2e       	mov	r0, r23
+ 4b0:	7a e0       	ldi	r23, 0x0A	; 10
+ 4b2:	88 0c       	add	r8, r8
+ 4b4:	99 1c       	adc	r9, r9
+ 4b6:	aa 1c       	adc	r10, r10
+ 4b8:	bb 1c       	adc	r11, r11
+ 4ba:	7a 95       	dec	r23
+ 4bc:	d1 f7       	brne	.-12     	; 0x4b2 <main+0x298>
+ 4be:	70 2d       	mov	r23, r0
+				PORTD.OUTCLR = 1 << 3;
+				PORTD.OUTSET = 1 << 4;
+				PORTD.OUTCLR = 1 << 6;
+				PORTD.OUTSET = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 4c0:	4d 80       	ldd	r4, Y+5	; 0x05
+ 4c2:	5e 80       	ldd	r5, Y+6	; 0x06
+ 4c4:	6f 80       	ldd	r6, Y+7	; 0x07
+ 4c6:	78 84       	ldd	r7, Y+8	; 0x08
+ 4c8:	84 0c       	add	r8, r4
+ 4ca:	95 1c       	adc	r9, r5
+ 4cc:	a6 1c       	adc	r10, r6
+ 4ce:	b7 1c       	adc	r11, r7
+ 4d0:	89 86       	std	Y+9, r8	; 0x09
+ 4d2:	9a 86       	std	Y+10, r9	; 0x0a
+ 4d4:	ab 86       	std	Y+11, r10	; 0x0b
+ 4d6:	bc 86       	std	Y+12, r11	; 0x0c
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;	
+ 4d8:	4e 2e       	mov	r4, r30
+ 4da:	51 2c       	mov	r5, r1
+ 4dc:	61 2c       	mov	r6, r1
+ 4de:	71 2c       	mov	r7, r1
+ 4e0:	53 01       	movw	r10, r6
+ 4e2:	42 01       	movw	r8, r4
+ 4e4:	07 2e       	mov	r0, r23
+ 4e6:	7e e1       	ldi	r23, 0x1E	; 30
+ 4e8:	88 0c       	add	r8, r8
+ 4ea:	99 1c       	adc	r9, r9
+ 4ec:	aa 1c       	adc	r10, r10
+ 4ee:	bb 1c       	adc	r11, r11
+ 4f0:	7a 95       	dec	r23
+ 4f2:	d1 f7       	brne	.-12     	; 0x4e8 <main+0x2ce>
+ 4f4:	70 2d       	mov	r23, r0
+				PORTD.OUTSET = 1 << 4;
+				PORTD.OUTCLR = 1 << 6;
+				PORTD.OUTSET = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 4f6:	49 84       	ldd	r4, Y+9	; 0x09
+ 4f8:	5a 84       	ldd	r5, Y+10	; 0x0a
+ 4fa:	6b 84       	ldd	r6, Y+11	; 0x0b
+ 4fc:	7c 84       	ldd	r7, Y+12	; 0x0c
+ 4fe:	48 0c       	add	r4, r8
+ 500:	59 1c       	adc	r5, r9
+ 502:	6a 1c       	adc	r6, r10
+ 504:	7b 1c       	adc	r7, r11
+				z+= (uint32_t)PORTD.IN << 18;
+ 506:	89 80       	ldd	r8, Y+1	; 0x01
+ 508:	9a 80       	ldd	r9, Y+2	; 0x02
+ 50a:	ab 80       	ldd	r10, Y+3	; 0x03
+ 50c:	bc 80       	ldd	r11, Y+4	; 0x04
+ 50e:	84 0c       	add	r8, r4
+ 510:	95 1c       	adc	r9, r5
+ 512:	a6 1c       	adc	r10, r6
+ 514:	b7 1c       	adc	r11, r7
+ 516:	89 82       	std	Y+1, r8	; 0x01
+ 518:	9a 82       	std	Y+2, r9	; 0x02
+ 51a:	ab 82       	std	Y+3, r10	; 0x03
+ 51c:	bc 82       	std	Y+4, r11	; 0x04
+				PORTD.OUTCLR = 1 << 3;
+				PORTD.OUTSET = 1 << 4;
+				PORTD.OUTCLR = 1 << 6;
+				PORTD.OUTSET = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 51e:	3a 70       	andi	r19, 0x0A	; 10
+ 520:	83 2e       	mov	r8, r19
+ 522:	91 2c       	mov	r9, r1
+ 524:	a1 2c       	mov	r10, r1
+ 526:	b1 2c       	mov	r11, r1
+ 528:	88 0c       	add	r8, r8
+ 52a:	99 1c       	adc	r9, r9
+ 52c:	aa 1c       	adc	r10, r10
+ 52e:	bb 1c       	adc	r11, r11
+ 530:	88 0c       	add	r8, r8
+ 532:	99 1c       	adc	r9, r9
+ 534:	aa 1c       	adc	r10, r10
+ 536:	bb 1c       	adc	r11, r11
+ 538:	88 0c       	add	r8, r8
+ 53a:	99 1c       	adc	r9, r9
+ 53c:	aa 1c       	adc	r10, r10
+ 53e:	bb 1c       	adc	r11, r11
+ 540:	88 0c       	add	r8, r8
+ 542:	99 1c       	adc	r9, r9
+ 544:	aa 1c       	adc	r10, r10
+ 546:	bb 1c       	adc	r11, r11
+ 548:	24 01       	movw	r4, r8
+ 54a:	35 01       	movw	r6, r10
+ 54c:	44 0c       	add	r4, r4
+ 54e:	55 1c       	adc	r5, r5
+ 550:	66 1c       	adc	r6, r6
+ 552:	77 1c       	adc	r7, r7
+ 554:	44 0c       	add	r4, r4
+ 556:	55 1c       	adc	r5, r5
+ 558:	66 1c       	adc	r6, r6
+ 55a:	77 1c       	adc	r7, r7
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 55c:	89 80       	ldd	r8, Y+1	; 0x01
+ 55e:	9a 80       	ldd	r9, Y+2	; 0x02
+ 560:	ab 80       	ldd	r10, Y+3	; 0x03
+ 562:	bc 80       	ldd	r11, Y+4	; 0x04
+ 564:	84 0c       	add	r8, r4
+ 566:	95 1c       	adc	r9, r5
+ 568:	a6 1c       	adc	r10, r6
+ 56a:	b7 1c       	adc	r11, r7
+ 56c:	89 82       	std	Y+1, r8	; 0x01
+ 56e:	9a 82       	std	Y+2, r9	; 0x02
+ 570:	ab 82       	std	Y+3, r10	; 0x03
+ 572:	bc 82       	std	Y+4, r11	; 0x04
+ 574:	2f 70       	andi	r18, 0x0F	; 15
+ 576:	82 2e       	mov	r8, r18
+ 578:	91 2c       	mov	r9, r1
+ 57a:	a1 2c       	mov	r10, r1
+ 57c:	b1 2c       	mov	r11, r1
+ 57e:	24 01       	movw	r4, r8
+ 580:	35 01       	movw	r6, r10
+ 582:	03 2e       	mov	r0, r19
+ 584:	3a e1       	ldi	r19, 0x1A	; 26
+ 586:	44 0c       	add	r4, r4
+ 588:	55 1c       	adc	r5, r5
+ 58a:	66 1c       	adc	r6, r6
+ 58c:	77 1c       	adc	r7, r7
+ 58e:	3a 95       	dec	r19
+ 590:	d1 f7       	brne	.-12     	; 0x586 <main+0x36c>
+ 592:	30 2d       	mov	r19, r0
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;	
+ 594:	89 80       	ldd	r8, Y+1	; 0x01
+ 596:	9a 80       	ldd	r9, Y+2	; 0x02
+ 598:	ab 80       	ldd	r10, Y+3	; 0x03
+ 59a:	bc 80       	ldd	r11, Y+4	; 0x04
+ 59c:	48 0c       	add	r4, r8
+ 59e:	59 1c       	adc	r5, r9
+ 5a0:	6a 1c       	adc	r6, r10
+ 5a2:	7b 1c       	adc	r7, r11
+				if (0b10001010010101010101010001010101 == (uint32_t) z) ok += 1;
+ 5a4:	21 e0       	ldi	r18, 0x01	; 1
+ 5a6:	35 e5       	ldi	r19, 0x55	; 85
+ 5a8:	43 16       	cp	r4, r19
+ 5aa:	34 e5       	ldi	r19, 0x54	; 84
+ 5ac:	53 06       	cpc	r5, r19
+ 5ae:	35 e5       	ldi	r19, 0x55	; 85
+ 5b0:	63 06       	cpc	r6, r19
+ 5b2:	3a e8       	ldi	r19, 0x8A	; 138
+ 5b4:	73 06       	cpc	r7, r19
+ 5b6:	09 f0       	breq	.+2      	; 0x5ba <main+0x3a0>
+ 5b8:	20 e0       	ldi	r18, 0x00	; 0
+
+				PORTD.OUTSET = 1 << 3;
+ 5ba:	68 94       	set
+ 5bc:	44 24       	eor	r4, r4
+ 5be:	43 f8       	bld	r4, 3
+ 5c0:	f6 01       	movw	r30, r12
+ 5c2:	45 82       	std	Z+5, r4	; 0x05
+				PORTE.OUTSET = 1 << 0;
+ 5c4:	55 24       	eor	r5, r5
+ 5c6:	53 94       	inc	r5
+ 5c8:	50 92 85 06 	sts	0x0685, r5
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+ 5cc:	00 91 08 06 	lds	r16, 0x0608
+ 5d0:	0a 7f       	andi	r16, 0xFA	; 250
+ 5d2:	40 2e       	mov	r4, r16
+ 5d4:	51 2c       	mov	r5, r1
+ 5d6:	61 2c       	mov	r6, r1
+ 5d8:	71 2c       	mov	r7, r1
+ 5da:	53 01       	movw	r10, r6
+ 5dc:	42 01       	movw	r8, r4
+ 5de:	b6 94       	lsr	r11
+ 5e0:	a7 94       	ror	r10
+ 5e2:	97 94       	ror	r9
+ 5e4:	87 94       	ror	r8
+ 5e6:	89 82       	std	Y+1, r8	; 0x01
+ 5e8:	9a 82       	std	Y+2, r9	; 0x02
+ 5ea:	ab 82       	std	Y+3, r10	; 0x03
+ 5ec:	bc 82       	std	Y+4, r11	; 0x04
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 5ee:	00 91 28 06 	lds	r16, 0x0628
+				z+= (uint32_t)PORTC.IN << 10;
+ 5f2:	f7 01       	movw	r30, r14
+ 5f4:	50 84       	ldd	r5, Z+8	; 0x08
+				z+= (uint32_t)PORTD.IN << 18;
+ 5f6:	f6 01       	movw	r30, r12
+ 5f8:	b0 84       	ldd	r11, Z+8	; 0x08
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 5fa:	30 91 88 06 	lds	r19, 0x0688
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 5fe:	e0 91 e8 07 	lds	r30, 0x07E8
+				PORTD.OUTSET = 1 << 3;
+				PORTE.OUTSET = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+ 602:	6b 2c       	mov	r6, r11
+ 604:	71 2c       	mov	r7, r1
+ 606:	81 2c       	mov	r8, r1
+ 608:	91 2c       	mov	r9, r1
+ 60a:	05 2e       	mov	r0, r21
+ 60c:	52 e1       	ldi	r21, 0x12	; 18
+ 60e:	66 0c       	add	r6, r6
+ 610:	77 1c       	adc	r7, r7
+ 612:	88 1c       	adc	r8, r8
+ 614:	99 1c       	adc	r9, r9
+ 616:	5a 95       	dec	r21
+ 618:	d1 f7       	brne	.-12     	; 0x60e <main+0x3f4>
+ 61a:	50 2d       	mov	r21, r0
+ 61c:	6d 82       	std	Y+5, r6	; 0x05
+ 61e:	7e 82       	std	Y+6, r7	; 0x06
+ 620:	8f 82       	std	Y+7, r8	; 0x07
+ 622:	98 86       	std	Y+8, r9	; 0x08
+
+				PORTD.OUTSET = 1 << 3;
+				PORTE.OUTSET = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 624:	85 2c       	mov	r8, r5
+ 626:	91 2c       	mov	r9, r1
+ 628:	a1 2c       	mov	r10, r1
+ 62a:	b1 2c       	mov	r11, r1
+ 62c:	24 01       	movw	r4, r8
+ 62e:	35 01       	movw	r6, r10
+ 630:	03 2e       	mov	r0, r19
+ 632:	3a e0       	ldi	r19, 0x0A	; 10
+ 634:	44 0c       	add	r4, r4
+ 636:	55 1c       	adc	r5, r5
+ 638:	66 1c       	adc	r6, r6
+ 63a:	77 1c       	adc	r7, r7
+ 63c:	3a 95       	dec	r19
+ 63e:	d1 f7       	brne	.-12     	; 0x634 <main+0x41a>
+ 640:	30 2d       	mov	r19, r0
+				if (0b10001010010101010101010001010101 == (uint32_t) z) ok += 1;
+
+				PORTD.OUTSET = 1 << 3;
+				PORTE.OUTSET = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 642:	8d 80       	ldd	r8, Y+5	; 0x05
+ 644:	9e 80       	ldd	r9, Y+6	; 0x06
+ 646:	af 80       	ldd	r10, Y+7	; 0x07
+ 648:	b8 84       	ldd	r11, Y+8	; 0x08
+ 64a:	48 0c       	add	r4, r8
+ 64c:	59 1c       	adc	r5, r9
+ 64e:	6a 1c       	adc	r6, r10
+ 650:	7b 1c       	adc	r7, r11
+ 652:	49 86       	std	Y+9, r4	; 0x09
+ 654:	5a 86       	std	Y+10, r5	; 0x0a
+ 656:	6b 86       	std	Y+11, r6	; 0x0b
+ 658:	7c 86       	std	Y+12, r7	; 0x0c
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 65a:	4e 2e       	mov	r4, r30
+ 65c:	51 2c       	mov	r5, r1
+ 65e:	61 2c       	mov	r6, r1
+ 660:	71 2c       	mov	r7, r1
+ 662:	53 01       	movw	r10, r6
+ 664:	42 01       	movw	r8, r4
+ 666:	07 2e       	mov	r0, r23
+ 668:	7e e1       	ldi	r23, 0x1E	; 30
+ 66a:	88 0c       	add	r8, r8
+ 66c:	99 1c       	adc	r9, r9
+ 66e:	aa 1c       	adc	r10, r10
+ 670:	bb 1c       	adc	r11, r11
+ 672:	7a 95       	dec	r23
+ 674:	d1 f7       	brne	.-12     	; 0x66a <main+0x450>
+ 676:	70 2d       	mov	r23, r0
+
+				PORTD.OUTSET = 1 << 3;
+				PORTE.OUTSET = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 678:	49 84       	ldd	r4, Y+9	; 0x09
+ 67a:	5a 84       	ldd	r5, Y+10	; 0x0a
+ 67c:	6b 84       	ldd	r6, Y+11	; 0x0b
+ 67e:	7c 84       	ldd	r7, Y+12	; 0x0c
+ 680:	48 0c       	add	r4, r8
+ 682:	59 1c       	adc	r5, r9
+ 684:	6a 1c       	adc	r6, r10
+ 686:	7b 1c       	adc	r7, r11
+				z+= (uint32_t)PORTD.IN << 18;
+ 688:	89 80       	ldd	r8, Y+1	; 0x01
+ 68a:	9a 80       	ldd	r9, Y+2	; 0x02
+ 68c:	ab 80       	ldd	r10, Y+3	; 0x03
+ 68e:	bc 80       	ldd	r11, Y+4	; 0x04
+ 690:	84 0c       	add	r8, r4
+ 692:	95 1c       	adc	r9, r5
+ 694:	a6 1c       	adc	r10, r6
+ 696:	b7 1c       	adc	r11, r7
+ 698:	89 82       	std	Y+1, r8	; 0x01
+ 69a:	9a 82       	std	Y+2, r9	; 0x02
+ 69c:	ab 82       	std	Y+3, r10	; 0x03
+ 69e:	bc 82       	std	Y+4, r11	; 0x04
+				if (0b10001010010101010101010001010101 == (uint32_t) z) ok += 1;
+
+				PORTD.OUTSET = 1 << 3;
+				PORTE.OUTSET = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 6a0:	0a 70       	andi	r16, 0x0A	; 10
+ 6a2:	80 2e       	mov	r8, r16
+ 6a4:	91 2c       	mov	r9, r1
+ 6a6:	a1 2c       	mov	r10, r1
+ 6a8:	b1 2c       	mov	r11, r1
+ 6aa:	88 0c       	add	r8, r8
+ 6ac:	99 1c       	adc	r9, r9
+ 6ae:	aa 1c       	adc	r10, r10
+ 6b0:	bb 1c       	adc	r11, r11
+ 6b2:	88 0c       	add	r8, r8
+ 6b4:	99 1c       	adc	r9, r9
+ 6b6:	aa 1c       	adc	r10, r10
+ 6b8:	bb 1c       	adc	r11, r11
+ 6ba:	88 0c       	add	r8, r8
+ 6bc:	99 1c       	adc	r9, r9
+ 6be:	aa 1c       	adc	r10, r10
+ 6c0:	bb 1c       	adc	r11, r11
+ 6c2:	88 0c       	add	r8, r8
+ 6c4:	99 1c       	adc	r9, r9
+ 6c6:	aa 1c       	adc	r10, r10
+ 6c8:	bb 1c       	adc	r11, r11
+ 6ca:	24 01       	movw	r4, r8
+ 6cc:	35 01       	movw	r6, r10
+ 6ce:	44 0c       	add	r4, r4
+ 6d0:	55 1c       	adc	r5, r5
+ 6d2:	66 1c       	adc	r6, r6
+ 6d4:	77 1c       	adc	r7, r7
+ 6d6:	44 0c       	add	r4, r4
+ 6d8:	55 1c       	adc	r5, r5
+ 6da:	66 1c       	adc	r6, r6
+ 6dc:	77 1c       	adc	r7, r7
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 6de:	89 80       	ldd	r8, Y+1	; 0x01
+ 6e0:	9a 80       	ldd	r9, Y+2	; 0x02
+ 6e2:	ab 80       	ldd	r10, Y+3	; 0x03
+ 6e4:	bc 80       	ldd	r11, Y+4	; 0x04
+ 6e6:	84 0c       	add	r8, r4
+ 6e8:	95 1c       	adc	r9, r5
+ 6ea:	a6 1c       	adc	r10, r6
+ 6ec:	b7 1c       	adc	r11, r7
+ 6ee:	89 82       	std	Y+1, r8	; 0x01
+ 6f0:	9a 82       	std	Y+2, r9	; 0x02
+ 6f2:	ab 82       	std	Y+3, r10	; 0x03
+ 6f4:	bc 82       	std	Y+4, r11	; 0x04
+ 6f6:	3f 70       	andi	r19, 0x0F	; 15
+ 6f8:	83 2e       	mov	r8, r19
+ 6fa:	91 2c       	mov	r9, r1
+ 6fc:	a1 2c       	mov	r10, r1
+ 6fe:	b1 2c       	mov	r11, r1
+ 700:	24 01       	movw	r4, r8
+ 702:	35 01       	movw	r6, r10
+ 704:	03 2e       	mov	r0, r19
+ 706:	3a e1       	ldi	r19, 0x1A	; 26
+ 708:	44 0c       	add	r4, r4
+ 70a:	55 1c       	adc	r5, r5
+ 70c:	66 1c       	adc	r6, r6
+ 70e:	77 1c       	adc	r7, r7
+ 710:	3a 95       	dec	r19
+ 712:	d1 f7       	brne	.-12     	; 0x708 <main+0x4ee>
+ 714:	30 2d       	mov	r19, r0
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 716:	89 80       	ldd	r8, Y+1	; 0x01
+ 718:	9a 80       	ldd	r9, Y+2	; 0x02
+ 71a:	ab 80       	ldd	r10, Y+3	; 0x03
+ 71c:	bc 80       	ldd	r11, Y+4	; 0x04
+ 71e:	48 0c       	add	r4, r8
+ 720:	59 1c       	adc	r5, r9
+ 722:	6a 1c       	adc	r6, r10
+ 724:	7b 1c       	adc	r7, r11
+				if (0b10011110111101010101010001010101 == (uint32_t) z) ok += 2;
+ 726:	35 e5       	ldi	r19, 0x55	; 85
+ 728:	43 16       	cp	r4, r19
+ 72a:	34 e5       	ldi	r19, 0x54	; 84
+ 72c:	53 06       	cpc	r5, r19
+ 72e:	35 ef       	ldi	r19, 0xF5	; 245
+ 730:	63 06       	cpc	r6, r19
+ 732:	3e e9       	ldi	r19, 0x9E	; 158
+ 734:	73 06       	cpc	r7, r19
+ 736:	09 f4       	brne	.+2      	; 0x73a <main+0x520>
+ 738:	2e 5f       	subi	r18, 0xFE	; 254
+
+				PORTE.OUTSET = 1 << 0;
+ 73a:	e1 e0       	ldi	r30, 0x01	; 1
+ 73c:	e0 93 85 06 	sts	0x0685, r30
+				PORTE.OUTCLR = 1 << 1;
+ 740:	f2 e0       	ldi	r31, 0x02	; 2
+ 742:	f0 93 86 06 	sts	0x0686, r31
+				PORTE.OUTSET = 1 << 3;
+ 746:	68 94       	set
+ 748:	44 24       	eor	r4, r4
+ 74a:	43 f8       	bld	r4, 3
+ 74c:	40 92 85 06 	sts	0x0685, r4
+				PORTD.DIR = 0b11011000;
+ 750:	0f 2e       	mov	r0, r31
+ 752:	f8 ed       	ldi	r31, 0xD8	; 216
+ 754:	4f 2e       	mov	r4, r31
+ 756:	f0 2d       	mov	r31, r0
+ 758:	f6 01       	movw	r30, r12
+ 75a:	40 82       	st	Z, r4
+				PORTA.OUTCLR = 1 << 3;
+ 75c:	68 94       	set
+ 75e:	55 24       	eor	r5, r5
+ 760:	53 f8       	bld	r5, 3
+ 762:	50 92 06 06 	sts	0x0606, r5
+				PORTA.OUTSET = 1 << 4;
+ 766:	68 94       	set
+ 768:	66 24       	eor	r6, r6
+ 76a:	64 f8       	bld	r6, 4
+ 76c:	60 92 05 06 	sts	0x0605, r6
+				PORTA.OUTCLR = 1 << 5;
+ 770:	20 92 06 06 	sts	0x0606, r2
+				PORTB.OUTSET = 1 << 3;
+ 774:	50 92 25 06 	sts	0x0625, r5
+				PORTC.OUTCLR = 1 << 0;
+ 778:	44 24       	eor	r4, r4
+ 77a:	43 94       	inc	r4
+ 77c:	f7 01       	movw	r30, r14
+ 77e:	46 82       	std	Z+6, r4	; 0x06
+				PORTC.OUTSET = 1 << 7;
+ 780:	68 94       	set
+ 782:	55 24       	eor	r5, r5
+ 784:	57 f8       	bld	r5, 7
+ 786:	55 82       	std	Z+5, r5	; 0x05
+				PORTC.OUTSET = 1 << 5;
+ 788:	25 82       	std	Z+5, r2	; 0x05
+				PORTC.OUTCLR = 1 << 6;
+ 78a:	68 94       	set
+ 78c:	66 24       	eor	r6, r6
+ 78e:	66 f8       	bld	r6, 6
+ 790:	66 82       	std	Z+6, r6	; 0x06
+				PORTD.OUTSET = 1 << 3;
+ 792:	68 94       	set
+ 794:	44 24       	eor	r4, r4
+ 796:	43 f8       	bld	r4, 3
+ 798:	f6 01       	movw	r30, r12
+ 79a:	45 82       	std	Z+5, r4	; 0x05
+				PORTD.OUTCLR = 1 << 4;
+ 79c:	68 94       	set
+ 79e:	55 24       	eor	r5, r5
+ 7a0:	54 f8       	bld	r5, 4
+ 7a2:	56 82       	std	Z+6, r5	; 0x06
+				PORTD.OUTSET = 1 << 6;
+ 7a4:	65 82       	std	Z+5, r6	; 0x05
+				PORTD.OUTCLR = 1 << 7;
+ 7a6:	68 94       	set
+ 7a8:	66 24       	eor	r6, r6
+ 7aa:	67 f8       	bld	r6, 7
+ 7ac:	66 82       	std	Z+6, r6	; 0x06
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+ 7ae:	00 91 08 06 	lds	r16, 0x0608
+ 7b2:	0a 7f       	andi	r16, 0xFA	; 250
+ 7b4:	40 2e       	mov	r4, r16
+ 7b6:	51 2c       	mov	r5, r1
+ 7b8:	61 2c       	mov	r6, r1
+ 7ba:	71 2c       	mov	r7, r1
+ 7bc:	53 01       	movw	r10, r6
+ 7be:	42 01       	movw	r8, r4
+ 7c0:	b6 94       	lsr	r11
+ 7c2:	a7 94       	ror	r10
+ 7c4:	97 94       	ror	r9
+ 7c6:	87 94       	ror	r8
+ 7c8:	89 82       	std	Y+1, r8	; 0x01
+ 7ca:	9a 82       	std	Y+2, r9	; 0x02
+ 7cc:	ab 82       	std	Y+3, r10	; 0x03
+ 7ce:	bc 82       	std	Y+4, r11	; 0x04
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 7d0:	00 91 28 06 	lds	r16, 0x0628
+				z+= (uint32_t)PORTC.IN << 10;
+ 7d4:	f7 01       	movw	r30, r14
+ 7d6:	50 84       	ldd	r5, Z+8	; 0x08
+				z+= (uint32_t)PORTD.IN << 18;
+ 7d8:	f6 01       	movw	r30, r12
+ 7da:	b0 84       	ldd	r11, Z+8	; 0x08
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 7dc:	30 91 88 06 	lds	r19, 0x0688
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 7e0:	e0 91 e8 07 	lds	r30, 0x07E8
+				PORTD.OUTSET = 1 << 6;
+				PORTD.OUTCLR = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+ 7e4:	6b 2c       	mov	r6, r11
+ 7e6:	71 2c       	mov	r7, r1
+ 7e8:	81 2c       	mov	r8, r1
+ 7ea:	91 2c       	mov	r9, r1
+ 7ec:	05 2e       	mov	r0, r21
+ 7ee:	52 e1       	ldi	r21, 0x12	; 18
+ 7f0:	66 0c       	add	r6, r6
+ 7f2:	77 1c       	adc	r7, r7
+ 7f4:	88 1c       	adc	r8, r8
+ 7f6:	99 1c       	adc	r9, r9
+ 7f8:	5a 95       	dec	r21
+ 7fa:	d1 f7       	brne	.-12     	; 0x7f0 <main+0x5d6>
+ 7fc:	50 2d       	mov	r21, r0
+ 7fe:	6d 82       	std	Y+5, r6	; 0x05
+ 800:	7e 82       	std	Y+6, r7	; 0x06
+ 802:	8f 82       	std	Y+7, r8	; 0x07
+ 804:	98 86       	std	Y+8, r9	; 0x08
+				PORTD.OUTCLR = 1 << 4;
+				PORTD.OUTSET = 1 << 6;
+				PORTD.OUTCLR = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 806:	85 2c       	mov	r8, r5
+ 808:	91 2c       	mov	r9, r1
+ 80a:	a1 2c       	mov	r10, r1
+ 80c:	b1 2c       	mov	r11, r1
+ 80e:	24 01       	movw	r4, r8
+ 810:	35 01       	movw	r6, r10
+ 812:	03 2e       	mov	r0, r19
+ 814:	3a e0       	ldi	r19, 0x0A	; 10
+ 816:	44 0c       	add	r4, r4
+ 818:	55 1c       	adc	r5, r5
+ 81a:	66 1c       	adc	r6, r6
+ 81c:	77 1c       	adc	r7, r7
+ 81e:	3a 95       	dec	r19
+ 820:	d1 f7       	brne	.-12     	; 0x816 <main+0x5fc>
+ 822:	30 2d       	mov	r19, r0
+				PORTD.OUTSET = 1 << 3;
+				PORTD.OUTCLR = 1 << 4;
+				PORTD.OUTSET = 1 << 6;
+				PORTD.OUTCLR = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 824:	8d 80       	ldd	r8, Y+5	; 0x05
+ 826:	9e 80       	ldd	r9, Y+6	; 0x06
+ 828:	af 80       	ldd	r10, Y+7	; 0x07
+ 82a:	b8 84       	ldd	r11, Y+8	; 0x08
+ 82c:	48 0c       	add	r4, r8
+ 82e:	59 1c       	adc	r5, r9
+ 830:	6a 1c       	adc	r6, r10
+ 832:	7b 1c       	adc	r7, r11
+ 834:	49 86       	std	Y+9, r4	; 0x09
+ 836:	5a 86       	std	Y+10, r5	; 0x0a
+ 838:	6b 86       	std	Y+11, r6	; 0x0b
+ 83a:	7c 86       	std	Y+12, r7	; 0x0c
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 83c:	4e 2e       	mov	r4, r30
+ 83e:	51 2c       	mov	r5, r1
+ 840:	61 2c       	mov	r6, r1
+ 842:	71 2c       	mov	r7, r1
+ 844:	53 01       	movw	r10, r6
+ 846:	42 01       	movw	r8, r4
+ 848:	07 2e       	mov	r0, r23
+ 84a:	7e e1       	ldi	r23, 0x1E	; 30
+ 84c:	88 0c       	add	r8, r8
+ 84e:	99 1c       	adc	r9, r9
+ 850:	aa 1c       	adc	r10, r10
+ 852:	bb 1c       	adc	r11, r11
+ 854:	7a 95       	dec	r23
+ 856:	d1 f7       	brne	.-12     	; 0x84c <main+0x632>
+ 858:	70 2d       	mov	r23, r0
+				PORTD.OUTCLR = 1 << 4;
+				PORTD.OUTSET = 1 << 6;
+				PORTD.OUTCLR = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 85a:	49 84       	ldd	r4, Y+9	; 0x09
+ 85c:	5a 84       	ldd	r5, Y+10	; 0x0a
+ 85e:	6b 84       	ldd	r6, Y+11	; 0x0b
+ 860:	7c 84       	ldd	r7, Y+12	; 0x0c
+ 862:	48 0c       	add	r4, r8
+ 864:	59 1c       	adc	r5, r9
+ 866:	6a 1c       	adc	r6, r10
+ 868:	7b 1c       	adc	r7, r11
+				z+= (uint32_t)PORTD.IN << 18;
+ 86a:	89 80       	ldd	r8, Y+1	; 0x01
+ 86c:	9a 80       	ldd	r9, Y+2	; 0x02
+ 86e:	ab 80       	ldd	r10, Y+3	; 0x03
+ 870:	bc 80       	ldd	r11, Y+4	; 0x04
+ 872:	84 0c       	add	r8, r4
+ 874:	95 1c       	adc	r9, r5
+ 876:	a6 1c       	adc	r10, r6
+ 878:	b7 1c       	adc	r11, r7
+ 87a:	89 82       	std	Y+1, r8	; 0x01
+ 87c:	9a 82       	std	Y+2, r9	; 0x02
+ 87e:	ab 82       	std	Y+3, r10	; 0x03
+ 880:	bc 82       	std	Y+4, r11	; 0x04
+				PORTD.OUTSET = 1 << 3;
+				PORTD.OUTCLR = 1 << 4;
+				PORTD.OUTSET = 1 << 6;
+				PORTD.OUTCLR = 1 << 7;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 882:	0a 70       	andi	r16, 0x0A	; 10
+ 884:	80 2e       	mov	r8, r16
+ 886:	91 2c       	mov	r9, r1
+ 888:	a1 2c       	mov	r10, r1
+ 88a:	b1 2c       	mov	r11, r1
+ 88c:	88 0c       	add	r8, r8
+ 88e:	99 1c       	adc	r9, r9
+ 890:	aa 1c       	adc	r10, r10
+ 892:	bb 1c       	adc	r11, r11
+ 894:	88 0c       	add	r8, r8
+ 896:	99 1c       	adc	r9, r9
+ 898:	aa 1c       	adc	r10, r10
+ 89a:	bb 1c       	adc	r11, r11
+ 89c:	88 0c       	add	r8, r8
+ 89e:	99 1c       	adc	r9, r9
+ 8a0:	aa 1c       	adc	r10, r10
+ 8a2:	bb 1c       	adc	r11, r11
+ 8a4:	88 0c       	add	r8, r8
+ 8a6:	99 1c       	adc	r9, r9
+ 8a8:	aa 1c       	adc	r10, r10
+ 8aa:	bb 1c       	adc	r11, r11
+ 8ac:	24 01       	movw	r4, r8
+ 8ae:	35 01       	movw	r6, r10
+ 8b0:	44 0c       	add	r4, r4
+ 8b2:	55 1c       	adc	r5, r5
+ 8b4:	66 1c       	adc	r6, r6
+ 8b6:	77 1c       	adc	r7, r7
+ 8b8:	44 0c       	add	r4, r4
+ 8ba:	55 1c       	adc	r5, r5
+ 8bc:	66 1c       	adc	r6, r6
+ 8be:	77 1c       	adc	r7, r7
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 8c0:	89 80       	ldd	r8, Y+1	; 0x01
+ 8c2:	9a 80       	ldd	r9, Y+2	; 0x02
+ 8c4:	ab 80       	ldd	r10, Y+3	; 0x03
+ 8c6:	bc 80       	ldd	r11, Y+4	; 0x04
+ 8c8:	84 0c       	add	r8, r4
+ 8ca:	95 1c       	adc	r9, r5
+ 8cc:	a6 1c       	adc	r10, r6
+ 8ce:	b7 1c       	adc	r11, r7
+ 8d0:	89 82       	std	Y+1, r8	; 0x01
+ 8d2:	9a 82       	std	Y+2, r9	; 0x02
+ 8d4:	ab 82       	std	Y+3, r10	; 0x03
+ 8d6:	bc 82       	std	Y+4, r11	; 0x04
+ 8d8:	3f 70       	andi	r19, 0x0F	; 15
+ 8da:	83 2e       	mov	r8, r19
+ 8dc:	91 2c       	mov	r9, r1
+ 8de:	a1 2c       	mov	r10, r1
+ 8e0:	b1 2c       	mov	r11, r1
+ 8e2:	24 01       	movw	r4, r8
+ 8e4:	35 01       	movw	r6, r10
+ 8e6:	03 2e       	mov	r0, r19
+ 8e8:	3a e1       	ldi	r19, 0x1A	; 26
+ 8ea:	44 0c       	add	r4, r4
+ 8ec:	55 1c       	adc	r5, r5
+ 8ee:	66 1c       	adc	r6, r6
+ 8f0:	77 1c       	adc	r7, r7
+ 8f2:	3a 95       	dec	r19
+ 8f4:	d1 f7       	brne	.-12     	; 0x8ea <main+0x6d0>
+ 8f6:	30 2d       	mov	r19, r0
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 8f8:	89 80       	ldd	r8, Y+1	; 0x01
+ 8fa:	9a 80       	ldd	r9, Y+2	; 0x02
+ 8fc:	ab 80       	ldd	r10, Y+3	; 0x03
+ 8fe:	bc 80       	ldd	r11, Y+4	; 0x04
+ 900:	48 0c       	add	r4, r8
+ 902:	59 1c       	adc	r5, r9
+ 904:	6a 1c       	adc	r6, r10
+ 906:	7b 1c       	adc	r7, r11
+				if (0b01110101101010101010101010101000 == (uint32_t) z) ok += 4;
+ 908:	38 ea       	ldi	r19, 0xA8	; 168
+ 90a:	43 16       	cp	r4, r19
+ 90c:	3a ea       	ldi	r19, 0xAA	; 170
+ 90e:	53 06       	cpc	r5, r19
+ 910:	63 06       	cpc	r6, r19
+ 912:	35 e7       	ldi	r19, 0x75	; 117
+ 914:	73 06       	cpc	r7, r19
+ 916:	09 f4       	brne	.+2      	; 0x91a <main+0x700>
+ 918:	2c 5f       	subi	r18, 0xFC	; 252
+
+				PORTD.OUTCLR = 1 << 3;
+ 91a:	68 94       	set
+ 91c:	44 24       	eor	r4, r4
+ 91e:	43 f8       	bld	r4, 3
+ 920:	f6 01       	movw	r30, r12
+ 922:	46 82       	std	Z+6, r4	; 0x06
+				PORTE.OUTCLR = 1 << 0;
+ 924:	55 24       	eor	r5, r5
+ 926:	53 94       	inc	r5
+ 928:	50 92 86 06 	sts	0x0686, r5
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+ 92c:	00 91 08 06 	lds	r16, 0x0608
+ 930:	0a 7f       	andi	r16, 0xFA	; 250
+ 932:	40 2e       	mov	r4, r16
+ 934:	51 2c       	mov	r5, r1
+ 936:	61 2c       	mov	r6, r1
+ 938:	71 2c       	mov	r7, r1
+ 93a:	53 01       	movw	r10, r6
+ 93c:	42 01       	movw	r8, r4
+ 93e:	b6 94       	lsr	r11
+ 940:	a7 94       	ror	r10
+ 942:	97 94       	ror	r9
+ 944:	87 94       	ror	r8
+ 946:	89 82       	std	Y+1, r8	; 0x01
+ 948:	9a 82       	std	Y+2, r9	; 0x02
+ 94a:	ab 82       	std	Y+3, r10	; 0x03
+ 94c:	bc 82       	std	Y+4, r11	; 0x04
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 94e:	00 91 28 06 	lds	r16, 0x0628
+				z+= (uint32_t)PORTC.IN << 10;
+ 952:	f7 01       	movw	r30, r14
+ 954:	50 84       	ldd	r5, Z+8	; 0x08
+				z+= (uint32_t)PORTD.IN << 18;
+ 956:	f6 01       	movw	r30, r12
+ 958:	b0 84       	ldd	r11, Z+8	; 0x08
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ 95a:	30 91 88 06 	lds	r19, 0x0688
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 95e:	e0 91 e8 07 	lds	r30, 0x07E8
+				PORTD.OUTCLR = 1 << 3;
+				PORTE.OUTCLR = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+ 962:	6b 2c       	mov	r6, r11
+ 964:	71 2c       	mov	r7, r1
+ 966:	81 2c       	mov	r8, r1
+ 968:	91 2c       	mov	r9, r1
+ 96a:	05 2e       	mov	r0, r21
+ 96c:	52 e1       	ldi	r21, 0x12	; 18
+ 96e:	66 0c       	add	r6, r6
+ 970:	77 1c       	adc	r7, r7
+ 972:	88 1c       	adc	r8, r8
+ 974:	99 1c       	adc	r9, r9
+ 976:	5a 95       	dec	r21
+ 978:	d1 f7       	brne	.-12     	; 0x96e <main+0x754>
+ 97a:	50 2d       	mov	r21, r0
+ 97c:	6d 82       	std	Y+5, r6	; 0x05
+ 97e:	7e 82       	std	Y+6, r7	; 0x06
+ 980:	8f 82       	std	Y+7, r8	; 0x07
+ 982:	98 86       	std	Y+8, r9	; 0x08
+
+				PORTD.OUTCLR = 1 << 3;
+				PORTE.OUTCLR = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 984:	85 2c       	mov	r8, r5
+ 986:	91 2c       	mov	r9, r1
+ 988:	a1 2c       	mov	r10, r1
+ 98a:	b1 2c       	mov	r11, r1
+ 98c:	24 01       	movw	r4, r8
+ 98e:	35 01       	movw	r6, r10
+ 990:	03 2e       	mov	r0, r19
+ 992:	3a e0       	ldi	r19, 0x0A	; 10
+ 994:	44 0c       	add	r4, r4
+ 996:	55 1c       	adc	r5, r5
+ 998:	66 1c       	adc	r6, r6
+ 99a:	77 1c       	adc	r7, r7
+ 99c:	3a 95       	dec	r19
+ 99e:	d1 f7       	brne	.-12     	; 0x994 <main+0x77a>
+ 9a0:	30 2d       	mov	r19, r0
+				if (0b01110101101010101010101010101000 == (uint32_t) z) ok += 4;
+
+				PORTD.OUTCLR = 1 << 3;
+				PORTE.OUTCLR = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ 9a2:	8d 80       	ldd	r8, Y+5	; 0x05
+ 9a4:	9e 80       	ldd	r9, Y+6	; 0x06
+ 9a6:	af 80       	ldd	r10, Y+7	; 0x07
+ 9a8:	b8 84       	ldd	r11, Y+8	; 0x08
+ 9aa:	48 0c       	add	r4, r8
+ 9ac:	59 1c       	adc	r5, r9
+ 9ae:	6a 1c       	adc	r6, r10
+ 9b0:	7b 1c       	adc	r7, r11
+ 9b2:	49 86       	std	Y+9, r4	; 0x09
+ 9b4:	5a 86       	std	Y+10, r5	; 0x0a
+ 9b6:	6b 86       	std	Y+11, r6	; 0x0b
+ 9b8:	7c 86       	std	Y+12, r7	; 0x0c
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ 9ba:	4e 2e       	mov	r4, r30
+ 9bc:	51 2c       	mov	r5, r1
+ 9be:	61 2c       	mov	r6, r1
+ 9c0:	71 2c       	mov	r7, r1
+ 9c2:	53 01       	movw	r10, r6
+ 9c4:	42 01       	movw	r8, r4
+ 9c6:	07 2e       	mov	r0, r23
+ 9c8:	7e e1       	ldi	r23, 0x1E	; 30
+ 9ca:	88 0c       	add	r8, r8
+ 9cc:	99 1c       	adc	r9, r9
+ 9ce:	aa 1c       	adc	r10, r10
+ 9d0:	bb 1c       	adc	r11, r11
+ 9d2:	7a 95       	dec	r23
+ 9d4:	d1 f7       	brne	.-12     	; 0x9ca <main+0x7b0>
+ 9d6:	70 2d       	mov	r23, r0
+
+				PORTD.OUTCLR = 1 << 3;
+				PORTE.OUTCLR = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+				z+= (uint32_t)PORTC.IN << 10;
+ 9d8:	49 84       	ldd	r4, Y+9	; 0x09
+ 9da:	5a 84       	ldd	r5, Y+10	; 0x0a
+ 9dc:	6b 84       	ldd	r6, Y+11	; 0x0b
+ 9de:	7c 84       	ldd	r7, Y+12	; 0x0c
+ 9e0:	48 0c       	add	r4, r8
+ 9e2:	59 1c       	adc	r5, r9
+ 9e4:	6a 1c       	adc	r6, r10
+ 9e6:	7b 1c       	adc	r7, r11
+				z+= (uint32_t)PORTD.IN << 18;
+ 9e8:	89 80       	ldd	r8, Y+1	; 0x01
+ 9ea:	9a 80       	ldd	r9, Y+2	; 0x02
+ 9ec:	ab 80       	ldd	r10, Y+3	; 0x03
+ 9ee:	bc 80       	ldd	r11, Y+4	; 0x04
+ 9f0:	84 0c       	add	r8, r4
+ 9f2:	95 1c       	adc	r9, r5
+ 9f4:	a6 1c       	adc	r10, r6
+ 9f6:	b7 1c       	adc	r11, r7
+ 9f8:	89 82       	std	Y+1, r8	; 0x01
+ 9fa:	9a 82       	std	Y+2, r9	; 0x02
+ 9fc:	ab 82       	std	Y+3, r10	; 0x03
+ 9fe:	bc 82       	std	Y+4, r11	; 0x04
+				if (0b01110101101010101010101010101000 == (uint32_t) z) ok += 4;
+
+				PORTD.OUTCLR = 1 << 3;
+				PORTE.OUTCLR = 1 << 0;
+				z = ((uint32_t)PORTA.IN & 0b11111010) >> 1;
+				z+= ((uint32_t)PORTB.IN & 0b00001010) << 6;
+ a00:	0a 70       	andi	r16, 0x0A	; 10
+ a02:	80 2e       	mov	r8, r16
+ a04:	91 2c       	mov	r9, r1
+ a06:	a1 2c       	mov	r10, r1
+ a08:	b1 2c       	mov	r11, r1
+ a0a:	88 0c       	add	r8, r8
+ a0c:	99 1c       	adc	r9, r9
+ a0e:	aa 1c       	adc	r10, r10
+ a10:	bb 1c       	adc	r11, r11
+ a12:	88 0c       	add	r8, r8
+ a14:	99 1c       	adc	r9, r9
+ a16:	aa 1c       	adc	r10, r10
+ a18:	bb 1c       	adc	r11, r11
+ a1a:	88 0c       	add	r8, r8
+ a1c:	99 1c       	adc	r9, r9
+ a1e:	aa 1c       	adc	r10, r10
+ a20:	bb 1c       	adc	r11, r11
+ a22:	88 0c       	add	r8, r8
+ a24:	99 1c       	adc	r9, r9
+ a26:	aa 1c       	adc	r10, r10
+ a28:	bb 1c       	adc	r11, r11
+ a2a:	24 01       	movw	r4, r8
+ a2c:	35 01       	movw	r6, r10
+ a2e:	44 0c       	add	r4, r4
+ a30:	55 1c       	adc	r5, r5
+ a32:	66 1c       	adc	r6, r6
+ a34:	77 1c       	adc	r7, r7
+ a36:	44 0c       	add	r4, r4
+ a38:	55 1c       	adc	r5, r5
+ a3a:	66 1c       	adc	r6, r6
+ a3c:	77 1c       	adc	r7, r7
+				z+= (uint32_t)PORTC.IN << 10;
+				z+= (uint32_t)PORTD.IN << 18;
+				z+= ((uint32_t)PORTE.IN & 0b00001111) << 26;
+ a3e:	89 80       	ldd	r8, Y+1	; 0x01
+ a40:	9a 80       	ldd	r9, Y+2	; 0x02
+ a42:	ab 80       	ldd	r10, Y+3	; 0x03
+ a44:	bc 80       	ldd	r11, Y+4	; 0x04
+ a46:	84 0c       	add	r8, r4
+ a48:	95 1c       	adc	r9, r5
+ a4a:	a6 1c       	adc	r10, r6
+ a4c:	b7 1c       	adc	r11, r7
+ a4e:	89 82       	std	Y+1, r8	; 0x01
+ a50:	9a 82       	std	Y+2, r9	; 0x02
+ a52:	ab 82       	std	Y+3, r10	; 0x03
+ a54:	bc 82       	std	Y+4, r11	; 0x04
+ a56:	3f 70       	andi	r19, 0x0F	; 15
+ a58:	83 2e       	mov	r8, r19
+ a5a:	91 2c       	mov	r9, r1
+ a5c:	a1 2c       	mov	r10, r1
+ a5e:	b1 2c       	mov	r11, r1
+ a60:	24 01       	movw	r4, r8
+ a62:	35 01       	movw	r6, r10
+ a64:	03 2e       	mov	r0, r19
+ a66:	3a e1       	ldi	r19, 0x1A	; 26
+ a68:	44 0c       	add	r4, r4
+ a6a:	55 1c       	adc	r5, r5
+ a6c:	66 1c       	adc	r6, r6
+ a6e:	77 1c       	adc	r7, r7
+ a70:	3a 95       	dec	r19
+ a72:	d1 f7       	brne	.-12     	; 0xa68 <main+0x84e>
+ a74:	30 2d       	mov	r19, r0
+				z+= ((uint32_t)PORTR.IN & 0b00000011) << 30;
+ a76:	89 80       	ldd	r8, Y+1	; 0x01
+ a78:	9a 80       	ldd	r9, Y+2	; 0x02
+ a7a:	ab 80       	ldd	r10, Y+3	; 0x03
+ a7c:	bc 80       	ldd	r11, Y+4	; 0x04
+ a7e:	48 0c       	add	r4, r8
+ a80:	59 1c       	adc	r5, r9
+ a82:	6a 1c       	adc	r6, r10
+ a84:	7b 1c       	adc	r7, r11
+				if (0b01100001000010101010101010101000 == (uint32_t) z) ok += 8;
+ a86:	38 ea       	ldi	r19, 0xA8	; 168
+ a88:	43 16       	cp	r4, r19
+ a8a:	3a ea       	ldi	r19, 0xAA	; 170
+ a8c:	53 06       	cpc	r5, r19
+ a8e:	3a e0       	ldi	r19, 0x0A	; 10
+ a90:	63 06       	cpc	r6, r19
+ a92:	31 e6       	ldi	r19, 0x61	; 97
+ a94:	73 06       	cpc	r7, r19
+ a96:	09 f4       	brne	.+2      	; 0xa9a <main+0x880>
+ a98:	28 5f       	subi	r18, 0xF8	; 248
+			
+				if (15==ok) {
+ a9a:	2f 30       	cpi	r18, 0x0F	; 15
+ a9c:	59 f4       	brne	.+22     	; 0xab4 <main+0x89a>
+					PORTC.OUTSET = 1 << 6;
+ a9e:	68 94       	set
+ aa0:	44 24       	eor	r4, r4
+ aa2:	46 f8       	bld	r4, 6
+ aa4:	f7 01       	movw	r30, r14
+ aa6:	45 82       	std	Z+5, r4	; 0x05
+					PORTC.OUTCLR = 1 << 7;
+ aa8:	68 94       	set
+ aaa:	55 24       	eor	r5, r5
+ aac:	57 f8       	bld	r5, 7
+ aae:	56 82       	std	Z+6, r5	; 0x06
+		}
+		//andere Pins testen
+		else{
+			j++;
+			if (j>10){
+				j = 0;
+ ab0:	00 e0       	ldi	r16, 0x00	; 0
+ ab2:	0a c0       	rjmp	.+20     	; 0xac8 <main+0x8ae>
+				if (15==ok) {
+					PORTC.OUTSET = 1 << 6;
+					PORTC.OUTCLR = 1 << 7;
+				}
+				else {
+					PORTC.OUTCLR = 1 << 6;
+ ab4:	68 94       	set
+ ab6:	44 24       	eor	r4, r4
+ ab8:	46 f8       	bld	r4, 6
+ aba:	f7 01       	movw	r30, r14
+ abc:	46 82       	std	Z+6, r4	; 0x06
+					PORTC.OUTSET = 1 << 7;
+ abe:	68 94       	set
+ ac0:	55 24       	eor	r5, r5
+ ac2:	57 f8       	bld	r5, 7
+ ac4:	55 82       	std	Z+5, r5	; 0x05
+		}
+		//andere Pins testen
+		else{
+			j++;
+			if (j>10){
+				j = 0;
+ ac6:	00 e0       	ldi	r16, 0x00	; 0
+					PORTC.OUTSET = 1 << 7;
+				}
 			}
-			z = (((uint32_t)PORTC.IN & 0x001F) << 12) + (((uint32_t)PORTB.IN & 0x000F) << 8) + ((uint32_t)PORTA.IN & 0x00EC);
- 668:	20 91 48 06 	lds	r18, 0x0648
- 66c:	20 91 28 06 	lds	r18, 0x0628
- 670:	20 91 08 06 	lds	r18, 0x0608
- 674:	44 cf       	rjmp	.-376    	; 0x4fe <main+0x2e4>
+			
+			// Quarz testen
+			if(ct < 1){
+ ac8:	11 11       	cpse	r17, r1
+ aca:	27 c0       	rjmp	.+78     	; 0xb1a <main+0x900>
+				PORTE.DIR = 0b00000001; // damit Quarz nicht über testpins belastet wird
+ acc:	44 24       	eor	r4, r4
+ ace:	43 94       	inc	r4
+ ad0:	e0 e8       	ldi	r30, 0x80	; 128
+ ad2:	f6 e0       	ldi	r31, 0x06	; 6
+ ad4:	40 82       	st	Z, r4
 
-00000676 <_exit>:
- 676:	f8 94       	cli
 
-00000678 <__stop_program>:
- 678:	ff cf       	rjmp	.-2      	; 0x678 <__stop_program>
+				// Enable the external oscillator
+				OSC.XOSCCTRL = OSC_FRQRANGE_2TO9_gc | OSC_XOSCSEL_XTAL_16KCLK_gc ;
+ ad6:	0f 2e       	mov	r0, r31
+ ad8:	fb e4       	ldi	r31, 0x4B	; 75
+ ada:	5f 2e       	mov	r5, r31
+ adc:	f0 2d       	mov	r31, r0
+ ade:	50 92 52 00 	sts	0x0052, r5
+				OSC.CTRL |= OSC_XOSCEN_bm ;
+ ae2:	e0 e5       	ldi	r30, 0x50	; 80
+ ae4:	f0 e0       	ldi	r31, 0x00	; 0
+ ae6:	20 81       	ld	r18, Z
+ ae8:	28 60       	ori	r18, 0x08	; 8
+ aea:	20 83       	st	Z, r18
+				while( (OSC.STATUS & OSC_XOSCRDY_bm) == 0 ){} // wait until stable
+ aec:	20 91 51 00 	lds	r18, 0x0051
+ af0:	23 ff       	sbrs	r18, 3
+ af2:	fc cf       	rjmp	.-8      	; 0xaec <main+0x8d2>
+
+				// Now configure the PLL to be eXternal OSCillator * 2
+				OSC.PLLCTRL = OSC_PLLSRC_XOSC_gc | 3 ;
+ af4:	f3 ec       	ldi	r31, 0xC3	; 195
+ af6:	f0 93 55 00 	sts	0x0055, r31
+				OSC.CTRL |= OSC_PLLEN_bm ; // enable the PLL...
+ afa:	e0 e5       	ldi	r30, 0x50	; 80
+ afc:	f0 e0       	ldi	r31, 0x00	; 0
+ afe:	20 81       	ld	r18, Z
+ b00:	20 61       	ori	r18, 0x10	; 16
+ b02:	20 83       	st	Z, r18
+				while( (OSC.STATUS & OSC_PLLRDY_bm) == 0 ){} // wait until stable
+ b04:	20 91 51 00 	lds	r18, 0x0051
+ b08:	24 ff       	sbrs	r18, 4
+ b0a:	fc cf       	rjmp	.-8      	; 0xb04 <main+0x8ea>
+
+				// And now switch to the PLL as the clocksource
+				CCP = CCP_IOREG_gc; // protected write follows
+ b0c:	f8 ed       	ldi	r31, 0xD8	; 216
+ b0e:	f4 bf       	out	0x34, r31	; 52
+				CLK.CTRL = CLK_SCLKSEL_PLL_gc;
+ b10:	24 e0       	ldi	r18, 0x04	; 4
+ b12:	e0 e4       	ldi	r30, 0x40	; 64
+ b14:	f0 e0       	ldi	r31, 0x00	; 0
+ b16:	20 83       	st	Z, r18
+ b18:	b2 cb       	rjmp	.-2204   	; 0x27e <main+0x64>
+				
+			}
+			else{
+				// And now switch to the PLL as the clocksource
+				CCP = CCP_IOREG_gc; // protected write follows
+ b1a:	f8 ed       	ldi	r31, 0xD8	; 216
+ b1c:	f4 bf       	out	0x34, r31	; 52
+				CLK.CTRL = CLK_SCLKSEL_RC2M_gc;
+ b1e:	e0 e4       	ldi	r30, 0x40	; 64
+ b20:	f0 e0       	ldi	r31, 0x00	; 0
+ b22:	10 82       	st	Z, r1
+
+
+				PORTE.DIR = 0b00001011; // PR0 und PR1 wieder verfuegbar
+ b24:	0f 2e       	mov	r0, r31
+ b26:	fb e0       	ldi	r31, 0x0B	; 11
+ b28:	4f 2e       	mov	r4, r31
+ b2a:	f0 2d       	mov	r31, r0
+ b2c:	e0 e8       	ldi	r30, 0x80	; 128
+ b2e:	f6 e0       	ldi	r31, 0x06	; 6
+ b30:	40 82       	st	Z, r4
+				// Disable the external oscillator
+				OSC.CTRL &= ~OSC_XOSCEN_bm;
+ b32:	e0 e5       	ldi	r30, 0x50	; 80
+ b34:	f0 e0       	ldi	r31, 0x00	; 0
+ b36:	20 81       	ld	r18, Z
+ b38:	27 7f       	andi	r18, 0xF7	; 247
+ b3a:	20 83       	st	Z, r18
+				OSC.CTRL &= ~OSC_PLLEN_bm ; // disable the PLL...
+ b3c:	20 81       	ld	r18, Z
+ b3e:	2f 7e       	andi	r18, 0xEF	; 239
+ b40:	20 83       	st	Z, r18
+ b42:	9d cb       	rjmp	.-2246   	; 0x27e <main+0x64>
+		// USB-ESD-Schutz Z-Diode testen
+		i++;
+		if (i> 20000) {
+			i = 0;
+			ct++;
+			if(ct>2) ct = 0;
+ b44:	10 e0       	ldi	r17, 0x00	; 0
+	
+	//PORTA.OUT = 4;
+	//while(1);
+	while(1){
+		PORTA.OUT = (PORTA.OUT & 0b11111011) | ((~PORTA.IN & 0b00000001) << 2);
+		PORTB.OUT = (PORTB.OUT & 0b11111011) | ((~PORTB.IN & 0b00000001) << 2);
+ b46:	40 e0       	ldi	r20, 0x00	; 0
+ b48:	50 e0       	ldi	r21, 0x00	; 0
+ b4a:	ba 01       	movw	r22, r20
+ b4c:	ca cb       	rjmp	.-2156   	; 0x2e2 <main+0xc8>
+
+00000b4e <_exit>:
+ b4e:	f8 94       	cli
+
+00000b50 <__stop_program>:
+ b50:	ff cf       	rjmp	.-2      	; 0xb50 <__stop_program>

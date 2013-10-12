@@ -1,33 +1,33 @@
-Reference, Value, Footprint, Datasheet, Digi-Key Part Number, Manufacturer Part Number, Seeed OPL SKU, Color, Notes, CSD-Electronics Part Number; 
-D4, BAS70BRW, SOT363, http://www.mccsemi.com/up_pdf/BAS70TW_DW-04_DW-05_DW-06_BRW(SOT-363).PDF, BAS70BRW-TPCT-ND, , , , , ; 
-R5, 1k5, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JT1K50CT-ND, RMCF0805JT1K50, 002022001, , , ; 
-R4, 1k, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JT1K00CT-ND, RMCF0805JT1K00, 002011001, , , ; 
-D3, LED, SM0805, http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf, 475-2560-1-ND, LY R976-PS-36, , yellow, , ; 
-D5, LED, SM0805, http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0226&txtPartNo=LTST-C170TBKT, 160-1579-1-ND, LTST-C170TBKT, , blue, , ; 
-P4, MICROUSB, ZX62-B-5PA, http://portal.fciconnect.com/Comergent//fci/drawing/10118192.pdf, 609-4613-2-ND, 10118192-0001LF, , , , ; 
-R2, 1k, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JT1K00CT-ND, RMCF0805JT1K00, 002011001, , , ; 
-R3, 1k, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JT1K00CT-ND, RMCF0805JT1K00, 002011001, , , ; 
-D2, LED, LED-0805, http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf, 475-1278-1-ND, LS R976-NR-1, 033004001, red, , ; 
-D1, LED, LED-0805, http://catalog.osram-os.com/catalogue/catalogue.do;jsessionid=B38D4035738FAE714C474120326E9384?act=downloadFile&favOid=02000002000009ee000100b6, 475-1410-1-ND, LG R971-KN-1, 033003001, green, , ; 
-C13, 10u, SM0805, http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf, 311-1355-1-ND, CC0805ZKY5V6BB106, 010008001, , , ; 
-C12, 10u, SM0805, http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf, 311-1355-1-ND, CC0805ZKY5V6BB106, 010008001, , , ; 
-L1, 100n, SM0805, http://www.abracon.com/Magnetics/chips/AIML0805,1206.pdf, 535-11645-1-ND, AIML-0805-R10K-T, , , , ; 
-P3, CONN_20, PIN_ARRAY_20X1, , , , , , 1/2 of Part, 15435; 
-P1, CONN_20, PIN_ARRAY_20X1, , , , , , 1/2 of Part, 15435; 
-C3, 10u, SM0805, http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf, 311-1355-1-ND, CC0805ZKY5V6BB106, 010008001, , , ; 
-C1, 10u, SM0805, http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf, 311-1355-1-ND, CC0805ZKY5V6BB106, 010008001, , , ; 
-C2, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-C4, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-X1, 4 MHz, HC-49V, http://www.ctscorp.com/components/Datasheets/008-0309-0.pdf, CTX896-ND, ATS040B, , , , ; 
-C11, 18p, SM0805, http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf, 1276-1107-1-ND, CL21C180JBANNNC, , , , ; 
-C10, 18p, SM0805, http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf, 1276-1107-1-ND, CL21C180JBANNNC, , , , ; 
-C9, 10u, SM0805, http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf, 311-1355-1-ND, CC0805ZKY5V6BB106, 010008001, , , ; 
-L2, 100n, SM0805, http://www.abracon.com/Magnetics/chips/AIML0805,1206.pdf, 535-11645-1-ND, AIML-0805-R10K-T, , , , ; 
-C5, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-C8, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-C7, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-C6, 100n, SM0603_Capa, http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf, 1276-1011-1-ND, CL10F104ZA8NNNC, 010002001, , , ; 
-R1, 10k, SM0805, http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf, RMCF0805JG10K0-ND, , 002004001, , , ; 
-P2, CONN_3X2, pin_array_3x2, , , , 346018001, , 3/40 of Part , 15485; 
-D6, 6V2, SOD323, http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF, MM3Z6V2ST1GOSCT-ND, MM3Z6V2ST1G, , , , ; 
-IC1, ATXMEGA128A4U, TQFP44, http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf, ATXMEGA128A4U-AU-ND, ATXMEGA128A4U-AU, , , , ; 
+Reference	Value	Footprint	Datasheet	Digi-Key Part Number	Manufacturer Part Number	Seeed OPL SKU	Color	Notes	CSD-Electronics Part Number
+D4	BAS70BRW	SOT363	http://www.mccsemi.com/up_pdf/BAS70TW_DW-04_DW-05_DW-06_BRW(SOT-363).PDF	BAS70BRW-TPCT-ND					
+R5	1k5	SM0805	http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf	RMCF0805JT1K50CT-ND	RMCF0805JT1K50	002022001			
+R4	1k	SM0805	http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf	RMCF0805JT1K00CT-ND	RMCF0805JT1K00	002011001			
+D3	LED	SM0805	http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf	475-2560-1-ND	LY R976-PS-36		yellow		
+D5	LED	SM0805	http://optoelectronics.liteon.com/en-us/api/DwonloadFileHandler.ashx?txtSpecNo=DS-22-99-0226&txtPartNo=LTST-C170TBKT	160-1579-1-ND	LTST-C170TBKT		blue		
+P4	MICROUSB	ZX62-B-5PA	http://portal.fciconnect.com/Comergent//fci/drawing/10118192.pdf	609-4613-2-ND	10118192-0001LF				
+R2	1k	SM0805	http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf	RMCF0805JT1K00CT-ND	RMCF0805JT1K00	002011001			
+R3	1k	SM0805	http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf	RMCF0805JT1K00CT-ND	RMCF0805JT1K00	002011001			
+D2	LED	LED-0805	http://catalog.osram-os.com/jsp/download.jsp?name=LO_LS_LY_R976.pdf&url=/media/_en/Graphics/00042116_0.pdf	475-1278-1-ND	LS R976-NR-1	033004001	red		
+D1	LED	LED-0805	http://catalog.osram-os.com/catalogue/catalogue.do;jsessionid=B38D4035738FAE714C474120326E9384?act=downloadFile&favOid=02000002000009ee000100b6	475-1410-1-ND	LG R971-KN-1	033003001	green		
+C13	10u	SM0805	http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf	311-1355-1-ND	CC0805ZKY5V6BB106	010008001			
+C12	10u	SM0805	http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf	311-1355-1-ND	CC0805ZKY5V6BB106	010008001			
+L1	100n	SM0805	http://www.abracon.com/Magnetics/chips/AIML0805,1206.pdf	535-11645-1-ND	AIML-0805-R10K-T				
+P3	CONN_20	PIN_ARRAY_20X1						1/2 of Part	15435
+P1	CONN_20	PIN_ARRAY_20X1						1/2 of Part	15435
+C3	10u	SM0805	http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf	311-1355-1-ND	CC0805ZKY5V6BB106	010008001			
+C1	10u	SM0805	http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf	311-1355-1-ND	CC0805ZKY5V6BB106	010008001			
+C2	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+C4	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+X1	4 MHz	HC-49V	http://www.ctscorp.com/components/Datasheets/008-0309-0.pdf	CTX896-ND	ATS040B				
+C11	18p	SM0805	http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf	1276-1107-1-ND	CL21C180JBANNNC				
+C10	18p	SM0805	http://www.samsungsem.com/servlet/DownloadServlet?dir=partnumber&num=&fileName=CL21C180JBANNND.pdf	1276-1107-1-ND	CL21C180JBANNNC				
+C9	10u	SM0805	http://www.yageo.com/documents/recent/UPY-GPHC_Y5V_6.3V-to-50V_5.pdf	311-1355-1-ND	CC0805ZKY5V6BB106	010008001			
+L2	100n	SM0805	http://www.abracon.com/Magnetics/chips/AIML0805,1206.pdf	535-11645-1-ND	AIML-0805-R10K-T				
+C5	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+C8	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+C7	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+C6	100n	SM0603_Capa	http://www.samsungsem.com/servlet/FileDownload?type=spec&file=CL10F104ZA8NNNC.pdf	1276-1011-1-ND	CL10F104ZA8NNNC	010002001			
+R1	10k	SM0805	http://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf	RMCF0805JG10K0-ND		002004001			
+P2	CONN_3X2	pin_array_3x2				346018001		3/40 of Part 	15485
+D6	6V2	SOD323	http://www.onsemi.com/pub_link/Collateral/MM3Z2V4T1-D.PDF	MM3Z6V2ST1GOSCT-ND	MM3Z6V2ST1G				
+IC1	ATXMEGA128A4U	TQFP44	http://www.atmel.com/Images/Atmel-8387-8-and16-bit-AVR-Microcontroller-XMEGA-A4U_Datasheet.pdf	ATXMEGA128A4U-AU-ND	ATXMEGA128A4U-AU				

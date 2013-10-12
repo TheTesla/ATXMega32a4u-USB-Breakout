@@ -308,7 +308,7 @@ Disassembly of section .text:
  218:	f3 ce       	rjmp	.-538    	; 0x0 <__vectors>
 
 0000021a <main>:
-#include <util/delay.h> 
+#include <avr/io.h>
 
 
 
@@ -392,10 +392,10 @@ int main(void)
  278:	f9 e9       	ldi	r31, 0x99	; 153
  27a:	3f 2e       	mov	r3, r31
  27c:	f0 2d       	mov	r31, r0
+	
+	i = x = y = z = 0;
 	j = ok = ct = 0;
 	
-	//PORTA.OUT = 4;
-	//while(1);
 	while(1){
 		PORTA.OUT = (PORTA.OUT & 0b11111011) | ((~PORTA.IN & 0b00000001) << 2);
  27e:	20 91 04 06 	lds	r18, 0x0604
@@ -1743,7 +1743,6 @@ int main(void)
  ad2:	f6 e0       	ldi	r31, 0x06	; 6
  ad4:	40 82       	st	Z, r4
 
-
 				// Enable the external oscillator
 				OSC.XOSCCTRL = OSC_FRQRANGE_2TO9_gc | OSC_XOSCSEL_XTAL_16KCLK_gc ;
  ad6:	0f 2e       	mov	r0, r31
@@ -1799,7 +1798,6 @@ int main(void)
  b20:	f0 e0       	ldi	r31, 0x00	; 0
  b22:	10 82       	st	Z, r1
 
-
 				PORTE.DIR = 0b00001011; // PR0 und PR1 wieder verfuegbar
  b24:	0f 2e       	mov	r0, r31
  b26:	fb e0       	ldi	r31, 0x0B	; 11
@@ -1827,9 +1825,9 @@ int main(void)
 			ct++;
 			if(ct>2) ct = 0;
  b44:	10 e0       	ldi	r17, 0x00	; 0
+	i = x = y = z = 0;
+	j = ok = ct = 0;
 	
-	//PORTA.OUT = 4;
-	//while(1);
 	while(1){
 		PORTA.OUT = (PORTA.OUT & 0b11111011) | ((~PORTA.IN & 0b00000001) << 2);
 		PORTB.OUT = (PORTB.OUT & 0b11111011) | ((~PORTB.IN & 0b00000001) << 2);

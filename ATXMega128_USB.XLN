@@ -1,5 +1,5 @@
 M48
-;DRILL file {Pcbnew (2013-03-31 BZR 4008)-stable} date 01.09.2013 16:31:35
+;DRILL file {Pcbnew (2013-03-31 BZR 4008)-stable} date 26.01.2014 00:59:30
 ;FORMAT={-:-/ absolute / inch / decimal}
 FMAT,2
 INCH,TZ
@@ -13,9 +13,9 @@ G05
 M72
 T1
 X1.485Y-2.285
-X1.6238Y-2.5762
 X1.625Y-2.4
 X1.625Y-2.4994
+X1.625Y-2.59
 X1.775Y-2.575
 X1.825Y-2.5
 X2.15Y-2.45

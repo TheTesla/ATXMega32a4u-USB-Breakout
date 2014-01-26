@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 11.08.2013 15:14:46
+Cmp-Mod V01 Created by CvPcb (2013-03-31 BZR 4008)-stable date = 26.01.2014 00:31:04
 
 BeginCmp
 TimeStamp = /50BFD1FA;
@@ -116,7 +116,7 @@ BeginCmp
 TimeStamp = /515F6E8D;
 Reference = D4;
 ValeurCmp = BAS70BRW;
-IdModule  = SOT-363;
+IdModule  = sot323-6;
 EndCmp
 
 BeginCmp
@@ -134,9 +134,9 @@ IdModule  = SOD323;
 EndCmp
 
 BeginCmp
-TimeStamp = /51159BBF;
+TimeStamp = /52234FEA;
 Reference = IC1;
-ValeurCmp = ATXMEGA32A4U;
+ValeurCmp = ATXMEGA128A4U;
 IdModule  = TQFP44;
 EndCmp
 

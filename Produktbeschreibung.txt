@@ -1,0 +1,14 @@
+ATXMega128a4u USB Breakout
+
+Auf der Platine sitzt ein ATXMega128a4u-Mikrocontroller von Atmel. Lade deine Firmware per PDI oder mit dem über USB auf den Controller. Der USB-DFU-Bootloader ist bereits installiert.
+
+Merkmale
+
+- micro-USB-Buchse, ESD-Schutz
+- Quarz (4 MHz)
+- RX- und TX-LEDs für seriellen Port
+- PDI-Anschluss
+- EMI-Filter, Abblockkondensatoren
+- 3,3 V Betriebsspannung
+- Nur Standard-Bauelemente - leicht reparierbar
+- kleiner Rand - keine verdeckten Buchsen auf dem Breadboard

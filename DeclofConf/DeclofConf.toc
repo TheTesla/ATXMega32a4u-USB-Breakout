@@ -1,0 +1,7 @@
+\select@language {ngerman}
+\contentsline {part}{\numberline {I}Erster Streich}{1}
+\contentsline {section}{\numberline {1}\"Uberschriften}{1}
+\contentsline {subsection}{\numberline {1.1}Erstellung des Beispiels}{1}
+\contentsline {section}{\numberline {2}weitere Gliederungspunkte}{1}
+\contentsline {subsection}{\numberline {2.1}die Sternvariante}{2}
+\contentsline {section}{\numberline {3}pers\"onlicher Tipp}{2}

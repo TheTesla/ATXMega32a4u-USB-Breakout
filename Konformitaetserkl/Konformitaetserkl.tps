@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=1145
 NormalPos.bottom=399
 Class=LaTeXView
-Document=DeclofConf.tex
+Document=Konformitaetserkl.tex
 
 [Frame0_View0,0]
-TopLine=107
-Cursor=4167
+TopLine=116
+Cursor=3323
 
 [SessionInfo]
 FrameCount=1

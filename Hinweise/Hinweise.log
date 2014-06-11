@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.28)  10 JUN 2014 20:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.28)  11 JUN 2014 16:48
 entering extended mode
-**C:/Projekte/KiCAD/ATXMega128_USB/DeclofConf/DeclofConf.tex
-(C:/Projekte/KiCAD/ATXMega128_USB/DeclofConf/DeclofConf.tex
+**C:/Projekte/KiCAD/ATXMega128_USB/Hinweise/Hinweise.tex
+(C:/Projekte/KiCAD/ATXMega128_USB/Hinweise/Hinweise.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -62,6 +62,12 @@ Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
 
 \ta@bcor=\skip41
 \ta@div=\count79
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
 \ta@hblk=\skip42
 \ta@vblk=\skip43
 \ta@temp=\skip44
@@ -166,6 +172,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+("C:\Program Files\MiKTeX_64_bit\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -194,115 +204,206 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(C:\Projekte\KiCAD\ATXMega128_USB\DeclofConf\DeclofConf.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 70.
+("C:\Program Files\MiKTeX_64_bit\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX_64_bit\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files\MiKTeX_64_bit\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX_64_bit\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
+\Gm@dimlist=\toks17
+
+("C:\Program Files\MiKTeX_64_bit\tex\latex\geometry\geometry.cfg"))
+(C:\Projekte\KiCAD\ATXMega128_USB\Hinweise\Hinweise.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 76.
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX_64_bit\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
-\scratchdimen=\dimen106
+\scratchcounter=\count93
+\scratchdimen=\dimen114
 \scratchbox=\box27
-\nofMPsegments=\count91
-\nofMParguments=\count92
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count93
-\MPscratchDim=\dimen107
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
-\everyMPtoPDFconversion=\toks18
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen115
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks19
 )
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 99.
- ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\t1lmss.fd"
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(65.44133pt, 460.93466pt, 71.13188pt)
+* v-part:(T,H,B)=(62.59605pt, 711.31891pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=460.93466pt
+* \textheight=711.31891pt
+* \oddsidemargin=-6.82866pt
+* \evensidemargin=-6.82866pt
+* \topmargin=-47.07394pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 105.
+
+("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 99.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 105.
+
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 99.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 105.
+
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 99.
-
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 105
+.
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 99.
-
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 105
+.
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 99.
+(Font)              <14.4> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 99.
+(Font)              <10> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 105.
 
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 122.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 136.
 
 ("C:\Program Files\MiKTeX_64_bit\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Unterschrift.jpg, id=1, 932.48375pt x 159.59625pt>
-File: Unterschrift.jpg Graphic file (type jpg)
- <use Unterschrift.jpg>
-Package pdftex.def Info: Unterschrift.jpg used on input line 137.
-(pdftex.def)             Requested size: 199.16928pt x 34.08847pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 136.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 136.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 136.
 
-<CE.png, id=2, 263.98625pt x 187.70125pt>
+<CE.png, id=1, 263.98625pt x 187.70125pt>
 File: CE.png Graphic file (type png)
  <use CE.png>
-Package pdftex.def Info: CE.png used on input line 143.
-(pdftex.def)             Requested size: 85.35826pt x 60.68999pt.
+Package pdftex.def Info: CE.png used on input line 154.
+(pdftex.def)             Requested size: 48.01898pt x 34.14322pt.
+
+<RoHSCompliant.png, id=3, 252.945pt x 132.495pt>
+File: RoHSCompliant.png Graphic file (type png)
+ <use RoHSCompliant.png>
+Package pdftex.def Info: RoHSCompliant.png used on input line 155.
+(pdftex.def)             Requested size: 65.18134pt x 34.14322pt.
+
+<PBfree.png, id=4, 130.086pt x 129.429pt>
+File: PBfree.png Graphic file (type png)
+ <use PBfree.png>
+Package pdftex.def Info: PBfree.png used on input line 156.
+(pdftex.def)             Requested size: 34.3158pt x 34.14322pt.
+
+<recycling.png, id=5, 106.80296pt x 105.0229pt>
+File: recycling.png Graphic file (type png)
+ <use recycling.png>
+Package pdftex.def Info: recycling.png used on input line 157.
+(pdftex.def)             Requested size: 34.72195pt x 34.14322pt.
+
+<muelltonne.png, id=6, 120.61113pt x 173.06126pt>
+File: muelltonne.png Graphic file (type png)
+ <use muelltonne.png>
+Package pdftex.def Info: muelltonne.png used on input line 158.
+(pdftex.def)             Requested size: 23.7942pt x 34.14322pt.
  [1
 
 
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Projekte/KiCAD/ATXMega
-128_USB/DeclofConf/Unterschrift.jpg> <C:/Projekte/KiCAD/ATXMega128_USB/DeclofCo
-nf/CE.png>]
-(C:\Projekte\KiCAD\ATXMega128_USB\DeclofConf\DeclofConf.aux) ) 
+128_USB/Hinweise/CE.png> <C:/Projekte/KiCAD/ATXMega128_USB/Hinweise/RoHSComplia
+nt.png> <C:/Projekte/KiCAD/ATXMega128_USB/Hinweise/PBfree.png (PNG copy)> <C:/P
+rojekte/KiCAD/ATXMega128_USB/Hinweise/recycling.png> <C:/Projekte/KiCAD/ATXMega
+128_USB/Hinweise/muelltonne.png (PNG copy)>]
+(C:\Projekte\KiCAD\ATXMega128_USB\Hinweise\Hinweise.aux) ) 
 Here is how much of TeX's memory you used:
- 3136 strings out of 493921
- 46792 string characters out of 3146079
- 139826 words of memory out of 3000000
- 6398 multiletter control sequences out of 15000+200000
- 33129 words of font info for 33 fonts, out of 3000000 for 9000
+ 3763 strings out of 493921
+ 56017 string characters out of 3146079
+ 157327 words of memory out of 3000000
+ 6997 multiletter control sequences out of 15000+200000
+ 43926 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,6n,38p,268b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files
-/MiKTeX_64_bit/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX_64_bit/fon
-ts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX_64_bit/fonts/type1/public
-/lm/lmssbx10.pfb><C:/Program Files/MiKTeX_64_bit/fonts/type1/public/lm/lmtt10.p
-fb>
-Output written on DeclofConf.pdf (1 page, 115890 bytes).
+ 40i,6n,51p,339b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiK
+TeX_64_bit/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX_64_bit/fonts/t
+ype1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX_64_bit/fonts/type1/public/lm/
+lmssbx10.pfb><C:/Program Files/MiKTeX_64_bit/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Hinweise.pdf (1 page, 264851 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

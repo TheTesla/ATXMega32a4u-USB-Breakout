@@ -8,6 +8,7 @@
 %% Optionen zum Layout des Artikels                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[%
+a4paper
 %a5paper,							% alle weiteren Papierformat einstellbar
 %landscape,						% Querformat
 %10pt,								% Schriftgröße (12pt, 11pt (Standard))
@@ -41,12 +42,16 @@
 \usepackage[ansinew]{inputenc}
 
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
-
+\usepackage{url}
 
 %% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx} %%Zum Laden von Grafiken
+\usepackage{geometry} 
+
 %\usepackage{subfig} %%Teilabbildungen in einer Abbildung
 %\usepackage{pst-all} %%PSTricks - nicht verwendbar mit pdfLaTeX
+
+\geometry{a4paper,left=23mm,right=25mm, top=22mm, bottom=25mm} 
 
 %% Beachten Sie:
 %% Die Einbindung einer Grafik erfolgt mit \includegraphics{Dateiname}
@@ -65,7 +70,8 @@
 
 
 \newcommand{\product}{ATXMega128a4u USB BO}
-
+\newcommand{\hspacesymb}{1.7cm}
+\newcommand{\symbwith}{1.2cm}
 
 \begin{document}
 
@@ -85,7 +91,7 @@
 %\titlehead{Titelkopf }
 %\subject{Typisierung}
 
-\title{EC Declaration of Conformity}
+\title{Hinweise}
 %\author{Ihr Name}
 %\and{Der Name des Co-Autoren}
 %\thanks{Fußnote}			% entspr. \footnote im Fließtext
@@ -111,36 +117,47 @@
 
 %% Der Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Manufacturer}
+\section*{Produktdaten}
+Bezeichnung: \product\\
+hergestellt in: China\\
+getestet in: China\\
+hergestellt am: 20.02.2014\\
+importiert am: 03.03.2014
+
+\section*{Hersteller}
 
 Stefan Helmert\\
 Brückenstr. 2\\
-09111 Chemnitz
+09111 Chemnitz\\
+USt-IdNr.: DE294678351
 
-\section*{Declares that produced by him}
+\section*{Produktdetails}
 
-\texttt{\product} complies with following directives:
+\url{https://github.com/TheTesla/ATXMega32a4u-USB-Breakout/tree/Xmega128a4u}
 
-\begin{description}
-	\item[2001/95/EG]{EU directive on product safety}
-	\item[2006/95/EG]{EU dir. on the use of electrical equipment within certain voltage limits}
-	\item[2011/65/EG]{EU dir. on the Restriction of the Use of Certain Hazardous Substances}
-\end{description}
+\section*{Gewährleistung}
+
+Alle Produkte wurden auf einwandfreie Funktion getestet. Gewährleistungsansprüche können nur bei eindeutigen Produktions- und Transportschäden geltend gemacht werden. 
+
+Für Schäden, die auch durch falsche Handhabung auftreten können (z.~B. Überspannung), wird nicht gehaftet. 
+
+\section*{Haftung}
+
+Das Produkt ist nicht für den Einsatz in Systemen vorgesehen, in denen eine Fehlfunktion zu erheblichen Schäden führen kann. Es erfolgt keine Haftung für Schäden und Folgeschäden, die durch unsachgemäße Verwendung oder unzureichende Funktion des Produktes verursacht wurden. 
+
+\section*{ElektroG}
+
+\texttt{\product} ist kein Elektrogerät im Sinne es ElektroG, da es keine eigenständige Funktion besitzt. Die Funktion wird im Wesentlichen durch die Außenbeschaltung bestimmt.  
 
 \vspace{0.5cm}
 
-\noindent
-Chemnitz, \today
+\includegraphics[height=\symbwith]{CE.png} \hspace{\hspacesymb}
+\includegraphics[height=\symbwith]{RoHSCompliant.png} \hspace{\hspacesymb}
+\includegraphics[height=\symbwith]{PBfree.png} \hspace{\hspacesymb}
+\includegraphics[height=\symbwith]{recycling.png} \hspace{\hspacesymb}
+\includegraphics[height=\symbwith]{muelltonne.png}
 
-\vspace*{0.5cm}
 
-\includegraphics[width=7cm]{Unterschrift.jpg}
-
-Stefan Helmert
-
-\vspace*{1.5cm}
-
-\includegraphics[width=3cm]{CE.png}
 
 %% Bibliographie unter Verwendung von dinnat %%%%%%%%%%%%%%%%%%%%%%%%%%
 %\setbibpreamble{Präambel}		% Text vor dem Verzeichnis

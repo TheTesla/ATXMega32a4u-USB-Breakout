@@ -51,7 +51,7 @@ a4paper
 %\usepackage{subfig} %%Teilabbildungen in einer Abbildung
 %\usepackage{pst-all} %%PSTricks - nicht verwendbar mit pdfLaTeX
 
-\geometry{a4paper,left=23mm,right=25mm, top=22mm, bottom=25mm} 
+\geometry{a4paper,left=23mm,right=25mm, top=25mm, bottom=25mm} 
 
 %% Beachten Sie:
 %% Die Einbindung einer Grafik erfolgt mit \includegraphics{Dateiname}
@@ -69,8 +69,8 @@ a4paper
 %\usepackage{natbib}
 
 
-\newcommand{\product}{ATXMega128a4u USB BO}
-\newcommand{\hspacesymb}{1.7cm}
+\newcommand{\product}{XMega128a4u USB BO}
+\newcommand{\hspacesymb}{2.7cm}
 \newcommand{\symbwith}{1.2cm}
 
 \begin{document}
@@ -91,7 +91,7 @@ a4paper
 %\titlehead{Titelkopf }
 %\subject{Typisierung}
 
-\title{Hinweise}
+%\title{Hinweise}
 %\author{Ihr Name}
 %\and{Der Name des Co-Autoren}
 %\thanks{Fußnote}			% entspr. \footnote im Fließtext
@@ -101,7 +101,7 @@ a4paper
 %% Widmungsseite %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\dedication{Widmung}
 
-\maketitle 						% Titelei wird erzeugt
+%\maketitle 						% Titelei wird erzeugt
 
 %% Zusammenfassung nach Titel, vor Inhaltsverzeichnis %%%%%%%%%%%%%%%%%
 %\begin{abstract}
@@ -117,14 +117,20 @@ a4paper
 
 %% Der Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{Huge}
+	\begin{center}
+		\textbf{Hinweise}
+	\end{center}
+\end{Huge}
+
 \section*{Produktdaten}
 Bezeichnung: \product\\
-hergestellt in: China\\
-getestet in: China\\
-hergestellt am: 20.02.2014\\
+Produktion: Seeed Technology Inc.\\
+Test: Seeed Technology Inc.\\
+produziert am: 20.02.2014\\
 importiert am: 03.03.2014
 
-\section*{Hersteller}
+\section*{Hersteller/Importeur}
 
 Stefan Helmert\\
 Brückenstr. 2\\
@@ -145,13 +151,14 @@ Für Schäden, die auch durch falsche Handhabung auftreten können (z.~B. Überspann
 
 Das Produkt ist nicht für den Einsatz in Systemen vorgesehen, in denen eine Fehlfunktion zu erheblichen Schäden führen kann. Es erfolgt keine Haftung für Schäden und Folgeschäden, die durch unsachgemäße Verwendung oder unzureichende Funktion des Produktes verursacht wurden. 
 
-\section*{ElektroG}
+\section*{Produktart}
 
-\texttt{\product} ist kein Elektrogerät im Sinne es ElektroG, da es keine eigenständige Funktion besitzt. Die Funktion wird im Wesentlichen durch die Außenbeschaltung bestimmt.  
+\texttt{\product} ist kein Elektrogerät im Sinne es ElektroG, da es keine eigenständige Funktion besitzt. Die Funktion wird im Wesentlichen durch die Außenbeschaltung und verwendeter Firmware bestimmt.  
+
+Da dieses Produkt kein Elektrogerät, sondern eine Elektronikkomponente ist, entfallen die CE-Kennzeichnung und Konformitätserklärung. Die Kennzeichnungspflicht eines Endproduktes, welches diese Komponente enthält, bleibt davon unberührt. Ob und welche Kennzeichnungspflichten oder Nachweispflichten bestehen, hängt Bauart und Einsatzzweck des daraus erzeugten Endproduktes ab. 
 
 \vspace{0.5cm}
 
-\includegraphics[height=\symbwith]{CE.png} \hspace{\hspacesymb}
 \includegraphics[height=\symbwith]{RoHSCompliant.png} \hspace{\hspacesymb}
 \includegraphics[height=\symbwith]{PBfree.png} \hspace{\hspacesymb}
 \includegraphics[height=\symbwith]{recycling.png} \hspace{\hspacesymb}

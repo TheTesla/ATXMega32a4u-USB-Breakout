@@ -12,13 +12,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1145
-NormalPos.bottom=399
+NormalPos.bottom=398
 Class=LaTeXView
 Document=Hinweise.tex
 
 [Frame0_View0,0]
-TopLine=112
-Cursor=4414
+TopLine=138
+Cursor=5660
 
 [SessionInfo]
 FrameCount=1

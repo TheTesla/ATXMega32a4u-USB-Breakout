@@ -1,6 +1,6 @@
-PCBNEW-BOARD Version 2 date 26.01.2014 00:54:47
+PCBNEW-BOARD Version 2 date 14.08.2014 19:14:11
 
-# Created by Pcbnew(2013-03-31 BZR 4008)-stable
+# Created by Pcbnew(2013-07-07 BZR 4022)-stable
 
 $GENERAL
 encoding utf-8
@@ -10,7 +10,7 @@ EnabledLayers 1FFF8001
 Links 105
 NoConn 0
 Di 31.9056 36.50234 113.154462 77.0096
-Ndraw 94
+Ndraw 96
 Ntrack 331
 Nzone 0
 BoardThickness 1.6002
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title ""
-Date "25 jan 2014"
+Date "14 aug 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -61,7 +61,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFFF
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer false) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory ""))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer false) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory ""))
 $EndSETUP
 
 $EQUIPOT
@@ -1625,7 +1625,7 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE SM0805
 $MODULE LED-0805
-Po 38.735 56.515 1800 15 521F9E93 5112B3F5 ~~
+Po 38.735 56.515 1800 15 53ECEE1B 5112B3F5 ~~
 Li LED-0805
 Cd LED 0805 smd package
 Kw LED 0805 SMD
@@ -1633,7 +1633,7 @@ Sc 5112B3F5
 AR /5112B2B3
 Op 0 0 0
 At SMD
-T0 2.286 -0.127 0.762 0.762 2700 0.127 N V 21 N "D1"
+T0 -1.778 -2.286 0.762 0.762 1800 0.127 N V 21 N "D1"
 T1 0 0 0.762 0.762 2700 0.127 N V 21 N "LED"
 DS 0.49784 0.29972 0.49784 0.62484 0.06604 21
 DS 0.49784 0.62484 0.99822 0.62484 0.06604 21
@@ -1704,7 +1704,7 @@ Po 1.04902 0
 $EndPAD
 $EndMODULE LED-0805
 $MODULE LED-0805
-Po 38.735 54.61 1800 15 521F9E81 5112B3F7 ~~
+Po 38.735 54.61 1800 15 53ECEE25 5112B3F7 ~~
 Li LED-0805
 Cd LED 0805 smd package
 Kw LED 0805 SMD
@@ -1712,7 +1712,7 @@ Sc 5112B3F7
 AR /5112B2C6
 Op 0 0 0
 At SMD
-T0 2.286 -0.127 0.762 0.762 2700 0.127 N V 21 N "D2"
+T0 -1.778 -3.175 0.762 0.762 1800 0.127 N V 21 N "D2"
 T1 0 0.635 0.762 0.762 2700 0.127 N V 21 N "LED"
 DS 0.49784 0.29972 0.49784 0.62484 0.06604 21
 DS 0.49784 0.62484 0.99822 0.62484 0.06604 21
@@ -2117,12 +2117,12 @@ Po 1.04902 0
 $EndPAD
 $EndMODULE LED-0805
 $MODULE MICRO-B_USB
-Po 35.56 64.135 2700 15 52078EB7 51FE31E5 ~~
+Po 35.56 64.135 2700 15 53ECEE17 51FE31E5 ~~
 Li MICRO-B_USB
 Sc 51FE31E5
 AR /5116F17F
 Op 0 0 0
-T0 -4.953 -4.445 0.762 0.762 3600 0.1905 N V 21 N "P4"
+T0 -4.953 -3.556 0.762 0.762 3600 0.1905 N V 21 N "P4"
 T1 0 2.54 1.524 1.524 2700 0.3048 N V 21 N "MICROUSB"
 DS -4.0005 1.00076 -4.0005 1.19888 0.09906 21
 DS 4.0005 1.00076 4.0005 1.19888 0.09906 21
@@ -2284,6 +2284,16 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE sot323-6
+$TEXTPCB
+Te "TX"
+Po 36.449 54.864 0.75 0.75 0.154 900
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "RX"
+Po 36.449 56.642 0.75 0.75 0.154 900
+De 21 1 0 Normal
+$EndTEXTPCB
 $TEXTPCB
 Te "Xmega128a4u"
 Po 57.404 60.452 1.524 2.032 0.3048 0
@@ -2715,7 +2725,7 @@ Po 84.836 53.086 0.75 1 0.15 0
 De 21 1 0 Normal
 $EndTEXTPCB
 $TEXTPCB
-Te "chaoschemnitz.de"
+Te "entroserv.de"
 Po 46.355 67.31 1.524 2.032 0.3048 0
 De 20 0 0 Normal
 $EndTEXTPCB
@@ -3056,7 +3066,7 @@ De 15 0 28 0 0
 Po 0 41.275 63.48476 42.27576 63.48476 0.29972 -1
 De 15 0 29 0 0
 Po 0 42.52976 63.73876 42.52976 64.27724 0.29972 -1
-De 15 0 29 52E44D63 800000
+De 15 0 29 52E44D63 0
 Po 0 42.27576 63.48476 42.52976 63.73876 0.29972 -1
 De 15 0 29 52E44D62 0
 Po 0 46.355 64.77 45.72 64.77 0.29972 -1
@@ -3092,11 +3102,11 @@ De 15 1 29 0 0
 Po 0 45.085 65.405 42.037 65.405 0.29972 -1
 De 15 0 30 0 0
 Po 0 40.767 64.135 39.68496 64.135 0.29972 -1
-De 15 0 30 52E44EBB 800000
+De 15 0 30 52E44EBB 0
 Po 0 42.037 65.405 40.767 64.135 0.29972 -1
 De 15 0 30 52E44EB7 0
 Po 0 43.83024 66.27876 44.21124 66.27876 0.29972 -1
-De 15 0 30 0 400000
+De 15 0 30 0 0
 Po 0 44.21124 66.27876 45.085 65.405 0.29972 -1
 De 15 0 30 52E44D86 0
 Po 0 45.085 65.405 56.515 65.405 0.29972 -1
@@ -3260,7 +3270,7 @@ De 15 0 40 52E44D94 0
 Po 0 41.275 66.675 41.275 65.786 0.29972 -1
 De 15 0 40 52E44E7B 0
 Po 0 39.68496 65.43294 40.99306 65.43294 0.29972 -1
-De 15 0 40 0 400000
+De 15 0 40 0 0
 Po 0 40.99306 65.43294 41.275 65.71488 0.29972 -1
 De 15 0 40 52E44E4A 0
 Po 0 41.275 65.71488 41.275 65.786 0.29972 -1
@@ -3270,7 +3280,7 @@ De 0 0 40 52E44E52 0
 Po 3 41.275 65.786 41.275 65.786 0.889 -1
 De 15 1 40 0 0
 Po 0 43.18 66.27876 43.18 66.802 0.29972 -1
-De 15 0 40 0 400000
+De 15 0 40 0 0
 Po 0 43.18 66.802 42.926 67.056 0.29972 -1
 De 15 0 40 52E44D8D 0
 Po 0 42.926 67.056 42.672 67.056 0.29972 -1
@@ -3278,7 +3288,7 @@ De 15 0 40 52E44D8E 0
 Po 0 42.672 67.056 42.52976 66.91376 0.29972 -1
 De 15 0 40 52E44D8F 0
 Po 0 42.52976 66.91376 42.52976 66.27876 0.29972 -1
-De 15 0 40 52E44D91 800000
+De 15 0 40 52E44D91 0
 Po 3 60.071 65.024 60.071 65.024 0.889 -1
 De 15 1 40 0 0
 Po 0 60.0202 65.0748 60.071 65.024 0.29972 -1
@@ -3394,13 +3404,13 @@ De 15 0 43 0 0
 Po 0 41.37152 56.1975 39.78402 54.61 0.29972 -1
 De 15 0 43 0 0
 Po 0 43.83024 64.27724 43.83024 62.80912 0.29972 -1
-De 15 0 44 0 400000
+De 15 0 44 0 0
 Po 0 43.83024 62.80912 43.25112 62.23 0.29972 -1
-De 15 0 44 52E44D6B 800000
+De 15 0 44 52E44D6B 0
 Po 0 43.18 64.27724 43.18 62.30112 0.29972 -1
-De 15 0 44 0 C00000
+De 15 0 44 0 0
 Po 0 43.18 62.30112 43.25112 62.23 0.29972 -1
-De 15 0 44 52E44D68 C00000
+De 15 0 44 52E44D68 0
 Po 0 43.18 62.30112 43.25112 62.23 0.29972 -1
 De 15 0 44 52E44ABA 0
 Po 0 43.18 62.30112 43.25112 62.23 0.29972 -1

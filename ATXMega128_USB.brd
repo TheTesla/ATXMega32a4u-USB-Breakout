@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 14.08.2014 19:14:11
+PCBNEW-BOARD Version 2 date 21.08.2014 16:09:02
 
 # Created by Pcbnew(2013-07-07 BZR 4022)-stable
 
@@ -10,7 +10,7 @@ EnabledLayers 1FFF8001
 Links 105
 NoConn 0
 Di 31.9056 36.50234 113.154462 77.0096
-Ndraw 96
+Ndraw 97
 Ntrack 331
 Nzone 0
 BoardThickness 1.6002
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title ""
-Date "14 aug 2014"
+Date "21 aug 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -2285,6 +2285,11 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE sot323-6
 $TEXTPCB
+Te "chaoschemnitz.de"
+Po 48.387 67.691 1.524 2.032 0.3048 0
+De 20 0 0 Normal
+$EndTEXTPCB
+$TEXTPCB
 Te "TX"
 Po 36.449 54.864 0.75 0.75 0.154 900
 De 21 1 0 Normal
@@ -2726,7 +2731,7 @@ De 21 1 0 Normal
 $EndTEXTPCB
 $TEXTPCB
 Te "entroserv.de"
-Po 46.355 67.31 1.524 2.032 0.3048 0
+Po 46.99 57.023 1.524 2.032 0.3048 0
 De 20 0 0 Normal
 $EndTEXTPCB
 $DRAWSEGMENT

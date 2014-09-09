@@ -1,0 +1,32 @@
+### Module positions - created on 28.08.2014 16:12:23 ###
+### Printed by Pcbnew version pcbnew (2013-07-07 BZR 4022)-stable
+## Unit = inches, Angle = deg.
+## Side : Vorderseite
+# Ref    Val                  Package         PosX       PosY        Rot     Side
+C1       10u              SM0805              2.8250    -2.4500     270.0    Vorderseite
+C2       100n             SM0603_Capa         2.6000    -2.4500     270.0    Vorderseite
+C3       10u              SM0805              2.6250    -2.1250     270.0    Vorderseite
+C4       100n             SM0603_Capa         2.5500    -2.1250     270.0    Vorderseite
+C5       100n             SM0603_Capa         2.6750    -2.4750      90.0    Vorderseite
+C6       100n             SM0603_Capa         1.9250    -2.5250      90.0    Vorderseite
+C7       100n             SM0603_Capa         2.2000    -2.1000       0.0    Vorderseite
+C8       100n             SM0603_Capa         2.4000    -2.7750     180.0    Vorderseite
+C9       10u              SM0805              3.3500    -2.7750     270.0    Vorderseite
+C10      18p              SM0805              3.0500    -2.5000      90.0    Vorderseite
+C11      18p              SM0805              2.9750    -2.5500      90.0    Vorderseite
+C12      10u              SM0805              2.7500    -2.4750     270.0    Vorderseite
+C13      10u              SM0805              1.5500    -2.7750     270.0    Vorderseite
+D1       LED              LED-0805            1.5250    -2.2250     180.0    Vorderseite
+D2       LED              LED-0805            1.5250    -2.1500     180.0    Vorderseite
+D3       LED              LED-0805            3.3500    -2.2500     270.0    Vorderseite
+D4       BAS70BRW         sot323-6            1.7000    -2.5700       0.0    Vorderseite
+D5       LED              LED-0805            1.7750    -2.3500     270.0    Vorderseite
+IC1      ATXMEGA128A4U    TQFP44              2.3000    -2.4500     270.0    Vorderseite
+L1       100n             SM0805              1.6500    -2.7750     270.0    Vorderseite
+L2       100n             SM0805              2.9500    -2.4500     180.0    Vorderseite
+R1       10k              SM0805              2.7500    -2.6500      90.0    Vorderseite
+R2       1k               SM0805              1.7500    -2.1750      90.0    Vorderseite
+R3       1k               SM0805              1.6500    -2.1750      90.0    Vorderseite
+R4       1k               SM0805              3.3000    -2.1500     180.0    Vorderseite
+R5       1k5              SM0805              1.7000    -2.3500     270.0    Vorderseite
+## End

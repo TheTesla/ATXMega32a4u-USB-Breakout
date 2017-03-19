@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Hinweise.tex
 
 [Frame0_View0,0]
-TopLine=138
-Cursor=6001
+TopLine=107
+Cursor=4658
 
 [SessionInfo]
 FrameCount=1
